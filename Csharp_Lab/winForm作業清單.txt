@@ -1,0 +1,24 @@
+成績 Struct
+txtBox
+result = ...
+
+成績
+txtBox
+result = ...
+
+成績 List
+txtBox
+result = ...
+
+Method 包含迴圈
+
+計算機 n1, n2 加減乘除
+
+
+
+
+
+
+
+
+

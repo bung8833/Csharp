@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32811.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WA.Utility", "WA.Utility\WA.Utility.csproj", "{C58579DC-E577-46A4-9545-2A862241A5DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WA.EStore.ConsoleApp", "WA.EStore.ConsoleApp\WA.EStore.ConsoleApp.csproj", "{875F3999-9738-443D-BAF1-BE6A3238CC86}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C58579DC-E577-46A4-9545-2A862241A5DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C58579DC-E577-46A4-9545-2A862241A5DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C58579DC-E577-46A4-9545-2A862241A5DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C58579DC-E577-46A4-9545-2A862241A5DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{875F3999-9738-443D-BAF1-BE6A3238CC86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{875F3999-9738-443D-BAF1-BE6A3238CC86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{875F3999-9738-443D-BAF1-BE6A3238CC86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{875F3999-9738-443D-BAF1-BE6A3238CC86}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FB6B65F8-83C6-4312-A0E8-C72664FC7B5A}
+	EndGlobalSection
+EndGlobal

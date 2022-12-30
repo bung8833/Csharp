@@ -1,0 +1,17 @@
+
+
+
+
+
+
+foreach (Control item in this.Controls)
+            {
+                if (item == btn_foreach)
+                {
+                    continue;
+                }
+                //item.Location = new Point(100, 100);
+                item.Left -= 10;
+                item.Top -= 10;
+                //item.Container container
+            }

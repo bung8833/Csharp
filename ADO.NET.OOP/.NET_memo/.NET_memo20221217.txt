@@ -1,0 +1,35 @@
+Class Form_xxx : Form
+
+為一個class 裡面也可以寫屬性
+public int PageLength
+        {
+            get
+            {
+                int pageLength = int.TryParse(pageLengthTextBox.Text, out int number)
+                    ? number : 1;
+
+                pageLengthTextBox.Text = pageLength.ToString();
+                return pageLength;
+            }
+        }
+
+class 原始繼承: object
+
+--------------------------
+
+interface 介面 命名要加I
+1. 屬性
+2. Method宣告
+3. public(?
+
+"實作"(implement)介面 要有介面所有成員 且一定要public
+
+
+
+
+
+
+
+
+
+

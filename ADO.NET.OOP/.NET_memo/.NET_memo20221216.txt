@@ -1,0 +1,37 @@
+考 1+2+...+n
+梯形公式佳 O(1)
+for loop O(n)
+
+SQL考題
+Join Equal Join
+Group By
+
+Interface
+
+履歷 作品集
+放連結 說明要點 功能 -> 面試
+
+GIT -> 設定名字email -> 
+
+
+
+*.dll
+Win Form
+Unit Test
+
+
+盡量不要讀取以下(外部)resources
+系統時間 檔案名稱
+
+會不好寫單元測試
+
+
+
+
+
+
+
+
+
+
+

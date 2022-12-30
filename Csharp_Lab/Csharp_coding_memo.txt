@@ -1,0 +1,113 @@
+張佑晨
+
+rory@ispan.com.tw
+
+instgram: rockrory_c
+
+
+
+作業!
+
+.Net Framework
+.NET Core (new, all platforms)
+
+
+Object: 
+{
+  Property屬性
+  Method方法 (功能 動作)
+  Event事件 (狀態 與方法繫結)
+  
+  識別性
+}
+
+
+物件導向 原則: 
+{
+抽象化 Abstraction: 用名字代表複雜實體
+封裝 Encapsulation
+繼承 Inheritance
+多型 Polymorphism
+***動態繫結 Dynamic Binding: 執行時判斷該呼叫的***
+}
+
+
+C#: "進階程式語言"
+內有CLR: 將code轉為機器語言
+"低階": 機器語言
+
+
+Class: 
+{
+  將Object分類 為Object的集合
+  藍圖 - 建築物
+}
+
+
+IDE
+Visual Studio 2022 社群版: 
+{
+.Net桌面
+ASP.NET與網頁
+}
+
+
+Class 即為一種自訂type
+MyClass myclass = new MyClass()
+
+修飾詞
+{
+pravite:	 Class本身可使用
+protected:	 Class 及 子類別可使用
+public:		 Anyone
+internal:	 同一專案中的所有Class都可使用
+protected internal: 
+
+***一個Class本身未指定修飾詞時	預設為internal***
+***Class內的東西未指定時			預設為pravite***
+}
+
+
+
+封裝 Encapsulation
+{
+將物件的私有部分封裝於物件內部
+隱藏細節
+透過存取修飾詞存取範圍
+}
+
+
+Partial Class
+{
+可跨檔案編輯同一個Class
+兩邊都要加partial字眼
+要在同一個namespace下
+一邊寫Form邏輯, 一邊寫Form外觀設定
+}
+
+
+Class 建立在.cs檔中
+
+
+執行個體 new出來的實體
+執行個體變數 其名稱
+
+
+Value Type
+int
+char
+bool
+
+Reference Type
+資料存於Heap區
+其位址存於Stack區
+string
+Object
+class
+int[] int[,]
+delegate int D
+
+
+
+
+

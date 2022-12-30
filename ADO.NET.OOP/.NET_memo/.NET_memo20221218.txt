@@ -1,0 +1,27 @@
+委派 delegate
+
+類似C, C++ 的function pointer
+
+Magic Number => 新增為變數
+
+new string("*", 5).padleft(5, " ")
+
+
+
+
+99乘法表
+將第2迴圈寫成Method
+
+
+
+
+存在繼承時
+父類別寫Virtual Method
+子類別可以選擇override它，定義自己的Method
+
+
+CW tab
+Console.WriteLine
+
+
+

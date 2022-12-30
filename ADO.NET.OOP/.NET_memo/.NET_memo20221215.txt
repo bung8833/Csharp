@@ -1,0 +1,55 @@
+2022-12-15
+寫class
+dll project
+
+有錯：
+先重現Error 單元測試增加測資
+再改到對
+
+
+field: 
+property: 
+1. get set 
+2. 可Read olny Write only
+
+Method等 建議大寫開頭
+field 底線小寫開頭
+
+
+
+單元測試 UnitTests
+
+擴充方法三步驟
+
+static class
+static method
+(this <擴充型別> parameterName)
+
+默寫程式 DateTime 擴充方法
+
+EXCEL 紀錄TimeStamp
+
+
+
+
+prop 建立屬性
+
+ctor 建構函式
+
+
+overload
+override
+
+考慮參數放在建構函式 or 放在method
+全Class都需要 v.s. 個別method需要
+
+
+練習開專案
+
+
+
+
+
+
+
+

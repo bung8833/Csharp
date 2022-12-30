@@ -1,0 +1,21 @@
+class Book
+public string Title { get; }
+private string[] _content;
+
+
+建構(title, content)
+Title <= title
+_content <= content
+
+
+public string GetPagedContent
+    (int pageIndex, int pageLength)
+傳回Concat處理後的string
+
+
+
+
+
+
+
+

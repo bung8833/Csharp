@@ -1,0 +1,44 @@
+[YcdDiceGame]
+
+[DiceUtility]
+
+[Class Dice]
+建構函式 驗證點數1~6
+
+int Value
+prop 點數1~6 readOnly
+
+
+[IRandomValueProvider]
+MockProvider
+DefaultProvider
+
+
+
+
+
+
+
+
+
+
+
+public class Lottery //樂透
+        {
+            public int GetNumber()
+            {
+                // 產生亂數標準寫法
+                int seed = Guid.NewGuid().GetHashCode(); //較接近真正亂數
+                var random = new Random(seed);
+
+                int number = random.Next(1, 100); // [1,100)
+
+                return number;
+            }
+        }
+
+
+public interface IRandomValueProvider
+        {
+            int Next(int min, int max); // 傳回[min, max)的數值
+        }
