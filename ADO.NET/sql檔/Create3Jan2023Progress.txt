@@ -1,0 +1,229 @@
+USE [master]
+GO
+/****** Object:  Database [iSpan202301]    Script Date: 2023/1/3 下午 04:38:33 ******/
+CREATE DATABASE [iSpan202301]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N'iSpan202301', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\iSpan202301.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+ LOG ON 
+( NAME = N'iSpan202301_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\iSpan202301_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+ WITH CATALOG_COLLATION = DATABASE_DEFAULT
+GO
+ALTER DATABASE [iSpan202301] SET COMPATIBILITY_LEVEL = 150
+GO
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [iSpan202301].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+ALTER DATABASE [iSpan202301] SET ANSI_NULL_DEFAULT OFF 
+GO
+ALTER DATABASE [iSpan202301] SET ANSI_NULLS OFF 
+GO
+ALTER DATABASE [iSpan202301] SET ANSI_PADDING OFF 
+GO
+ALTER DATABASE [iSpan202301] SET ANSI_WARNINGS OFF 
+GO
+ALTER DATABASE [iSpan202301] SET ARITHABORT OFF 
+GO
+ALTER DATABASE [iSpan202301] SET AUTO_CLOSE OFF 
+GO
+ALTER DATABASE [iSpan202301] SET AUTO_SHRINK OFF 
+GO
+ALTER DATABASE [iSpan202301] SET AUTO_UPDATE_STATISTICS ON 
+GO
+ALTER DATABASE [iSpan202301] SET CURSOR_CLOSE_ON_COMMIT OFF 
+GO
+ALTER DATABASE [iSpan202301] SET CURSOR_DEFAULT  GLOBAL 
+GO
+ALTER DATABASE [iSpan202301] SET CONCAT_NULL_YIELDS_NULL OFF 
+GO
+ALTER DATABASE [iSpan202301] SET NUMERIC_ROUNDABORT OFF 
+GO
+ALTER DATABASE [iSpan202301] SET QUOTED_IDENTIFIER OFF 
+GO
+ALTER DATABASE [iSpan202301] SET RECURSIVE_TRIGGERS OFF 
+GO
+ALTER DATABASE [iSpan202301] SET  DISABLE_BROKER 
+GO
+ALTER DATABASE [iSpan202301] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+GO
+ALTER DATABASE [iSpan202301] SET DATE_CORRELATION_OPTIMIZATION OFF 
+GO
+ALTER DATABASE [iSpan202301] SET TRUSTWORTHY OFF 
+GO
+ALTER DATABASE [iSpan202301] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+GO
+ALTER DATABASE [iSpan202301] SET PARAMETERIZATION SIMPLE 
+GO
+ALTER DATABASE [iSpan202301] SET READ_COMMITTED_SNAPSHOT OFF 
+GO
+ALTER DATABASE [iSpan202301] SET HONOR_BROKER_PRIORITY OFF 
+GO
+ALTER DATABASE [iSpan202301] SET RECOVERY FULL 
+GO
+ALTER DATABASE [iSpan202301] SET  MULTI_USER 
+GO
+ALTER DATABASE [iSpan202301] SET PAGE_VERIFY CHECKSUM  
+GO
+ALTER DATABASE [iSpan202301] SET DB_CHAINING OFF 
+GO
+ALTER DATABASE [iSpan202301] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+GO
+ALTER DATABASE [iSpan202301] SET TARGET_RECOVERY_TIME = 60 SECONDS 
+GO
+ALTER DATABASE [iSpan202301] SET DELAYED_DURABILITY = DISABLED 
+GO
+ALTER DATABASE [iSpan202301] SET ACCELERATED_DATABASE_RECOVERY = OFF  
+GO
+EXEC sys.sp_db_vardecimal_storage_format N'iSpan202301', N'ON'
+GO
+ALTER DATABASE [iSpan202301] SET QUERY_STORE = OFF
+GO
+USE [iSpan202301]
+GO
+/****** Object:  User [sa5]    Script Date: 2023/1/3 下午 04:38:33 ******/
+CREATE USER [sa5] FOR LOGIN [sa5] WITH DEFAULT_SCHEMA=[dbo]
+GO
+ALTER ROLE [db_owner] ADD MEMBER [sa5]
+GO
+/****** Object:  Table [dbo].[Categories]    Script Date: 2023/1/3 下午 04:38:33 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Categories](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](30) NOT NULL,
+	[DisplayOrder] [int] NOT NULL,
+ CONSTRAINT [PK_Categories] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[News]    Script Date: 2023/1/3 下午 04:38:33 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[News](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Title] [nvarchar](50) NOT NULL,
+	[Description] [nvarchar](3000) NOT NULL,
+	[CreatedTime] [datetime] NOT NULL,
+	[ModifiedTime] [datetime] NOT NULL,
+ CONSTRAINT [PK_News] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Products]    Script Date: 2023/1/3 下午 04:38:33 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Products](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[CategoryId] [int] NOT NULL,
+	[Name] [nvarchar](50) NOT NULL,
+	[Description] [nvarchar](3000) NOT NULL,
+	[Price] [int] NOT NULL,
+	[Status] [bit] NOT NULL,
+	[ProductImage] [nvarchar](70) NOT NULL,
+	[Stock] [int] NOT NULL,
+ CONSTRAINT [PK_Products] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Users]    Script Date: 2023/1/3 下午 04:38:33 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Users](
+	[Id] [int] NOT NULL,
+	[Name] [nvarchar](50) NOT NULL,
+	[Account] [nvarchar](50) NOT NULL,
+	[Password] [nvarchar](50) NOT NULL,
+	[DateOfBirth] [datetime] NULL,
+	[Height] [int] NULL,
+	[Email] [nvarchar](256) NULL,
+ CONSTRAINT [PK_Users] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET IDENTITY_INSERT [dbo].[Categories] ON 
+GO
+INSERT [dbo].[Categories] ([Id], [Name], [DisplayOrder]) VALUES (1, N'3C', 10)
+GO
+INSERT [dbo].[Categories] ([Id], [Name], [DisplayOrder]) VALUES (2, N'家電', 20)
+GO
+INSERT [dbo].[Categories] ([Id], [Name], [DisplayOrder]) VALUES (3, N'生活用品', 30)
+GO
+SET IDENTITY_INSERT [dbo].[Categories] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Products] ON 
+GO
+INSERT [dbo].[Products] ([Id], [CategoryId], [Name], [Description], [Price], [Status], [ProductImage], [Stock]) VALUES (1, 1, N'HP Printer', N'description', 3000, 1, N'printer.jpg', 100)
+GO
+INSERT [dbo].[Products] ([Id], [CategoryId], [Name], [Description], [Price], [Status], [ProductImage], [Stock]) VALUES (2, 1, N'華碩A320 桌機', N'description', 20000, 1, N'acerPC.jpg', 100)
+GO
+INSERT [dbo].[Products] ([Id], [CategoryId], [Name], [Description], [Price], [Status], [ProductImage], [Stock]) VALUES (3, 1, N'華碩 Zenbook 14 UX3402ZA', N'description', 34900, 1, N'zenbook.jpg', 100)
+GO
+INSERT [dbo].[Products] ([Id], [CategoryId], [Name], [Description], [Price], [Status], [ProductImage], [Stock]) VALUES (4, 2, N'Dyson Cyclone V10 Fluffy SV12 無線吸塵器', N'description', 12900, 1, N'a.jpg', 98)
+GO
+INSERT [dbo].[Products] ([Id], [CategoryId], [Name], [Description], [Price], [Status], [ProductImage], [Stock]) VALUES (5, 2, N'SANSUI 山水 1.8L大容量304不銹鋼電茶壺二入組', N'description', 788, 1, N'a.jpg', 100)
+GO
+INSERT [dbo].[Products] ([Id], [CategoryId], [Name], [Description], [Price], [Status], [ProductImage], [Stock]) VALUES (6, 2, N'大日 Dainichi 煤油暖氣機', N'description', 10900, 1, N'a.jpg', 100)
+GO
+INSERT [dbo].[Products] ([Id], [CategoryId], [Name], [Description], [Price], [Status], [ProductImage], [Stock]) VALUES (7, 2, N'PHILIPS 飛利浦  智能護齦音波震動牙刷 HX6803/02', N'description', 2490, 1, N'a.jpg', 100)
+GO
+INSERT [dbo].[Products] ([Id], [CategoryId], [Name], [Description], [Price], [Status], [ProductImage], [Stock]) VALUES (8, 3, N'Boden-奧洛4尺多功能收納升降大茶几', N'description', 5599, 1, N'a.jpg', 98)
+GO
+INSERT [dbo].[Products] ([Id], [CategoryId], [Name], [Description], [Price], [Status], [ProductImage], [Stock]) VALUES (9, 3, N'Flexispot 單螢幕懸浮旋臂支架 - 黑色', N'description', 1912, 1, N'a.jpg', 100)
+GO
+INSERT [dbo].[Products] ([Id], [CategoryId], [Name], [Description], [Price], [Status], [ProductImage], [Stock]) VALUES (10, 3, N'Flexispot 簡易式氣壓升降工作台', N'description', 3390, 1, N'a.jpg', 100)
+GO
+INSERT [dbo].[Products] ([Id], [CategoryId], [Name], [Description], [Price], [Status], [ProductImage], [Stock]) VALUES (11, 3, N'TOTO TCF23710ATW C2 溫水洗淨便座', N'description', 8990, 1, N'a.jpg', 100)
+GO
+INSERT [dbo].[Products] ([Id], [CategoryId], [Name], [Description], [Price], [Status], [ProductImage], [Stock]) VALUES (12, 3, N'象印*0.82L*SLiT不鏽鋼真空保溫瓶', N'description', 690, 1, N'a.jpg', 100)
+GO
+SET IDENTITY_INSERT [dbo].[Products] OFF
+GO
+INSERT [dbo].[Users] ([Id], [Name], [Account], [Password], [DateOfBirth], [Height], [Email]) VALUES (1, N'Richard', N'a1', N'password', NULL, 175, NULL)
+GO
+INSERT [dbo].[Users] ([Id], [Name], [Account], [Password], [DateOfBirth], [Height], [Email]) VALUES (2, N'Richard', N'b1', N'password', CAST(N'1970-01-01T00:00:00.000' AS DateTime), NULL, NULL)
+GO
+SET ANSI_PADDING ON
+GO
+/****** Object:  Index [IX_Categories]    Script Date: 2023/1/3 下午 04:38:33 ******/
+CREATE UNIQUE NONCLUSTERED INDEX [IX_Categories] ON [dbo].[Categories]
+(
+	[Name] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+SET ANSI_PADDING ON
+GO
+/****** Object:  Index [IX_Users]    Script Date: 2023/1/3 下午 04:38:33 ******/
+CREATE UNIQUE NONCLUSTERED INDEX [IX_Users] ON [dbo].[Users]
+(
+	[Account] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[Products] ADD  CONSTRAINT [DF_Products_Status]  DEFAULT ((1)) FOR [Status]
+GO
+ALTER TABLE [dbo].[Products]  WITH CHECK ADD  CONSTRAINT [FK_Products_Categories] FOREIGN KEY([CategoryId])
+REFERENCES [dbo].[Categories] ([Id])
+GO
+ALTER TABLE [dbo].[Products] CHECK CONSTRAINT [FK_Products_Categories]
+GO
+USE [master]
+GO
+ALTER DATABASE [iSpan202301] SET  READ_WRITE 
+GO
