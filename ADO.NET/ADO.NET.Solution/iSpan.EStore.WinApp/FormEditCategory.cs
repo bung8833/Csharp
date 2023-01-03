@@ -16,10 +16,10 @@ namespace iSpan.EStore.WinApp
     {
         private readonly int categoryId;
 
-        public FormEditCategory()
-        {
-            InitializeComponent();
-        }
+        //public FormEditCategory()
+        //{
+        //    InitializeComponent();
+        //}
 
         public FormEditCategory(int categoryId)
         {
