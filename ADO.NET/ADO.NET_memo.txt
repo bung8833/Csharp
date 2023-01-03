@@ -1,0 +1,41 @@
+ADO.NET <- 底層
+
+Entity Framework <- MVC會教
+Dapper <- 可以自學
+
+面試準備SQL:
+Join
+Group
+
+建立資料表 參考範例練習
+
+Users		SQL Server
+
+U1		DB1
+U2		DB2
+U3		DB3
+
+sa(預設最高權限)
+
+sa5 (iSpan202301, sa5, sa5)
+
+建立table後無法修改存檔 -> tools designer 取消防止...
+
+table task 資料庫右鍵 -> 產生指令scrip
+
+connectstrings
+
+字型
+JetBrain.Mono >=
+Source code pro
+
+專題每個畫面 一張A5 寫編號
+
+
+
+
+
+
+
+
+
