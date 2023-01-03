@@ -31,7 +31,7 @@ namespace iSpan.EStore.WinApp
 
         private void FormEditCategory_Load(object sender, EventArgs e)
         {
-            using (var conn = SqlDb.GetConnection())
+            using (SqlConnection conn = SqlDb.GetConnection())
             {
                 string sql = $"SELECT * FROM Categories WHERE Id={categoryId}";
 
