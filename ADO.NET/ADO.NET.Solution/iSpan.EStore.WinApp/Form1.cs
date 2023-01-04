@@ -23,7 +23,7 @@ namespace iSpan.EStore.WinApp
         private void btn_GetConnectionString_Click(object sender, EventArgs e)
         {
             SqlDb.ApplicationName = "MyConnectionTest";
-            //SqlDb.ConnectionTimeout = 90;
+            SqlDb.ConnectionTimeout = 5;
             SqlDb.Pooling = false;
 
             string connStr = SqlDb.GetConnectionString("default");
