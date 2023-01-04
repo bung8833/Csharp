@@ -89,7 +89,7 @@ namespace iSpan.EStore.WinApp
             int countOfProductsByCategory = new CategoryRepository().GetProductCount(categoryId);
             MessageBox.Show(countOfProductsByCategory.ToString());
         }
-
+        
         private void button_GetProducts_Click(object sender, EventArgs e)
         {
             //FormProducts formProducts = new FormProducts();
@@ -100,9 +100,28 @@ namespace iSpan.EStore.WinApp
             string prodName = textBox_ProductName.Text;
 
 
-
             var formProducts = new FormProducts(categoryId, prodName);
             formProducts.ShowDialog();
+        }
+        //private void button_GetProducts_Click(object sender, EventArgs e)
+        //{
+        //    //FormProducts formProducts = new FormProducts();
+        //    //formProducts.ShowDialog();
+
+        //    bool isInt = int.TryParse(textBox_id.Text, out int value);
+        //    int? categoryId = isInt ? value : (int?)null;
+        //    string prodName = textBox_ProductName.Text;
+
+
+        //    var formProducts = new FormProducts(categoryId, prodName);
+        //    formProducts.ShowDialog();
+        //}
+        
+        private void button_CreateNews_Click(object sender, EventArgs e)
+        {
+            //todo modify
+            var createNews = new FormCreateNews();
+            createNews.ShowDialog();
         }
     }
 }

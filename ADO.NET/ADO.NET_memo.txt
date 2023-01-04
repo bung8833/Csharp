@@ -57,15 +57,26 @@ SqlDataReader
 --------
 
 
-
+SQL Injection 寫惡意語法 偷窺 破壞資料 原因: 寫SQL時串接語法
 SQL語法 切記不要組合字串
 登入程式 寫法
 
+DateTime dt = new DateTime(2023, 1, 4);
+DateTime.AddDays(1)
 
+百元買百雞 練習作業
+公   5元/隻
+母   3元/隻
+小雞 1元/3隻
+--每種雞都要買
 
+技巧:
+按住Ctrl->拖曳
+檢視->定位順序
 
-
-
+筆記:
+notion
+HackMD
 
 
 

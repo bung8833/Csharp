@@ -41,7 +41,7 @@
             this.label_Name.Location = new System.Drawing.Point(34, 48);
             this.label_Name.Name = "label_Name";
             this.label_Name.Size = new System.Drawing.Size(64, 20);
-            this.label_Name.TabIndex = 0;
+            this.label_Name.TabIndex = 2;
             this.label_Name.Text = "Name: ";
             // 
             // label_DisplayOrder
@@ -51,7 +51,7 @@
             this.label_DisplayOrder.Location = new System.Drawing.Point(34, 96);
             this.label_DisplayOrder.Name = "label_DisplayOrder";
             this.label_DisplayOrder.Size = new System.Drawing.Size(124, 20);
-            this.label_DisplayOrder.TabIndex = 1;
+            this.label_DisplayOrder.TabIndex = 3;
             this.label_DisplayOrder.Text = "Display Order: ";
             // 
             // textBox_Name
@@ -59,14 +59,14 @@
             this.textBox_Name.Location = new System.Drawing.Point(156, 45);
             this.textBox_Name.Name = "textBox_Name";
             this.textBox_Name.Size = new System.Drawing.Size(247, 29);
-            this.textBox_Name.TabIndex = 2;
+            this.textBox_Name.TabIndex = 0;
             // 
             // textBox_DisplayOrder
             // 
             this.textBox_DisplayOrder.Location = new System.Drawing.Point(156, 93);
             this.textBox_DisplayOrder.Name = "textBox_DisplayOrder";
             this.textBox_DisplayOrder.Size = new System.Drawing.Size(247, 29);
-            this.textBox_DisplayOrder.TabIndex = 3;
+            this.textBox_DisplayOrder.TabIndex = 1;
             // 
             // FormEditCategory
             // 

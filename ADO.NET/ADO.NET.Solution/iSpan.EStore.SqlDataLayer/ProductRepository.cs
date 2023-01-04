@@ -18,7 +18,7 @@ namespace iSpan.EStore.SqlDataLayer
 
             #region SQL statement
             // += 開頭要加空白 用以分段
-
+            
             string sql = $@"
 SELECT P.*, C.Name as CategoryName
 FROM Products as P
