@@ -18,20 +18,9 @@ namespace HundredChickens
             int x = 0;
             int y = 0;
             int z = 0;
-            int price = 0;
 
-            while (x + y + z != 100)
-            {
-                x += 1;
-                while (x + y + z != 100)
-                {
-                    y += 1;
-                    while (x + y + z != 100)
-                    {
-                        z += 1;
-                    }
-                }
-            }
+
+            
         }
     }
 }
