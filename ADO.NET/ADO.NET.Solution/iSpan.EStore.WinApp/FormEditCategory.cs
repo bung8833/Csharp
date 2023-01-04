@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static iSpan.EStore.SqlDataLayer.CategoryRepository;
+//using iSpan.EStore.SqlDataLayer;
 
 namespace iSpan.EStore.WinApp
 {
@@ -31,29 +33,45 @@ namespace iSpan.EStore.WinApp
 
         private void FormEditCategory_Load(object sender, EventArgs e)
         {
-            using (SqlConnection conn = SqlDb.GetConnection())
+            Category category = new CategoryRepository().GetCategory(categoryId);
+
+            if (category == null)
             {
-                string sql = $"SELECT * FROM Categories WHERE Id={categoryId}";
-
-                using (var command = new SqlCommand(sql, conn))
-                {
-                    conn.Open();
-
-                    var reader = command.ExecuteReader();
-
-                    if (reader.Read())
-                    {
-                        textBox_Name.Text = reader["Name"].ToString();
-                        textBox_DisplayOrder.Text = reader["DisplayOrder"].ToString();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Record not found");
-                        this.DialogResult = DialogResult.Cancel;
-                        return;
-                    }
-                }
+                MessageBox.Show("record not found");
+                this.DialogResult = DialogResult.Cancel;
+                return;
             }
+            else
+            {
+                textBox_Name.Text = category.Name;
+                textBox_DisplayOrder.Text = category.DisplayOrder.ToString();
+            }
+
+
+
+            //using (SqlConnection conn = SqlDb.GetConnection())
+            //{
+            //    string sql = $"SELECT * FROM Categories WHERE Id={categoryId}";
+
+            //    using (var command = new SqlCommand(sql, conn))
+            //    {
+            //        conn.Open();
+
+            //        var reader = command.ExecuteReader();
+
+            //        if (reader.Read())
+            //        {
+            //            textBox_Name.Text = reader["Name"].ToString();
+            //            textBox_DisplayOrder.Text = reader["DisplayOrder"].ToString();
+            //        }
+            //        else
+            //        {
+            //            MessageBox.Show("Record not found");
+            //            this.DialogResult = DialogResult.Cancel;
+            //            return;
+            //        }
+            //    }
+            //}
         }
     }
 }

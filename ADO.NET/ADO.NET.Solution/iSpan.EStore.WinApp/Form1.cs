@@ -49,22 +49,6 @@ namespace iSpan.EStore.WinApp
                 }
             }
         }
-
-        private void button_EditCategory_Click(object sender, EventArgs e)
-        {
-            bool isInt = int.TryParse(textBox_id.Text, out int categoryId);
-            if (!isInt)
-            {
-                MessageBox.Show("請輸入正確的 Category Id");
-                return;
-            }
-
-            var editCategory = new FormEditCategory(categoryId);
-            editCategory.ShowDialog();
-        }
-
-        
-
         //private void btn_GetConnection_Click(object sender, EventArgs e)
         //{
         //    SqlDb.ApplicationName = "conn test"; // 到profiler看連線情形
@@ -79,5 +63,46 @@ namespace iSpan.EStore.WinApp
         //    conn.Close();
         //    conn.Dispose();
         //}
+
+        private void button_EditCategory_Click(object sender, EventArgs e)
+        {
+            bool isInt = int.TryParse(textBox_id.Text, out int categoryId);
+            if (!isInt)
+            {
+                MessageBox.Show("請輸入正確的 Category Id");
+                return;
+            }
+
+            var editCategory = new FormEditCategory(categoryId);
+            editCategory.ShowDialog();
+        }
+
+        private void button_ExecuteScalar_Click(object sender, EventArgs e)
+        {
+            bool isInt = int.TryParse(textBox_id.Text, out int categoryId);
+            if (!isInt)
+            {
+                MessageBox.Show("請輸入正確的 Category Id");
+                return;
+            }
+
+            int countOfProductsByCategory = new CategoryRepository().GetProductCount(categoryId);
+            MessageBox.Show(countOfProductsByCategory.ToString());
+        }
+
+        private void button_GetProducts_Click(object sender, EventArgs e)
+        {
+            //FormProducts formProducts = new FormProducts();
+            //formProducts.ShowDialog();
+
+            bool isInt = int.TryParse(textBox_id.Text, out int value);
+            int? categoryId = isInt ? value : (int?)null;
+            string prodName = textBox_ProductName.Text;
+
+
+
+            var formProducts = new FormProducts(categoryId, prodName);
+            formProducts.ShowDialog();
+        }
     }
 }

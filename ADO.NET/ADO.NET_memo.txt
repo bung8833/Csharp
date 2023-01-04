@@ -1,3 +1,4 @@
+2023 Jan03
 ADO.NET <- 底層
 
 Entity Framework <- MVC會教
@@ -30,6 +31,42 @@ JetBrain.Mono >=
 Source code pro
 
 專題每個畫面 一張A5 寫編號
+
+
+
+
+
+
+2023 Jan04
+
+針對SQL statement
+先在SQL Server寫好
+再貼到VS
+
+SqlDataReader
+一定要保持連線才能用，且傳回的是Data的索引值(較快)
+
+--------  <-- (一開始的位置
+1      |
+--------  <-- (每次Read往下移動
+2      |
+--------
+3      |
+--------
+4      |
+--------
+
+
+
+SQL語法 切記不要組合字串
+登入程式 寫法
+
+
+
+
+
+
+
 
 
 
