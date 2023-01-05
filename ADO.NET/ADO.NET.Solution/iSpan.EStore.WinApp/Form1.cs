@@ -119,9 +119,42 @@ namespace iSpan.EStore.WinApp
         
         private void button_CreateNews_Click(object sender, EventArgs e)
         {
-            //todo modify
             var createNews = new FormCreateNews();
             createNews.ShowDialog();
+        }
+
+        private void button_EditNews_Click(object sender, EventArgs e)
+        {
+            bool isInt = int.TryParse(textBox_NewsId.Text, out int newsId);
+            if (!isInt)
+            {
+                MessageBox.Show("請輸入正確的 News Id");
+                return;
+            }
+
+            var editNews = new FormEditNews(newsId);
+            editNews.ShowDialog();
+        }
+
+        private void button_DeleteNews_Click(object sender, EventArgs e)
+        {
+            bool isInt = int.TryParse(textBox_NewsId.Text, out int newsId);
+            if (!isInt)
+            {
+                MessageBox.Show("請輸入正確的 News Id");
+                return;
+            }
+
+            int rowsAffected = new NewsRepository().Delete(newsId);
+
+            if (rowsAffected > 0)
+            {
+                MessageBox.Show($"{rowsAffected}筆紀錄已刪除");
+            }
+            else
+            {
+                MessageBox.Show("沒有紀錄被刪除，可能此紀錄不存在");
+            }
         }
     }
 }

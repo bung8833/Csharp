@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7C94338C-9B4F-4A33-B1BF-DA2E6677826A}</ProjectGuid>
+    <ProjectGuid>{41721929-45CC-434C-B681-ADD00B17F20B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>iSpan.EStore.SqlDataLayer</RootNamespace>
-    <AssemblyName>iSpan.EStore.SqlDataLayer</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <RootNamespace>allenHw_buyChicken_dll</RootNamespace>
+    <AssemblyName>allenHw_buyChicken_dll</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
@@ -32,7 +32,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,12 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CategoryRepository.cs" />
-    <Compile Include="NewsRepository.cs" />
-    <Compile Include="ProductRepository.cs" />
-    <Compile Include="SqlDb.cs" />
+    <Compile Include="MyCal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SqlParameterBuilder.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

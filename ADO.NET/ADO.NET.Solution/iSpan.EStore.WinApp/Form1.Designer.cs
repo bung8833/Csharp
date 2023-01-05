@@ -39,6 +39,10 @@
             this.label_ProductName = new System.Windows.Forms.Label();
             this.textBox_ProductName = new System.Windows.Forms.TextBox();
             this.button_CreateNews = new System.Windows.Forms.Button();
+            this.button_EditNews = new System.Windows.Forms.Button();
+            this.label_NewsId = new System.Windows.Forms.Label();
+            this.textBox_NewsId = new System.Windows.Forms.TextBox();
+            this.button_DeleteNews = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_GetConnectionString
@@ -76,7 +80,7 @@
             // button_EditCategory
             // 
             this.button_EditCategory.Font = new System.Drawing.Font("微軟正黑體", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button_EditCategory.Location = new System.Drawing.Point(13, 153);
+            this.button_EditCategory.Location = new System.Drawing.Point(13, 115);
             this.button_EditCategory.Name = "button_EditCategory";
             this.button_EditCategory.Size = new System.Drawing.Size(260, 35);
             this.button_EditCategory.TabIndex = 4;
@@ -87,7 +91,7 @@
             // label_id
             // 
             this.label_id.AutoSize = true;
-            this.label_id.Location = new System.Drawing.Point(12, 120);
+            this.label_id.Location = new System.Drawing.Point(279, 122);
             this.label_id.Name = "label_id";
             this.label_id.Size = new System.Drawing.Size(101, 20);
             this.label_id.TabIndex = 9;
@@ -95,15 +99,15 @@
             // 
             // textBox_id
             // 
-            this.textBox_id.Location = new System.Drawing.Point(143, 117);
+            this.textBox_id.Location = new System.Drawing.Point(386, 119);
             this.textBox_id.Name = "textBox_id";
-            this.textBox_id.Size = new System.Drawing.Size(130, 31);
+            this.textBox_id.Size = new System.Drawing.Size(74, 31);
             this.textBox_id.TabIndex = 3;
             // 
             // button_ExecuteScalar
             // 
             this.button_ExecuteScalar.Font = new System.Drawing.Font("微軟正黑體", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button_ExecuteScalar.Location = new System.Drawing.Point(13, 194);
+            this.button_ExecuteScalar.Location = new System.Drawing.Point(13, 156);
             this.button_ExecuteScalar.Name = "button_ExecuteScalar";
             this.button_ExecuteScalar.Size = new System.Drawing.Size(260, 35);
             this.button_ExecuteScalar.TabIndex = 5;
@@ -114,26 +118,26 @@
             // button_GetProducts
             // 
             this.button_GetProducts.Font = new System.Drawing.Font("微軟正黑體", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button_GetProducts.Location = new System.Drawing.Point(13, 235);
+            this.button_GetProducts.Location = new System.Drawing.Point(13, 197);
             this.button_GetProducts.Name = "button_GetProducts";
             this.button_GetProducts.Size = new System.Drawing.Size(260, 35);
             this.button_GetProducts.TabIndex = 7;
-            this.button_GetProducts.Text = "顯示多筆Products";
+            this.button_GetProducts.Text = "讀取多筆Products";
             this.button_GetProducts.UseVisualStyleBackColor = true;
             this.button_GetProducts.Click += new System.EventHandler(this.button_GetProducts_Click);
             // 
             // label_ProductName
             // 
             this.label_ProductName.AutoSize = true;
-            this.label_ProductName.Location = new System.Drawing.Point(279, 244);
+            this.label_ProductName.Location = new System.Drawing.Point(279, 206);
             this.label_ProductName.Name = "label_ProductName";
-            this.label_ProductName.Size = new System.Drawing.Size(125, 20);
+            this.label_ProductName.Size = new System.Drawing.Size(120, 20);
             this.label_ProductName.TabIndex = 10;
-            this.label_ProductName.Text = "Product Name: ";
+            this.label_ProductName.Text = "Product Name:";
             // 
             // textBox_ProductName
             // 
-            this.textBox_ProductName.Location = new System.Drawing.Point(410, 241);
+            this.textBox_ProductName.Location = new System.Drawing.Point(405, 203);
             this.textBox_ProductName.Name = "textBox_ProductName";
             this.textBox_ProductName.Size = new System.Drawing.Size(130, 31);
             this.textBox_ProductName.TabIndex = 6;
@@ -141,19 +145,61 @@
             // button_CreateNews
             // 
             this.button_CreateNews.Font = new System.Drawing.Font("微軟正黑體", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button_CreateNews.Location = new System.Drawing.Point(13, 298);
+            this.button_CreateNews.Location = new System.Drawing.Point(13, 260);
             this.button_CreateNews.Name = "button_CreateNews";
             this.button_CreateNews.Size = new System.Drawing.Size(260, 35);
             this.button_CreateNews.TabIndex = 8;
-            this.button_CreateNews.Text = "Create News";
+            this.button_CreateNews.Text = "新增News";
             this.button_CreateNews.UseVisualStyleBackColor = true;
             this.button_CreateNews.Click += new System.EventHandler(this.button_CreateNews_Click);
+            // 
+            // button_EditNews
+            // 
+            this.button_EditNews.Font = new System.Drawing.Font("微軟正黑體", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button_EditNews.Location = new System.Drawing.Point(13, 323);
+            this.button_EditNews.Name = "button_EditNews";
+            this.button_EditNews.Size = new System.Drawing.Size(124, 35);
+            this.button_EditNews.TabIndex = 11;
+            this.button_EditNews.Text = "編輯News";
+            this.button_EditNews.UseVisualStyleBackColor = true;
+            this.button_EditNews.Click += new System.EventHandler(this.button_EditNews_Click);
+            // 
+            // label_NewsId
+            // 
+            this.label_NewsId.AutoSize = true;
+            this.label_NewsId.Location = new System.Drawing.Point(279, 332);
+            this.label_NewsId.Name = "label_NewsId";
+            this.label_NewsId.Size = new System.Drawing.Size(77, 20);
+            this.label_NewsId.TabIndex = 10;
+            this.label_NewsId.Text = "News Id:";
+            // 
+            // textBox_NewsId
+            // 
+            this.textBox_NewsId.Location = new System.Drawing.Point(362, 329);
+            this.textBox_NewsId.Name = "textBox_NewsId";
+            this.textBox_NewsId.Size = new System.Drawing.Size(74, 31);
+            this.textBox_NewsId.TabIndex = 12;
+            // 
+            // button_DeleteNews
+            // 
+            this.button_DeleteNews.Font = new System.Drawing.Font("微軟正黑體", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button_DeleteNews.Location = new System.Drawing.Point(149, 323);
+            this.button_DeleteNews.Name = "button_DeleteNews";
+            this.button_DeleteNews.Size = new System.Drawing.Size(124, 35);
+            this.button_DeleteNews.TabIndex = 13;
+            this.button_DeleteNews.Text = "刪除News";
+            this.button_DeleteNews.UseVisualStyleBackColor = true;
+            this.button_DeleteNews.Click += new System.EventHandler(this.button_DeleteNews_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(988, 549);
+            this.Controls.Add(this.button_DeleteNews);
+            this.Controls.Add(this.textBox_NewsId);
+            this.Controls.Add(this.button_EditNews);
+            this.Controls.Add(this.label_NewsId);
             this.Controls.Add(this.label_ProductName);
             this.Controls.Add(this.textBox_ProductName);
             this.Controls.Add(this.label_id);
@@ -186,6 +232,10 @@
         private System.Windows.Forms.Label label_ProductName;
         private System.Windows.Forms.TextBox textBox_ProductName;
         private System.Windows.Forms.Button button_CreateNews;
+        private System.Windows.Forms.Button button_EditNews;
+        private System.Windows.Forms.Label label_NewsId;
+        private System.Windows.Forms.TextBox textBox_NewsId;
+        private System.Windows.Forms.Button button_DeleteNews;
     }
 }
 

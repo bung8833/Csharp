@@ -50,10 +50,70 @@ namespace iSpan.EStore.SqlDataLayer
             return sb.ToString();
         }
 
-        public static SqlConnection GetConnection(string keyOfConnString = "default")
+        // OverLoading
+        public static SqlConnection GetConnection()
+        {
+            return GetConnection("default");
+        }
+
+        public static SqlConnection GetConnection(string keyOfConnString)
         {
             string connStr = GetConnectionString(keyOfConnString);
             return new SqlConnection(connStr); // 建立一個SqlConnection物件並傳回
+        }
+
+        /// <summary>
+        /// 運用委派 傳入SqlConnection
+        /// </summary>
+        /// <param name="funcConnection"></param>
+        /// <param name="sql"></param>
+        /// <param name="parameters"></param>
+        /// <returns></returns>
+        public static int UpdateOrDelete(Func<SqlConnection> funcConnection, string sql, params SqlParameter[] parameters)
+        {
+            using (var conn = funcConnection())
+            {
+                using (var cmd = new SqlCommand(sql, conn))
+                {
+                    conn.Open();
+
+                    if (parameters != null)
+                    {
+                        cmd.Parameters.AddRange(parameters);
+                    }
+
+                    return cmd.ExecuteNonQuery(); // 傳回被異動的筆數
+                }
+            }
+        }
+
+        /// <summary>
+        /// 運用委派 傳入SqlConnection
+        /// </summary>
+        /// <param name="funcConnection"></param>
+        /// <param name="sql"></param>
+        /// <param name="parameters"></param>
+        /// <returns></returns>
+        public static int Create(Func<SqlConnection> funcConnection, string sql, params SqlParameter[] parameters)
+        {
+            sql += ";SELECT SCOPE_IDENTITY();";
+
+            using (var conn = funcConnection())
+            {
+                using (var cmd = conn.CreateCommand())
+                {
+                    conn.Open();
+                    cmd.CommandText = sql;
+
+                    if (parameters != null)
+                    {
+                        cmd.Parameters.AddRange(parameters);
+                    }
+
+                    // 傳回受影響資料的id
+                    return Convert.ToInt32(cmd.ExecuteScalar());
+                }
+            }
         }
     }
 }

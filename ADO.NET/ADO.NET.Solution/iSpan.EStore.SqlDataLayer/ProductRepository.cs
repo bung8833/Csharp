@@ -27,14 +27,21 @@ INNER JOIN Categories as C ON P.CategoryId = C.Id";
             #region WHERE子句
             string where = String.Empty;
 
+            // Allen Jan 5 用來存放不特定數量的 SqlParameter
+            var parameters = new List<SqlParameter>();
+
             if (categoryId.HasValue)
             {
                 where += $" AND P.CategoryId = {categoryId.Value}";
             }
             if (String.IsNullOrEmpty(productName) == false)
             {
-                where += $" AND P.Name LIKE '%{productName}%'";
+                // Allen Jan 5
+                //where += $" AND P.Name LIKE '%{productName}%'";
+                where += $" AND P.Name LIKE '%' + @productName + '%'";
+                parameters.Add(new SqlParameter("@productName", System.Data.SqlDbType.NVarChar, 50) { Value = productName });
             }
+
             where = where == String.Empty ? where : where = " WHERE " + where.Substring(5);
             //where = where == String.Empty ? where : " WHERE " + where.Substring(5);
             sql += '\n' + where;
@@ -46,10 +53,14 @@ INNER JOIN Categories as C ON P.CategoryId = C.Id";
 
             using (SqlConnection conn = SqlDb.GetConnection())
             {
-                using (var cmd = conn.CreateCommand())
+                using (SqlCommand cmd = conn.CreateCommand())
                 {
                     conn.Open();
                     cmd.CommandText = sql;
+
+                    // Allen Jan 5 加入參數
+                    cmd.Parameters.AddRange(parameters.ToArray());
+
                     var reader = cmd.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
 
                     while (reader.Read())

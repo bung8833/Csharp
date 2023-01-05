@@ -1,4 +1,4 @@
-2023 Jan03
+2023 Jan 03
 ADO.NET <- 底層
 
 Entity Framework <- MVC會教
@@ -37,7 +37,7 @@ Source code pro
 
 
 
-2023 Jan04
+2023 Jan 04
 
 針對SQL statement
 先在SQL Server寫好
@@ -77,6 +77,90 @@ DateTime.AddDays(1)
 筆記:
 notion
 HackMD
+
+
+
+
+
+
+
+
+
+
+2023 Jan 05
+
+寫在Class裡面
+不要有magic number
+不要把運算和呈現(print)寫在一起 否則無法給別人(如winForm)
+較好的方式: 傳回 string 讓呼叫者print使用
+
+重視：維護性 可擴展性
+變數名稱 好懂
+變數、欄位要小寫開頭
+
+
+// decimal 小數點用十進位為計算
+
+
+---------------------------
+
+Class Plan { // 購買計畫
+	RoosterCount {get; set;}
+	HenCount {get; set;}
+	ChickCount {get; set;}
+}
+
+Class Product {
+	decimal 
+}
+
+List<Plan> Calc(int totalCount,
+		int budget,
+		Product product)
+
+---------------------------
+
+
+SqlDbType.Bit
+0 or 1  -->  true or false
+
+
+SQL @參數名稱
+C# 變數不寫底線
+
+委派
+Func<SqlConnection>
+
+扭蛋機 作業
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

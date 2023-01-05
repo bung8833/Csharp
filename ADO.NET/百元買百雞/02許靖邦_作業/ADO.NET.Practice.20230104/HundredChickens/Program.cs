@@ -10,16 +10,6 @@ namespace HundredChickens
     {
         static void Main(string[] args)
         {
-            List<Plan> CalcMethod()
-            {
-                Plan purchasePlan = new Plan();
-                List<Plan> purchasePlanList = new List<Plan>();
-
-                return purchasePlanList;
-            }
-
-
-            #region
             int x; // 公雞
             int y; // 母雞
             int z; // z代表要買多少組3隻的小雞
@@ -44,21 +34,8 @@ namespace HundredChickens
                     }
                 }
             }
-            #endregion
 
-            Console.ReadLine();
+            Console.ReadKey();
         }
-    }
-
-    public class Plan
-    {
-        public int RoosterCount { get; set; }
-        public int HenCount { get; set; }
-        public int ChickCount { get; set; }
-    }
-
-    public class Product
-    {
-        //todo
     }
 }

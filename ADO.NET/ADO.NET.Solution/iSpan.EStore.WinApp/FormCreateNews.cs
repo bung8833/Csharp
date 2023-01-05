@@ -20,6 +20,22 @@ namespace iSpan.EStore.WinApp
 
         private void button_Save_Click(object sender, EventArgs e)
         {
+            //todo 驗證
+            bool titleIsNull = string.IsNullOrEmpty(textBox_Title.Text);
+            bool descriptionIsNull = string.IsNullOrEmpty(textBox_Description.Text);
+
+            if (descriptionIsNull)
+            {
+                MessageBox.Show($"請輸入內容");
+                return;
+            }
+
+            if (titleIsNull)
+            {
+                MessageBox.Show($"請輸入標題");
+                return;
+            }
+
             News news = new News()
             {
                 Title = textBox_Title.Text,
