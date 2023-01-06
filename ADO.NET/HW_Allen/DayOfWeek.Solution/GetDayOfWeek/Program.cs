@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,14 +9,15 @@ namespace GetDayOfWeek
 {
     internal class Program
     {
-        // 題目: 找出2023年裡 所有是星期三的日期
+        // 題目: 找出今年 所有是星期三的日期
         
         static void Main(string[] args)
         {
+            int targetYear = DateTime.Today.Year; // 範圍是今年
             DayOfWeek targetDayOfWeek = DayOfWeek.Wednesday; // 指定找出星期三
-            
-            DateTime startingDay = new DateTime(2023, 1, 1);
-            DateTime endingDay = new DateTime(2023, 12, 31);
+
+            DateTime startingDay = new DateTime(targetYear, 1, 1);
+            DateTime endingDay = new DateTime(targetYear, 12, 31);
 
 
             List<DateTime> dates = DayOfWeekCalculation.GetDateByDayOfWeek(targetDayOfWeek, startingDay, endingDay);
