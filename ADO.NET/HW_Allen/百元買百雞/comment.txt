@@ -1,9 +1,0 @@
-class/method 命名最好要易懂, 若不行, 就加註解, 註解(class/method)通常含What, Why, How
-程式裡,不要有magic number
-
-method裡,最好不要Console.Write,因為日後也許會被win form, mvc 叫用,不一定只是console app
-變數小寫開頭, 不要縮寫到不易閱讀
-
-不要機關算盡
-
-變數名稱要有意義, x,y,z; a,b, value, list, items, myNumber 都是沒意義的名稱
