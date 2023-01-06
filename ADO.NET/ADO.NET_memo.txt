@@ -158,6 +158,12 @@ SnagIt 截圖
 程式碼產生器
 List<String> {xxx, yyy, zzz}
 
+SQL 語法寫錯
+debug方式 執行後檢視sql 貼到記事本檢查
+
+SQL Server
+table設計 將Id(及主鍵)的
+識別規格開啟 自動替主鍵編上不重複且遞增的號碼
 
 
 

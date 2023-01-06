@@ -44,7 +44,7 @@
             // 
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("新細明體", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.labelName.Location = new System.Drawing.Point(30, 34);
+            this.labelName.Location = new System.Drawing.Point(20, 28);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(59, 20);
             this.labelName.TabIndex = 12;
@@ -52,14 +52,14 @@
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(106, 33);
+            this.textBoxName.Location = new System.Drawing.Point(96, 27);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(109, 29);
             this.textBoxName.TabIndex = 11;
             // 
             // textBoxAccount
             // 
-            this.textBoxAccount.Location = new System.Drawing.Point(329, 33);
+            this.textBoxAccount.Location = new System.Drawing.Point(319, 27);
             this.textBoxAccount.Name = "textBoxAccount";
             this.textBoxAccount.Size = new System.Drawing.Size(109, 29);
             this.textBoxAccount.TabIndex = 11;
@@ -68,7 +68,7 @@
             // 
             this.labelAccount.AutoSize = true;
             this.labelAccount.Font = new System.Drawing.Font("新細明體", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.labelAccount.Location = new System.Drawing.Point(236, 34);
+            this.labelAccount.Location = new System.Drawing.Point(226, 28);
             this.labelAccount.Name = "labelAccount";
             this.labelAccount.Size = new System.Drawing.Size(76, 20);
             this.labelAccount.TabIndex = 12;
@@ -76,7 +76,7 @@
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(552, 33);
+            this.textBoxEmail.Location = new System.Drawing.Point(542, 27);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(109, 29);
             this.textBoxEmail.TabIndex = 11;
@@ -85,7 +85,7 @@
             // 
             this.labelEmail.AutoSize = true;
             this.labelEmail.Font = new System.Drawing.Font("新細明體", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.labelEmail.Location = new System.Drawing.Point(477, 34);
+            this.labelEmail.Location = new System.Drawing.Point(467, 28);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(58, 20);
             this.labelEmail.TabIndex = 12;
@@ -94,7 +94,7 @@
             // buttonSearch
             // 
             this.buttonSearch.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.buttonSearch.Location = new System.Drawing.Point(732, 33);
+            this.buttonSearch.Location = new System.Drawing.Point(722, 27);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(124, 35);
             this.buttonSearch.TabIndex = 14;
@@ -105,18 +105,18 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(34, 107);
+            this.dataGridView1.Location = new System.Drawing.Point(24, 101);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 31;
-            this.dataGridView1.Size = new System.Drawing.Size(1141, 300);
+            this.dataGridView1.Size = new System.Drawing.Size(1194, 355);
             this.dataGridView1.TabIndex = 15;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // buttonAddNew
             // 
             this.buttonAddNew.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.buttonAddNew.Location = new System.Drawing.Point(1051, 427);
+            this.buttonAddNew.Location = new System.Drawing.Point(1041, 462);
             this.buttonAddNew.Name = "buttonAddNew";
             this.buttonAddNew.Size = new System.Drawing.Size(124, 35);
             this.buttonAddNew.TabIndex = 14;
@@ -128,7 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1260, 524);
+            this.ClientSize = new System.Drawing.Size(1246, 533);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonAddNew);
             this.Controls.Add(this.buttonSearch);

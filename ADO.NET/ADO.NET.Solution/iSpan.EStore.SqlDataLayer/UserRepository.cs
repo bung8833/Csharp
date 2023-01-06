@@ -17,7 +17,8 @@ namespace iSpan.EStore.SqlDataLayer
 
         public int Create(UserEntity entity)
         {
-            string sql = $@"INSERT INTO {_tableName}
+            string sql = $@"
+INSERT INTO {_tableName}
 (Name, Account, Password, DateOfBirth, Height, Email)
 VALUES
 (@Name, @Account, @Password, @DateOfBirth, @Height, @Email)";
@@ -32,7 +33,20 @@ VALUES
                 .AddNVarChar("Email", entity.Email, 256)
                 .Build();
 
-            int newId = SqlDb.Create(funcConn, sql, parameters);
+            //int newId = SqlDb.Create(funcConn, sql, parameters);
+
+            int newId = 0;
+            try
+            {
+                newId = SqlDb.Create(funcConn, sql, parameters);
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message.Contains("IX_Users"))
+                {
+                    throw new Exception("您新增的帳號已存在, 請修改後再試一次", ex);
+                }
+            }
             return newId;
         }
 
@@ -60,7 +74,7 @@ Account = @Account,
 Password = @Password,
 DateOfBirth = @DateOfBirth,
 Height = @Height,
-Email = @Email,
+Email = @Email
 WHERE Id = {entity.Id}";
 
 
@@ -82,7 +96,7 @@ WHERE Id = {entity.Id}";
             #region 生成 SQL Statement
             string sql = $@"
 SELECT *
-FROM {_tableName}";
+FROM {_tableName} ";
 
             #region 生成 WHERE 子句
             string where = String.Empty;
@@ -104,8 +118,8 @@ FROM {_tableName}";
                 where += $" AND Email LIKE '%' + @Email + '%'";
                 parameters.Add(new SqlParameter("Email", System.Data.SqlDbType.NVarChar, 256) { Value = email });
             }
-
-            where += where == String.Empty ? where : where = " WHERE " + where.Substring(5);
+            //todo bug found
+            where = where == String.Empty ? where : where = " WHERE " + where.Substring(5);
             sql += where;
             #endregion
             #endregion

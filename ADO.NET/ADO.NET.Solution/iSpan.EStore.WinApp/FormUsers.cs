@@ -65,7 +65,7 @@ namespace iSpan.EStore.WinApp
         private void buttonAddNew_Click(object sender, EventArgs e)
         {
             var createUsers = new FormCreateUser();
-            //createUsers.Owner = 
+            createUsers.Owner = this;
             createUsers.ShowDialog();
         }
 
@@ -77,6 +77,7 @@ namespace iSpan.EStore.WinApp
             int userId = _users[e.RowIndex].Id;
 
             var editUser = new FormEditUser(userId);
+            editUser.Owner = this;
             editUser.ShowDialog();
         }
     }

@@ -31,7 +31,6 @@ namespace iSpan.EStore.WinApp
         private UserEntity GetModel()
             => new UserEntity
             {
-                //Id = this.id
                 Account = textBoxAccount.Text,
                 Password = textBoxPassword.Text,
                 Name = textBoxName.Text,
@@ -40,9 +39,21 @@ namespace iSpan.EStore.WinApp
                 Height = this.UserHeight
             };
 
+        //todo 驗證
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            new UserRepository().Create(GetModel());
+            try
+            {
+                new UserRepository().Create(GetModel());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("新增失敗\r\n" + ex.Message);
+            }
+            
+            
+
+
 
             IGridContainer container = this.Owner as IGridContainer;
             if (container != null)
