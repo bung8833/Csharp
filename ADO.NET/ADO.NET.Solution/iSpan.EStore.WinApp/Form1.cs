@@ -36,6 +36,7 @@ namespace iSpan.EStore.WinApp
             // 看螢幕截圖
             SqlDb.ApplicationName = "conn test"; // 到profiler看連線情形
             SqlDb.Pooling = this.checkBox_Pooling.Checked; // true or false
+            SqlDb.ConnectionTimeout = 5;
 
             // using 避免code有錯 走不到close()
             using (SqlConnection conn = SqlDb.GetConnection("default"))

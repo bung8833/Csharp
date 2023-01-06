@@ -11,6 +11,8 @@ namespace ISpan.PracticeQuestion.BuyHundredChicken
 		static void Main(string[] args)
 		{
 			ClacChickenNum4();
+
+			Console.ReadLine();
 		}
 		//public static void ClacChickenNum()
 		//{
@@ -93,28 +95,28 @@ namespace ISpan.PracticeQuestion.BuyHundredChicken
 			
 			const int cockPrice = 5;
 			const int henPrice = 4;
-			const decimal chickenPrice = 1 / 3.0; // 十進位數
+			const decimal chickenPrice = (decimal)(1 / 3.0); // 十進位數
 			
-			const int budget =150; // 預算
-			int target = 200; // 總共要買幾隻雞
+			const int budget =100; // 預算
+			int targetCount = 100; // 總共要買幾隻雞
 
-			int count = 0;
-			int maxCock =  budget / CockPrice; // 最多可以購買的公雞數量
+			int loopCount = 0;
+			int maxCock =  budget / cockPrice; // 最多可以購買的公雞數量
 						
-			for (Cock = 1; Cock <=maxCock; Cock++)
+			for (cock = 1; cock <=maxCock; cock++)
 			{
-				int maxHen = (budget - (Cock * CockPrice)) / HenPrice;
-				for (Hen = 1; Hen <= maxHen; Hen++)
+                int maxHen = (budget - (cock * cockPrice)) / henPrice;
+				for (hen = 1; hen <= maxHen; hen++)
 				{
-					Chicken = target - Cock - Hen;
-					if ((Cock * CockPrice) + (Hen * HenPrice) + (Chicken * ChickenPrice) == budget)
+					chicken = targetCount - cock - hen;
+                    if ((cock * cockPrice) + (hen * henPrice) + (int)(chicken * chickenPrice) == budget)
 					{
-						Console.WriteLine($"找到了: 公雞:{Cock}隻，母雞{Hen}隻，小雞{Chicken}隻");
+						Console.WriteLine($"找到了: 公雞:{cock}隻，母雞{hen}隻，小雞{chicken}隻");
 					}
-					count++;
+					loopCount++;
 				}
 			}
-			Console.WriteLine($"{count}");
+			Console.WriteLine($"{loopCount}");
 		}
 
 	}

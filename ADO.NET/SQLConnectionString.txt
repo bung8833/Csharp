@@ -1,4 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+connectionString="Server=.;Database=iSpan202301;User Id=sa5;Password=sa5;
+connectionString="Server=RICHARD\SQLEXPRESS;Database=iSpan202301;User Id=sa5;Password=sa5;
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8" ?>
 <configuration>
     <startup> 
         <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.7.2" />

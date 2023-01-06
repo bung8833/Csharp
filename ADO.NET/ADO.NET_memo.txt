@@ -165,6 +165,11 @@ SQL Server
 table設計 將Id(及主鍵)的
 識別規格開啟 自動替主鍵編上不重複且遞增的號碼
 
+SQL Server
+Server Name
+Server=.;
+Server=RICHARD\SQLEXPRESS;
+
 
 
 

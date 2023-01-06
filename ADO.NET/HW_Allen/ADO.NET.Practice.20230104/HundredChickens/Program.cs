@@ -10,13 +10,13 @@ namespace HundredChickens
     {
         static void Main(string[] args)
         {
-            List<Plan> CalcMethod()
-            {
-                Plan purchasePlan = new Plan();
-                List<Plan> purchasePlanList = new List<Plan>();
+            //List<Plan> CalcMethod()
+            //{
+            //    Plan purchasePlan = new Plan();
+            //    List<Plan> purchasePlanList = new List<Plan>();
 
-                return purchasePlanList;
-            }
+            //    return purchasePlanList;
+            //}
 
 
             #region
@@ -24,6 +24,7 @@ namespace HundredChickens
             int y; // 母雞
             int z; // z代表要買多少組3隻的小雞
             string result = String.Empty;
+            //int loopCount = 0;
 
             // 公雞  5元/ 隻
             // 母雞  3元/ 隻
@@ -42,8 +43,12 @@ namespace HundredChickens
                         result = $"公雞: {x, 2}隻\t母雞: {y, 2}隻\t小雞: {3*z, 2}隻({z, 2}組)";
                         Console.WriteLine(result);
                     }
+
+                    //loopCount++;
                 }
             }
+
+            //Console.WriteLine(loopCount.ToString());
             #endregion
 
             Console.ReadLine();

@@ -44,6 +44,7 @@
             this.textBox_NewsId = new System.Windows.Forms.TextBox();
             this.button_DeleteNews = new System.Windows.Forms.Button();
             this.buttonMaintainUsers = new System.Windows.Forms.Button();
+            this.labelInstrConnString = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_GetConnectionString
@@ -203,11 +204,21 @@
             this.buttonMaintainUsers.UseVisualStyleBackColor = true;
             this.buttonMaintainUsers.Click += new System.EventHandler(this.buttonMaintainUsers_Click);
             // 
+            // labelInstrConnString
+            // 
+            this.labelInstrConnString.AutoSize = true;
+            this.labelInstrConnString.Location = new System.Drawing.Point(279, 22);
+            this.labelInstrConnString.Name = "labelInstrConnString";
+            this.labelInstrConnString.Size = new System.Drawing.Size(351, 20);
+            this.labelInstrConnString.TabIndex = 15;
+            this.labelInstrConnString.Text = "Server=.; Server=RICHARD\\SQLEXPRESS;";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(988, 549);
+            this.Controls.Add(this.labelInstrConnString);
             this.Controls.Add(this.buttonMaintainUsers);
             this.Controls.Add(this.button_DeleteNews);
             this.Controls.Add(this.textBox_NewsId);
@@ -250,6 +261,7 @@
         private System.Windows.Forms.TextBox textBox_NewsId;
         private System.Windows.Forms.Button button_DeleteNews;
         private System.Windows.Forms.Button buttonMaintainUsers;
+        private System.Windows.Forms.Label labelInstrConnString;
     }
 }
 
