@@ -145,6 +145,35 @@ namespace iSpan.EStore.WinApp
                 return;
             }
 
+            // 檢查是否有這筆紀錄
+            News news = new NewsRepository().GetNews(newsId);
+            if (news == null)
+            {
+                MessageBox.Show("Record not found");
+                //this.DialogResult = DialogResult.Cancel; // 會關閉表單
+                return;
+            }
+
+            //todo 顯示這筆紀錄的資訊
+            //var frm = new FormEditNews(newsId);
+            //frm.ShowDialog();
+
+            //// bind data
+            //textBox_Title.Text = news.Title;
+            //textBox_Description.Text = news.Description;
+            //label_ModifiedTime.Text = news.ModifiedTime.ToString("yyyy/MM/dd HH:mm:ss");
+
+            // 再次確認是否刪除
+            DialogResult result;
+            result = MessageBox.Show("確定要刪除這筆紀錄嗎？", "刪除紀錄", MessageBoxButtons.YesNo);
+            if (result != DialogResult.Yes)
+            {
+                return;
+            }
+
+
+
+            // 刪除紀錄
             int rowsAffected = new NewsRepository().Delete(newsId);
 
             if (rowsAffected > 0)
@@ -155,6 +184,12 @@ namespace iSpan.EStore.WinApp
             {
                 MessageBox.Show("沒有紀錄被刪除，可能此紀錄不存在");
             }
+        }
+
+        private void buttonMaintainUsers_Click(object sender, EventArgs e)
+        {
+            var users = new FormUsers();
+            users.ShowDialog();
         }
     }
 }

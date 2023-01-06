@@ -43,6 +43,7 @@
             this.label_NewsId = new System.Windows.Forms.Label();
             this.textBox_NewsId = new System.Windows.Forms.TextBox();
             this.button_DeleteNews = new System.Windows.Forms.Button();
+            this.buttonMaintainUsers = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_GetConnectionString
@@ -156,7 +157,7 @@
             // button_EditNews
             // 
             this.button_EditNews.Font = new System.Drawing.Font("微軟正黑體", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button_EditNews.Location = new System.Drawing.Point(13, 323);
+            this.button_EditNews.Location = new System.Drawing.Point(13, 301);
             this.button_EditNews.Name = "button_EditNews";
             this.button_EditNews.Size = new System.Drawing.Size(124, 35);
             this.button_EditNews.TabIndex = 11;
@@ -167,7 +168,7 @@
             // label_NewsId
             // 
             this.label_NewsId.AutoSize = true;
-            this.label_NewsId.Location = new System.Drawing.Point(279, 332);
+            this.label_NewsId.Location = new System.Drawing.Point(279, 310);
             this.label_NewsId.Name = "label_NewsId";
             this.label_NewsId.Size = new System.Drawing.Size(77, 20);
             this.label_NewsId.TabIndex = 10;
@@ -175,7 +176,7 @@
             // 
             // textBox_NewsId
             // 
-            this.textBox_NewsId.Location = new System.Drawing.Point(362, 329);
+            this.textBox_NewsId.Location = new System.Drawing.Point(362, 307);
             this.textBox_NewsId.Name = "textBox_NewsId";
             this.textBox_NewsId.Size = new System.Drawing.Size(74, 31);
             this.textBox_NewsId.TabIndex = 12;
@@ -183,7 +184,7 @@
             // button_DeleteNews
             // 
             this.button_DeleteNews.Font = new System.Drawing.Font("微軟正黑體", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button_DeleteNews.Location = new System.Drawing.Point(149, 323);
+            this.button_DeleteNews.Location = new System.Drawing.Point(149, 301);
             this.button_DeleteNews.Name = "button_DeleteNews";
             this.button_DeleteNews.Size = new System.Drawing.Size(124, 35);
             this.button_DeleteNews.TabIndex = 13;
@@ -191,11 +192,23 @@
             this.button_DeleteNews.UseVisualStyleBackColor = true;
             this.button_DeleteNews.Click += new System.EventHandler(this.button_DeleteNews_Click);
             // 
+            // buttonMaintainUsers
+            // 
+            this.buttonMaintainUsers.Font = new System.Drawing.Font("微軟正黑體", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.buttonMaintainUsers.Location = new System.Drawing.Point(13, 369);
+            this.buttonMaintainUsers.Name = "buttonMaintainUsers";
+            this.buttonMaintainUsers.Size = new System.Drawing.Size(260, 35);
+            this.buttonMaintainUsers.TabIndex = 14;
+            this.buttonMaintainUsers.Text = "Maintain Users";
+            this.buttonMaintainUsers.UseVisualStyleBackColor = true;
+            this.buttonMaintainUsers.Click += new System.EventHandler(this.buttonMaintainUsers_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(988, 549);
+            this.Controls.Add(this.buttonMaintainUsers);
             this.Controls.Add(this.button_DeleteNews);
             this.Controls.Add(this.textBox_NewsId);
             this.Controls.Add(this.button_EditNews);
@@ -236,6 +249,7 @@
         private System.Windows.Forms.Label label_NewsId;
         private System.Windows.Forms.TextBox textBox_NewsId;
         private System.Windows.Forms.Button button_DeleteNews;
+        private System.Windows.Forms.Button buttonMaintainUsers;
     }
 }
 

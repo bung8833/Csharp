@@ -62,14 +62,10 @@ namespace iSpan.EStore.SqlDataLayer
             return new SqlConnection(connStr); // 建立一個SqlConnection物件並傳回
         }
 
-        /// <summary>
-        /// 運用委派 傳入SqlConnection
-        /// </summary>
-        /// <param name="funcConnection"></param>
-        /// <param name="sql"></param>
-        /// <param name="parameters"></param>
-        /// <returns></returns>
-        public static int UpdateOrDelete(Func<SqlConnection> funcConnection, string sql, params SqlParameter[] parameters)
+
+
+        public static int UpdateOrDelete(Func<SqlConnection> funcConnection, 
+                                         string sql, params SqlParameter[] parameters)
         {
             using (var conn = funcConnection())
             {
@@ -87,14 +83,9 @@ namespace iSpan.EStore.SqlDataLayer
             }
         }
 
-        /// <summary>
-        /// 運用委派 傳入SqlConnection
-        /// </summary>
-        /// <param name="funcConnection"></param>
-        /// <param name="sql"></param>
-        /// <param name="parameters"></param>
-        /// <returns></returns>
-        public static int Create(Func<SqlConnection> funcConnection, string sql, params SqlParameter[] parameters)
+
+        public static int Create(Func<SqlConnection> funcConnection, 
+                                 string sql, params SqlParameter[] parameters)
         {
             sql += ";SELECT SCOPE_IDENTITY();";
 
@@ -115,5 +106,74 @@ namespace iSpan.EStore.SqlDataLayer
                 }
             }
         }
+
+
+        /// <summary>
+        /// 叫用時有時不須指名T 因為VS能猜到型別
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="funcConnection"></param>
+        /// <param name="funcAssembler"></param>
+        /// <param name="sql"></param>
+        /// <param name="parameters"></param>
+        /// <returns></returns>
+        public static T Get<T>(Func<SqlConnection> funcConnection, Func<SqlDataReader, T> funcAssembler, 
+                               string sql, params SqlParameter[] parameters)
+        {
+            using (var conn = funcConnection())
+            {
+                using (var cmd = new SqlCommand(sql, conn))
+                {
+                    conn.Open();
+
+                    if (parameters != null)
+                    {
+                        cmd.Parameters.AddRange(parameters);
+                    }
+                    var reader = cmd.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
+
+                    return reader.Read()
+                    ? funcAssembler(reader)
+                    : default(T);
+                }
+            }
+        }
+
+
+        /// <summary>
+        /// 叫用時有時不須指名T 因為VS能猜到型別
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="funcConnection"></param>
+        /// <param name="funcAssembler"></param>
+        /// <param name="sql"></param>
+        /// <param name="parameters"></param>
+        /// <returns></returns>
+        public static IEnumerable<T> Search<T>(Func<SqlConnection> funcConnection, Func<SqlDataReader, T> funcAssembler, 
+                                               string sql, params SqlParameter[] parameters)
+        {
+            using (SqlConnection conn = funcConnection())
+            {
+                using (SqlCommand cmd = conn.CreateCommand())
+                {
+                    conn.Open();
+                    cmd.CommandText = sql;
+                    if (parameters != null)
+                    {
+                        cmd.Parameters.AddRange(parameters);
+                    }
+
+                    var reader = cmd.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
+
+                    while (reader.Read())
+                    {
+                        yield return funcAssembler(reader);
+                    }
+                }
+            }
+        }
+
+
+        // end of class SqlDb
     }
 }

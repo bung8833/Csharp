@@ -44,19 +44,21 @@ VALUES
         {
             var sql = $"SELECT * FROM News WHERE Id = {newsId}";
 
-            using (var conn = SqlDb.GetConnection())
-            {
-                using (var cmd = new SqlCommand(sql, conn))
-                {
-                    conn.Open();
+            return SqlDb.Get(SqlDb.GetConnection, News.GetInstance, sql);
 
-                    var reader = cmd.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
+            //using (var conn = SqlDb.GetConnection())
+            //{
+            //    using (var cmd = new SqlCommand(sql, conn))
+            //    {
+            //        conn.Open();
+
+            //        var reader = cmd.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
                     
-                    return reader.Read() 
-                    ? News.GetInstance(reader)
-                    : null;
-                }
-            }
+            //        return reader.Read() 
+            //        ? News.GetInstance(reader)
+            //        : null;
+            //    }
+            //}
         }
 
         public int Update(News entity)

@@ -20,7 +20,6 @@ namespace iSpan.EStore.WinApp
 
         private void button_Save_Click(object sender, EventArgs e)
         {
-            //todo 驗證
             bool titleIsNull = string.IsNullOrEmpty(textBox_Title.Text);
             bool descriptionIsNull = string.IsNullOrEmpty(textBox_Description.Text);
 

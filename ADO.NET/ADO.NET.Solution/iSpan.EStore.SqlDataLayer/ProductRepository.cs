@@ -51,25 +51,27 @@ INNER JOIN Categories as C ON P.CategoryId = C.Id";
 
             #endregion
 
-            using (SqlConnection conn = SqlDb.GetConnection())
-            {
-                using (SqlCommand cmd = conn.CreateCommand())
-                {
-                    conn.Open();
-                    cmd.CommandText = sql;
+            return SqlDb.Search(SqlDb.GetConnection, ProductDto.GetInstance, sql, parameters.ToArray());
 
-                    // Allen Jan 5 加入參數
-                    cmd.Parameters.AddRange(parameters.ToArray());
+            //using (SqlConnection conn = SqlDb.GetConnection())
+            //{
+            //    using (SqlCommand cmd = conn.CreateCommand())
+            //    {
+            //        conn.Open();
+            //        cmd.CommandText = sql;
 
-                    var reader = cmd.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
+            //        // Allen Jan 5 加入參數
+            //        cmd.Parameters.AddRange(parameters.ToArray());
 
-                    while (reader.Read())
-                    {
-                        var dto = ProductDto.GetInstance(reader);
-                        yield return dto;
-                    }
-                }
-            }
+            //        var reader = cmd.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
+
+            //        while (reader.Read())
+            //        {
+            //            var dto = ProductDto.GetInstance(reader);
+            //            yield return dto;
+            //        }
+            //    }
+            //}
 
             //using (SqlConnection conn = SqlDb.GetConnection("default"))
             //{
