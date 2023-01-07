@@ -64,7 +64,7 @@
             this.btn_GetConnection.Location = new System.Drawing.Point(13, 54);
             this.btn_GetConnection.Name = "btn_GetConnection";
             this.btn_GetConnection.Size = new System.Drawing.Size(260, 35);
-            this.btn_GetConnection.TabIndex = 1;
+            this.btn_GetConnection.TabIndex = 2;
             this.btn_GetConnection.Text = "GetConnection";
             this.btn_GetConnection.UseVisualStyleBackColor = true;
             this.btn_GetConnection.Click += new System.EventHandler(this.btn_GetConnection_Click);
@@ -75,7 +75,7 @@
             this.checkBox_Pooling.Location = new System.Drawing.Point(279, 62);
             this.checkBox_Pooling.Name = "checkBox_Pooling";
             this.checkBox_Pooling.Size = new System.Drawing.Size(91, 24);
-            this.checkBox_Pooling.TabIndex = 2;
+            this.checkBox_Pooling.TabIndex = 1;
             this.checkBox_Pooling.Text = "Pooling";
             this.checkBox_Pooling.UseVisualStyleBackColor = true;
             // 
@@ -96,7 +96,7 @@
             this.label_id.Location = new System.Drawing.Point(279, 122);
             this.label_id.Name = "label_id";
             this.label_id.Size = new System.Drawing.Size(101, 20);
-            this.label_id.TabIndex = 9;
+            this.label_id.TabIndex = 13;
             this.label_id.Text = "Catogory id:";
             // 
             // textBox_id
@@ -134,7 +134,7 @@
             this.label_ProductName.Location = new System.Drawing.Point(279, 206);
             this.label_ProductName.Name = "label_ProductName";
             this.label_ProductName.Size = new System.Drawing.Size(120, 20);
-            this.label_ProductName.TabIndex = 10;
+            this.label_ProductName.TabIndex = 14;
             this.label_ProductName.Text = "Product Name:";
             // 
             // textBox_ProductName
@@ -161,7 +161,7 @@
             this.button_EditNews.Location = new System.Drawing.Point(13, 301);
             this.button_EditNews.Name = "button_EditNews";
             this.button_EditNews.Size = new System.Drawing.Size(124, 35);
-            this.button_EditNews.TabIndex = 11;
+            this.button_EditNews.TabIndex = 10;
             this.button_EditNews.Text = "編輯News";
             this.button_EditNews.UseVisualStyleBackColor = true;
             this.button_EditNews.Click += new System.EventHandler(this.button_EditNews_Click);
@@ -172,7 +172,7 @@
             this.label_NewsId.Location = new System.Drawing.Point(279, 310);
             this.label_NewsId.Name = "label_NewsId";
             this.label_NewsId.Size = new System.Drawing.Size(77, 20);
-            this.label_NewsId.TabIndex = 10;
+            this.label_NewsId.TabIndex = 15;
             this.label_NewsId.Text = "News Id:";
             // 
             // textBox_NewsId
@@ -180,7 +180,7 @@
             this.textBox_NewsId.Location = new System.Drawing.Point(362, 307);
             this.textBox_NewsId.Name = "textBox_NewsId";
             this.textBox_NewsId.Size = new System.Drawing.Size(74, 31);
-            this.textBox_NewsId.TabIndex = 12;
+            this.textBox_NewsId.TabIndex = 9;
             // 
             // button_DeleteNews
             // 
@@ -188,7 +188,7 @@
             this.button_DeleteNews.Location = new System.Drawing.Point(149, 301);
             this.button_DeleteNews.Name = "button_DeleteNews";
             this.button_DeleteNews.Size = new System.Drawing.Size(124, 35);
-            this.button_DeleteNews.TabIndex = 13;
+            this.button_DeleteNews.TabIndex = 11;
             this.button_DeleteNews.Text = "刪除News";
             this.button_DeleteNews.UseVisualStyleBackColor = true;
             this.button_DeleteNews.Click += new System.EventHandler(this.button_DeleteNews_Click);
@@ -199,7 +199,7 @@
             this.buttonMaintainUsers.Location = new System.Drawing.Point(13, 369);
             this.buttonMaintainUsers.Name = "buttonMaintainUsers";
             this.buttonMaintainUsers.Size = new System.Drawing.Size(260, 35);
-            this.buttonMaintainUsers.TabIndex = 14;
+            this.buttonMaintainUsers.TabIndex = 12;
             this.buttonMaintainUsers.Text = "Maintain Users";
             this.buttonMaintainUsers.UseVisualStyleBackColor = true;
             this.buttonMaintainUsers.Click += new System.EventHandler(this.buttonMaintainUsers_Click);
@@ -210,7 +210,7 @@
             this.labelInstrConnString.Location = new System.Drawing.Point(707, 22);
             this.labelInstrConnString.Name = "labelInstrConnString";
             this.labelInstrConnString.Size = new System.Drawing.Size(269, 20);
-            this.labelInstrConnString.TabIndex = 15;
+            this.labelInstrConnString.TabIndex = 16;
             this.labelInstrConnString.Text = "Server=.; Server=.\\SQLEXPRESS;";
             // 
             // Form1

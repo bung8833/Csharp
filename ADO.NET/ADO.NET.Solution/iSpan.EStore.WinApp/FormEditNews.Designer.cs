@@ -44,7 +44,7 @@
             this.textBox_Description.Multiline = true;
             this.textBox_Description.Name = "textBox_Description";
             this.textBox_Description.Size = new System.Drawing.Size(452, 190);
-            this.textBox_Description.TabIndex = 6;
+            this.textBox_Description.TabIndex = 1;
             // 
             // textBox_Title
             // 
@@ -52,7 +52,7 @@
             this.textBox_Title.Location = new System.Drawing.Point(126, 25);
             this.textBox_Title.Name = "textBox_Title";
             this.textBox_Title.Size = new System.Drawing.Size(452, 36);
-            this.textBox_Title.TabIndex = 5;
+            this.textBox_Title.TabIndex = 0;
             // 
             // label_Description
             // 
@@ -60,7 +60,7 @@
             this.label_Description.Location = new System.Drawing.Point(29, 89);
             this.label_Description.Name = "label_Description";
             this.label_Description.Size = new System.Drawing.Size(93, 18);
-            this.label_Description.TabIndex = 9;
+            this.label_Description.TabIndex = 4;
             this.label_Description.Text = "Description:";
             // 
             // label_Title
@@ -69,7 +69,7 @@
             this.label_Title.Location = new System.Drawing.Point(29, 28);
             this.label_Title.Name = "label_Title";
             this.label_Title.Size = new System.Drawing.Size(46, 18);
-            this.label_Title.TabIndex = 8;
+            this.label_Title.TabIndex = 3;
             this.label_Title.Text = "Title:";
             // 
             // button_Update
@@ -77,7 +77,7 @@
             this.button_Update.Location = new System.Drawing.Point(503, 301);
             this.button_Update.Name = "button_Update";
             this.button_Update.Size = new System.Drawing.Size(75, 36);
-            this.button_Update.TabIndex = 7;
+            this.button_Update.TabIndex = 2;
             this.button_Update.Text = "Update";
             this.button_Update.UseVisualStyleBackColor = true;
             this.button_Update.Click += new System.EventHandler(this.button_Update_Click);
@@ -88,7 +88,7 @@
             this.label_InstructionModifiedTime.Location = new System.Drawing.Point(12, 310);
             this.label_InstructionModifiedTime.Name = "label_InstructionModifiedTime";
             this.label_InstructionModifiedTime.Size = new System.Drawing.Size(85, 18);
-            this.label_InstructionModifiedTime.TabIndex = 10;
+            this.label_InstructionModifiedTime.TabIndex = 5;
             this.label_InstructionModifiedTime.Text = "異動時間:";
             // 
             // label_ModifiedTime
@@ -97,7 +97,7 @@
             this.label_ModifiedTime.Location = new System.Drawing.Point(103, 310);
             this.label_ModifiedTime.Name = "label_ModifiedTime";
             this.label_ModifiedTime.Size = new System.Drawing.Size(105, 18);
-            this.label_ModifiedTime.TabIndex = 11;
+            this.label_ModifiedTime.TabIndex = 6;
             this.label_ModifiedTime.Text = "modifiedTime";
             // 
             // FormEditNews

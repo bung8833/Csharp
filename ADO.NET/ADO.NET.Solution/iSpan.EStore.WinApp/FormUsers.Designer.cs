@@ -47,7 +47,7 @@
             this.labelName.Location = new System.Drawing.Point(20, 28);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(59, 20);
-            this.labelName.TabIndex = 12;
+            this.labelName.TabIndex = 6;
             this.labelName.Text = "Name:";
             // 
             // textBoxName
@@ -55,14 +55,14 @@
             this.textBoxName.Location = new System.Drawing.Point(96, 27);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(109, 29);
-            this.textBoxName.TabIndex = 11;
+            this.textBoxName.TabIndex = 0;
             // 
             // textBoxAccount
             // 
             this.textBoxAccount.Location = new System.Drawing.Point(319, 27);
             this.textBoxAccount.Name = "textBoxAccount";
             this.textBoxAccount.Size = new System.Drawing.Size(109, 29);
-            this.textBoxAccount.TabIndex = 11;
+            this.textBoxAccount.TabIndex = 1;
             // 
             // labelAccount
             // 
@@ -71,7 +71,7 @@
             this.labelAccount.Location = new System.Drawing.Point(226, 28);
             this.labelAccount.Name = "labelAccount";
             this.labelAccount.Size = new System.Drawing.Size(76, 20);
-            this.labelAccount.TabIndex = 12;
+            this.labelAccount.TabIndex = 7;
             this.labelAccount.Text = "Account:";
             // 
             // textBoxEmail
@@ -79,7 +79,7 @@
             this.textBoxEmail.Location = new System.Drawing.Point(542, 27);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(109, 29);
-            this.textBoxEmail.TabIndex = 11;
+            this.textBoxEmail.TabIndex = 2;
             // 
             // labelEmail
             // 
@@ -88,7 +88,7 @@
             this.labelEmail.Location = new System.Drawing.Point(467, 28);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(58, 20);
-            this.labelEmail.TabIndex = 12;
+            this.labelEmail.TabIndex = 8;
             this.labelEmail.Text = "Email:";
             // 
             // buttonSearch
@@ -97,7 +97,7 @@
             this.buttonSearch.Location = new System.Drawing.Point(722, 27);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(124, 35);
-            this.buttonSearch.TabIndex = 14;
+            this.buttonSearch.TabIndex = 3;
             this.buttonSearch.Text = "Search";
             this.buttonSearch.UseVisualStyleBackColor = true;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
@@ -110,7 +110,7 @@
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 31;
             this.dataGridView1.Size = new System.Drawing.Size(1194, 355);
-            this.dataGridView1.TabIndex = 15;
+            this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // buttonAddNew
@@ -119,7 +119,7 @@
             this.buttonAddNew.Location = new System.Drawing.Point(1041, 462);
             this.buttonAddNew.Name = "buttonAddNew";
             this.buttonAddNew.Size = new System.Drawing.Size(124, 35);
-            this.buttonAddNew.TabIndex = 14;
+            this.buttonAddNew.TabIndex = 4;
             this.buttonAddNew.Text = "Add New...";
             this.buttonAddNew.UseVisualStyleBackColor = true;
             this.buttonAddNew.Click += new System.EventHandler(this.buttonAddNew_Click);
