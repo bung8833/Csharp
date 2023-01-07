@@ -207,7 +207,7 @@
             // labelInstrConnString
             // 
             this.labelInstrConnString.AutoSize = true;
-            this.labelInstrConnString.Location = new System.Drawing.Point(279, 22);
+            this.labelInstrConnString.Location = new System.Drawing.Point(707, 22);
             this.labelInstrConnString.Name = "labelInstrConnString";
             this.labelInstrConnString.Size = new System.Drawing.Size(269, 20);
             this.labelInstrConnString.TabIndex = 15;

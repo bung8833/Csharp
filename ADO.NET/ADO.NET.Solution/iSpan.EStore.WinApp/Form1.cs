@@ -39,7 +39,7 @@ namespace iSpan.EStore.WinApp
             SqlDb.ConnectionTimeout = 5;
 
             // using 避免code有錯 走不到close()
-            using (SqlConnection conn = SqlDb.GetConnection("default"))
+            using (SqlConnection conn = SqlDb.GetConnection())
             {
                 using (var command = new SqlCommand("SELECT * FROM Categories", conn))
                 {

@@ -50,6 +50,7 @@ namespace iSpan.EStore.SqlDataLayer
             return sb.ToString();
         }
 
+
         // OverLoading
         public static SqlConnection GetConnection()
         {
