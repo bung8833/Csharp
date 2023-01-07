@@ -209,9 +209,9 @@
             this.labelInstrConnString.AutoSize = true;
             this.labelInstrConnString.Location = new System.Drawing.Point(279, 22);
             this.labelInstrConnString.Name = "labelInstrConnString";
-            this.labelInstrConnString.Size = new System.Drawing.Size(351, 20);
+            this.labelInstrConnString.Size = new System.Drawing.Size(269, 20);
             this.labelInstrConnString.TabIndex = 15;
-            this.labelInstrConnString.Text = "Server=.; Server=RICHARD\\SQLEXPRESS;";
+            this.labelInstrConnString.Text = "Server=.; Server=.\\SQLEXPRESS;";
             // 
             // Form1
             // 

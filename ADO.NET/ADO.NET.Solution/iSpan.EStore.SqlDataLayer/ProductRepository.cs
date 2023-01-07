@@ -51,7 +51,8 @@ INNER JOIN Categories as C ON P.CategoryId = C.Id";
 
             #endregion
 
-            return SqlDb.Search(SqlDb.GetConnection, ProductDto.GetInstance, sql, parameters.ToArray());
+            return SqlDb.Search(SqlDb.GetConnection, ProductDto.GetInstance, 
+                                sql, parameters.ToArray());
 
             //using (SqlConnection conn = SqlDb.GetConnection())
             //{
