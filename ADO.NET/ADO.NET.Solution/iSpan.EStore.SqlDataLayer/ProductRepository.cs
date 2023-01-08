@@ -11,6 +11,60 @@ namespace iSpan.EStore.SqlDataLayer
 {
     public class ProductRepository
     {
+        private readonly string _tableName = "Products";
+        public Func<SqlConnection> funcConn = SqlDb.GetConnection;
+        public Func<SqlDataReader, ProductDto> funcAssembler = ProductDto.GetInstance;
+
+
+        // undone int Create(int categoryId, string productName, int price)
+        public int Create(int categoryId, string productName, int price)
+        {
+            string sql = $@"
+INSERT INTO {_tableName}
+(CategoryId, Name, Price)
+VALUES
+(@CategoryId, @Name, @Price";
+
+            var parameters = SqlParameterBuilder.Create()
+                .AddInt("CategoryId", categoryId)
+                .AddNVarChar("Name", productName, 50)
+                .AddInt("Price", price)
+                .Build();
+
+            int newId = 0;
+            newId = SqlDb.Create(funcConn, sql, parameters);
+            return newId;
+        }
+
+        // undone int Delete(int productId)
+        public int Delete(int productId)
+        {
+            string sql = $"DELETE FROM {_tableName} WHERE Id = {productId}";
+            int rowsAffected = SqlDb.UpdateOrDelete(funcConn, sql);
+            return rowsAffected;
+        }
+
+        // undone int Update(int productId, int categoryId, string productName, int price)
+        public int Update(int productId, int categoryId, string productName, int price)
+        {
+            string sql = $@"
+UPDATE {_tableName} SET
+CategoryId = @CategoryId,
+Name = @Name,
+Price = @Price
+WHERE Id = {productId}";
+
+
+            var parameters = SqlParameterBuilder.Create()
+                .AddInt("CategoryId", categoryId)
+                .AddNVarChar("Name", productName, 50)
+                .AddInt("Price", price)
+                .Build();
+
+            int rowsAffected = SqlDb.UpdateOrDelete(funcConn, sql, parameters);
+            return rowsAffected;
+        }
+
         public IEnumerable<ProductDto> Search(int? categoryId=null, string productName=null)
         {
             // 這一行是方便在 profiler 查看
@@ -20,9 +74,9 @@ namespace iSpan.EStore.SqlDataLayer
             // += 開頭要加空白 用以分段
             
             string sql = $@"
-SELECT P.*, C.Name as CategoryName
-FROM Products as P
-INNER JOIN Categories as C ON P.CategoryId = C.Id";
+SELECT P.*, C.Name AS CategoryName
+FROM Products AS P INNER JOIN Categories AS C 
+ON P.CategoryId = C.Id";
 
             #region WHERE子句
             string where = String.Empty;
@@ -84,6 +138,14 @@ INNER JOIN Categories as C ON P.CategoryId = C.Id";
             //        reader.Close();
             //    }
             //}
+        }
+
+        // undone ProductDto GetProductDto(int productId)
+        public ProductDto GetProductDto(int productId)
+        {
+            string sql = $"SELECT * FROM {_tableName} WHERE Id = {productId}";
+
+            return SqlDb.Get(funcConn, funcAssembler, sql);
         }
     }
 

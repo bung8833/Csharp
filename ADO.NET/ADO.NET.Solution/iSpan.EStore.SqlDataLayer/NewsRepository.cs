@@ -11,10 +11,15 @@ namespace iSpan.EStore.SqlDataLayer
 {
     public class NewsRepository
     {
+        private readonly string _tableName = "News";
+        public Func<SqlConnection> funcConn = SqlDb.GetConnection;
+        public Func<SqlDataReader, News> funcAssembler = News.GetInstance;
+
+
         public int Create(News entity)
         {
-            string sql = @"
-INSERT INTO News
+            string sql = $@"
+INSERT INTO {_tableName}
 (Title, Description, CreatedTime, ModifiedTime)
 VALUES
 (@Title, @Description, @CreatedTime, @ModifiedTime)";
@@ -27,7 +32,7 @@ VALUES
                 // .AddInt("@newId", null, System.Data.ParameterDirection.Output)
                 .Build();
 
-            return SqlDb.Create(SqlDb.GetConnection, sql, parameters);
+            return SqlDb.Create(funcConn, sql, parameters);
 
             //SqlParameter[] parameters = new SqlParameter[]
             //{
@@ -42,7 +47,7 @@ VALUES
 
         public int Delete(int newsId)
         {
-            string sql = @"DELETE News WHERE Id = @Id";
+            string sql = $@"DELETE FROM {_tableName} WHERE Id = @Id";
 
             SqlParameter[] parameters = SqlParameterBuilder.Create()
                 .AddInt("@Id", newsId)
@@ -66,7 +71,7 @@ VALUES
 
         public int Update(News entity)
         {
-            string sql = @"UPDATE News SET
+            string sql = $@"UPDATE {_tableName} SET
 Title = @Title,
 Description = @Description,
 ModifiedTime = @ModifiedTime
@@ -94,9 +99,42 @@ Id = @Id";
             //}
         }
 
+        //undone IEnumerable<News> Search(string title, string description)
+        public IEnumerable<News> Search(string title, string description)
+        {
+            #region 生成 SQL Statement
+            string sql = $@"
+SELECT *
+FROM {_tableName} ";
+
+            #region 生成 WHERE 子句
+            string where = String.Empty;
+
+            var parameters = new List<SqlParameter>();
+
+            if (string.IsNullOrEmpty(title) == false)
+            {
+                where += " AND Title LIKE '%' + @Title + '%'";
+                parameters.Add(new SqlParameter("Title", System.Data.SqlDbType.NVarChar, 50) { Value = title });
+            }
+            if (string.IsNullOrEmpty(description) == false)
+            {
+                where += " AND Description LIKE '%' + @Description + '%'";
+                parameters.Add(new SqlParameter("Description", System.Data.SqlDbType.NVarChar, 3000) { Value = description });
+            }
+
+
+            where = where == String.Empty ? where : where = " WHERE " + where.Substring(5);
+            sql += where;
+            #endregion
+            #endregion
+
+            return SqlDb.Search(funcConn, funcAssembler, sql, parameters.ToArray());
+        }
+
         public News GetNews(int newsId)
         {
-            var sql = $"SELECT * FROM News WHERE Id = {newsId}";
+            string sql = $"SELECT * FROM {_tableName} WHERE Id = {newsId}";
 
             return SqlDb.Get(SqlDb.GetConnection, News.GetInstance, sql);
 

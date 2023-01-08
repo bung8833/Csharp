@@ -52,7 +52,7 @@ VALUES
 
         public int Delete(int userId)
         {
-            var sql = $"DELETE FROM {_tableName} WHERE Id = {userId}";
+            string sql = $"DELETE FROM {_tableName} WHERE Id = {userId}";
             int rowsAffected = SqlDb.UpdateOrDelete(funcConn, sql);
             return rowsAffected;
 
@@ -67,7 +67,7 @@ VALUES
 
         public int Update(UserEntity entity)
         {
-            var sql = $@"
+            string sql = $@"
 UPDATE {_tableName} SET
 Name = @Name,
 Account = @Account,
@@ -106,7 +106,7 @@ FROM {_tableName} ";
             if (string.IsNullOrEmpty(name) == false)
             {
                 where += $" AND Name LIKE '%' + @Name + '%'";
-                parameters.Add(new SqlParameter("Name", System.Data.SqlDbType.NVarChar, 50) { Value = name});
+                parameters.Add(new SqlParameter("Name", System.Data.SqlDbType.NVarChar, 50) { Value = name });
             }
             if (string.IsNullOrEmpty(account) == false)
             {
@@ -144,7 +144,6 @@ FROM {_tableName} ";
         public DateTime? DateOfBirth { get; set; } // nullable
         public int? Height { get; set; } // nullable
         public string Email { get; set; }
-
 
 
         public static UserEntity GetInstance(SqlDataReader reader)

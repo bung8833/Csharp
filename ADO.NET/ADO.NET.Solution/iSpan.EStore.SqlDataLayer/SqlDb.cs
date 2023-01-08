@@ -85,6 +85,13 @@ namespace iSpan.EStore.SqlDataLayer
         }
 
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="funcConnection"></param>
+        /// <param name="sql"></param>
+        /// <param name="parameters"></param>
+        /// <returns>受影響資料的id</returns>
         public static int Create(Func<SqlConnection> funcConnection, 
                                  string sql, params SqlParameter[] parameters)
         {
