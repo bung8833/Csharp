@@ -39,7 +39,7 @@ namespace iSpan.EStore.WinApp
                 Height = this.UserHeight
             };
 
-        //todo 驗證
+
         private void buttonSave_Click(object sender, EventArgs e)
         {
             try

@@ -40,11 +40,15 @@ VALUES
             //};
         }
 
-        public News GetNews(int newsId)
+        public int Delete(int newsId)
         {
-            var sql = $"SELECT * FROM News WHERE Id = {newsId}";
+            string sql = @"DELETE News WHERE Id = @Id";
 
-            return SqlDb.Get(SqlDb.GetConnection, News.GetInstance, sql);
+            SqlParameter[] parameters = SqlParameterBuilder.Create()
+                .AddInt("@Id", newsId)
+                .Build();
+
+            return SqlDb.UpdateOrDelete(SqlDb.GetConnection, sql, parameters);
 
             //using (var conn = SqlDb.GetConnection())
             //{
@@ -52,11 +56,10 @@ VALUES
             //    {
             //        conn.Open();
 
-            //        var reader = cmd.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
-                    
-            //        return reader.Read() 
-            //        ? News.GetInstance(reader)
-            //        : null;
+            //        //cmd.Parameters.AddRange(parameters);
+            //        cmd.Parameters.AddWithValue("@Id", newsId);
+
+            //        return cmd.ExecuteNonQuery(); // 傳回被異動的筆數
             //    }
             //}
         }
@@ -91,15 +94,11 @@ Id = @Id";
             //}
         }
 
-        public int Delete(int newsId)
+        public News GetNews(int newsId)
         {
-            string sql = @"DELETE News WHERE Id = @Id";
+            var sql = $"SELECT * FROM News WHERE Id = {newsId}";
 
-            SqlParameter[] parameters = SqlParameterBuilder.Create()
-                .AddInt("@Id", newsId)
-                .Build();
-
-            return SqlDb.UpdateOrDelete(SqlDb.GetConnection, sql, parameters);
+            return SqlDb.Get(SqlDb.GetConnection, News.GetInstance, sql);
 
             //using (var conn = SqlDb.GetConnection())
             //{
@@ -107,13 +106,16 @@ Id = @Id";
             //    {
             //        conn.Open();
 
-            //        //cmd.Parameters.AddRange(parameters);
-            //        cmd.Parameters.AddWithValue("@Id", newsId);
-
-            //        return cmd.ExecuteNonQuery(); // 傳回被異動的筆數
+            //        var reader = cmd.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
+                    
+            //        return reader.Read() 
+            //        ? News.GetInstance(reader)
+            //        : null;
             //    }
             //}
         }
+
+
     }
 
     public class News

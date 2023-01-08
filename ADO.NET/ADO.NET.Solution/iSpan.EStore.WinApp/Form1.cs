@@ -155,7 +155,7 @@ namespace iSpan.EStore.WinApp
                 return;
             }
 
-            //todo 顯示這筆紀錄的資訊
+            //todo button_DeleteNews 顯示這筆紀錄的資訊
             //var frm = new FormEditNews(newsId);
             //frm.ShowDialog();
 
