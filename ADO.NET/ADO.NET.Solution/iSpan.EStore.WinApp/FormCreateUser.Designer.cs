@@ -55,7 +55,7 @@
             this.label1.Location = new System.Drawing.Point(110, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 20);
-            this.label1.TabIndex = 7;
+            this.label1.TabIndex = 8;
             this.label1.Text = "Account:";
             // 
             // textBoxAccount
@@ -72,7 +72,7 @@
             this.label2.Location = new System.Drawing.Point(102, 97);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 20);
-            this.label2.TabIndex = 8;
+            this.label2.TabIndex = 9;
             this.label2.Text = "Password:";
             // 
             // textBoxPassword
@@ -89,7 +89,7 @@
             this.label3.Location = new System.Drawing.Point(127, 198);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 20);
-            this.label3.TabIndex = 9;
+            this.label3.TabIndex = 11;
             this.label3.Text = "Name:";
             // 
             // textBoxName
@@ -97,7 +97,7 @@
             this.textBoxName.Location = new System.Drawing.Point(206, 189);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(236, 29);
-            this.textBoxName.TabIndex = 2;
+            this.textBoxName.TabIndex = 3;
             // 
             // label4
             // 
@@ -106,7 +106,7 @@
             this.label4.Location = new System.Drawing.Point(128, 255);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 20);
-            this.label4.TabIndex = 10;
+            this.label4.TabIndex = 12;
             this.label4.Text = "Email:";
             // 
             // textBoxEmail
@@ -114,7 +114,7 @@
             this.textBoxEmail.Location = new System.Drawing.Point(206, 246);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(236, 29);
-            this.textBoxEmail.TabIndex = 3;
+            this.textBoxEmail.TabIndex = 4;
             // 
             // label5
             // 
@@ -123,7 +123,7 @@
             this.label5.Location = new System.Drawing.Point(74, 312);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(112, 20);
-            this.label5.TabIndex = 11;
+            this.label5.TabIndex = 13;
             this.label5.Text = "Date of Birth:";
             // 
             // textBoxDateOfBirth
@@ -131,7 +131,7 @@
             this.textBoxDateOfBirth.Location = new System.Drawing.Point(206, 303);
             this.textBoxDateOfBirth.Name = "textBoxDateOfBirth";
             this.textBoxDateOfBirth.Size = new System.Drawing.Size(236, 29);
-            this.textBoxDateOfBirth.TabIndex = 4;
+            this.textBoxDateOfBirth.TabIndex = 5;
             // 
             // label6
             // 
@@ -140,7 +140,7 @@
             this.label6.Location = new System.Drawing.Point(122, 366);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 20);
-            this.label6.TabIndex = 12;
+            this.label6.TabIndex = 14;
             this.label6.Text = "Height:";
             // 
             // textBoxHeight
@@ -148,7 +148,7 @@
             this.textBoxHeight.Location = new System.Drawing.Point(206, 357);
             this.textBoxHeight.Name = "textBoxHeight";
             this.textBoxHeight.Size = new System.Drawing.Size(236, 29);
-            this.textBoxHeight.TabIndex = 5;
+            this.textBoxHeight.TabIndex = 6;
             // 
             // buttonSave
             // 
@@ -156,7 +156,7 @@
             this.buttonSave.Location = new System.Drawing.Point(343, 407);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(99, 42);
-            this.buttonSave.TabIndex = 6;
+            this.buttonSave.TabIndex = 7;
             this.buttonSave.Text = "Save";
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
@@ -166,7 +166,7 @@
             this.textBoxConfirmPassword.Location = new System.Drawing.Point(206, 138);
             this.textBoxConfirmPassword.Name = "textBoxConfirmPassword";
             this.textBoxConfirmPassword.Size = new System.Drawing.Size(236, 29);
-            this.textBoxConfirmPassword.TabIndex = 13;
+            this.textBoxConfirmPassword.TabIndex = 2;
             // 
             // label7
             // 
@@ -175,7 +175,7 @@
             this.label7.Location = new System.Drawing.Point(34, 147);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(152, 20);
-            this.label7.TabIndex = 14;
+            this.label7.TabIndex = 10;
             this.label7.Text = "Confirm Password:";
             // 
             // errorProvider1

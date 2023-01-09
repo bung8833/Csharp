@@ -7,6 +7,7 @@ using System.Linq;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace iSpan.EStore.SqlDataLayer
 {
@@ -36,9 +37,11 @@ namespace iSpan.EStore.SqlDataLayer
         {
             string sql = $@"
 INSERT INTO {_tableName}
-(Name, Account, Password, DateOfBirth, Height, Email)
+(Name, Account, Password, DateOfBirth, Height, 
+Email)
 VALUES
-(@Name, @Account, @Password, @DateOfBirth, @Height, @Email)";
+(@Name, @Account, @Password, @DateOfBirth, @Height, 
+@Email)";
 
 
             var parameters = SqlParameterBuilder.Create()
@@ -153,14 +156,21 @@ FROM {_tableName} ";
 
         public UserEntity GetByAccount(string account)
         {
-            string sql = $"SELECT * FROM {_tableName} WHERE Account = {account}";
+            string sql = $"SELECT * FROM {_tableName} WHERE Account=@Account";
 
-            SqlParameter[] parameters = new SqlParameter[]
+            SqlParameter[] parameters1 = new SqlParameter[]
             {
                 new SqlParameter("@Account", System.Data.SqlDbType.NVarChar, 50) { Value = account },
             };
 
-            return SqlDb.Get(funcConn, funcAssembler, sql, parameters);
+            var parameters2 = SqlParameterBuilder.Create()
+                .AddNVarChar("Account", account, 50)
+                .Build();
+
+            var parameters3 = new List<SqlParameter>();
+            parameters3.Add(new SqlParameter("Account", System.Data.SqlDbType.NVarChar, 50) { Value = account });
+
+            return SqlDb.Get(funcConn, funcAssembler, sql, parameters1);
         }
     }
 }
