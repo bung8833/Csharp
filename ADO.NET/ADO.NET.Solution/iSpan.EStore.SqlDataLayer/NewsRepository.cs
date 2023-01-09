@@ -99,7 +99,6 @@ Id = @Id";
             //}
         }
 
-        //undone IEnumerable<News> Search(string title, string description)
         public IEnumerable<News> Search(string title, string description)
         {
             #region 生成 SQL Statement

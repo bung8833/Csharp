@@ -1,4 +1,5 @@
-﻿using iSpan.EStore.SqlDataLayer;
+﻿using iSpan.EStore.BLL.Core;
+using iSpan.EStore.SqlDataLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -71,14 +72,14 @@ namespace iSpan.EStore.WinApp
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < 0) 
-                return;
+            //if (e.RowIndex < 0) 
+            //    return;
 
-            int userId = _users[e.RowIndex].Id;
+            //int userId = _users[e.RowIndex].Id;
 
-            var editUser = new FormEditUser(userId);
-            editUser.Owner = this;
-            editUser.ShowDialog();
+            //var editUser = new FormEditUser(userId);
+            //editUser.Owner = this;
+            //editUser.ShowDialog();
         }
     }
 }

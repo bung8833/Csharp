@@ -15,8 +15,7 @@ namespace iSpan.EStore.SqlDataLayer
         public Func<SqlConnection> funcConn = SqlDb.GetConnection;
         public Func<SqlDataReader, ProductDto> funcAssembler = ProductDto.GetInstance;
 
-
-        // undone int Create(int categoryId, string productName, int price)
+        // 增加欄位
         public int Create(int categoryId, string productName, int price)
         {
             string sql = $@"
@@ -36,7 +35,6 @@ VALUES
             return newId;
         }
 
-        // undone int Delete(int productId)
         public int Delete(int productId)
         {
             string sql = $"DELETE FROM {_tableName} WHERE Id = {productId}";
@@ -44,7 +42,6 @@ VALUES
             return rowsAffected;
         }
 
-        // undone int Update(int productId, int categoryId, string productName, int price)
         public int Update(int productId, int categoryId, string productName, int price)
         {
             string sql = $@"
@@ -107,40 +104,8 @@ ON P.CategoryId = C.Id";
 
             return SqlDb.Search(SqlDb.GetConnection, ProductDto.GetInstance, 
                                 sql, parameters.ToArray());
-
-            //using (SqlConnection conn = SqlDb.GetConnection())
-            //{
-            //    using (SqlCommand cmd = conn.CreateCommand())
-            //    {
-            //        conn.Open();
-            //        cmd.CommandText = sql;
-
-            //        // Allen Jan 5 加入參數
-            //        cmd.Parameters.AddRange(parameters.ToArray());
-
-            //        var reader = cmd.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
-
-            //        while (reader.Read())
-            //        {
-            //            var dto = ProductDto.GetInstance(reader);
-            //            yield return dto;
-            //        }
-            //    }
-            //}
-
-            //using (SqlConnection conn = SqlDb.GetConnection("default"))
-            //{
-            //    using (var command = new SqlCommand("SELECT * FROM Categories", conn))
-            //    {
-            //        conn.Open();
-
-            //        var reader = command.ExecuteReader();
-            //        reader.Close();
-            //    }
-            //}
         }
 
-        // undone ProductDto GetProductDto(int productId)
         public ProductDto GetProductDto(int productId)
         {
             string sql = $"SELECT * FROM {_tableName} WHERE Id = {productId}";

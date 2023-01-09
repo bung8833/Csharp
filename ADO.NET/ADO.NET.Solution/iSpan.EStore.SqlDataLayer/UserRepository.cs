@@ -1,4 +1,6 @@
-﻿using System;
+﻿using iSpan.EStore.BLL.Core;
+using iSpan.EStore.BLL.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -8,11 +10,26 @@ using System.Threading.Tasks;
 
 namespace iSpan.EStore.SqlDataLayer
 {
-    public class UserRepository
+    public class UserRepository : IUserRepository
     {
         private readonly string _tableName = "Users";
         public Func<SqlConnection> funcConn = SqlDb.GetConnection;
-        public Func<SqlDataReader, UserEntity> funcAssembler = UserEntity.GetInstance;
+        public Func<SqlDataReader, UserEntity> funcAssembler = GetInstance;
+
+        public static UserEntity GetInstance(SqlDataReader reader)
+        {
+            var id = reader.GetFieldValue<int>("Id");
+            var name = reader.GetFieldValue<string>("Name");
+            var account = reader.GetFieldValue<string>("Account");
+            var password = reader.GetFieldValue<string>("Password");
+
+            var entity = new UserEntity(name, account, password);
+            entity.DateOfBirth = reader.GetFieldValue<DateTime?>("DateOfBirth");
+            entity.Height = reader.GetFieldValue<int?>("Height");
+            entity.Email = reader.GetFieldValue<string>("Email");
+
+            return entity;
+        }
 
 
         public int Create(UserEntity entity)
@@ -133,31 +150,17 @@ FROM {_tableName} ";
 
             return SqlDb.Get(funcConn, funcAssembler, sql);
         }
-    }
 
-    public class UserEntity
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Account { get; set; }
-        public string Password { get; set; }
-        public DateTime? DateOfBirth { get; set; } // nullable
-        public int? Height { get; set; } // nullable
-        public string Email { get; set; }
-
-
-        public static UserEntity GetInstance(SqlDataReader reader)
+        public UserEntity GetByAccount(string account)
         {
-            var entity = new UserEntity();
-            entity.Id =               reader.GetFieldValue<int>("Id");
-            entity.Name =          reader.GetFieldValue<string>("Name");
-            entity.Account =       reader.GetFieldValue<string>("Account");
-            entity.Password =      reader.GetFieldValue<string>("Password");
-            entity.DateOfBirth= reader.GetFieldValue<DateTime?>("DateOfBirth");
-            entity.Height =          reader.GetFieldValue<int?>("Height");
-            entity.Email =         reader.GetFieldValue<string>("Email");
+            string sql = $"SELECT * FROM {_tableName} WHERE Account = {account}";
 
-            return entity;
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@Account", System.Data.SqlDbType.NVarChar, 50) { Value = account },
+            };
+
+            return SqlDb.Get(funcConn, funcAssembler, sql, parameters);
         }
     }
 }

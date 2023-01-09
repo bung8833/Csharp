@@ -15,7 +15,6 @@ namespace iSpan.EStore.SqlDataLayer
         public Func<SqlDataReader, Category> funcAssembler = Category.GetInstance;
 
 
-        // undone int Create(Category entity)
         public int Create(Category entity)
         {
             string sql = $@"
@@ -34,7 +33,6 @@ VALUES
             return newId;
         }
 
-        // undone int Delete(int categoryId)
         public int Delete(int categoryId)
         {
             string sql = $"DELETE FROM {_tableName} WHERE Id = {categoryId}";
@@ -42,7 +40,6 @@ VALUES
             return rowsAffected;
         }
 
-        // undone int Update(Category entity)
         public int Update(Category entity)
         {
             string sql = $@"
@@ -61,7 +58,6 @@ WHERE Id = {entity.Id}";
             return rowsAffected;
         }
 
-        // undone IEnumerable<Category> Search(string name)
         public IEnumerable<Category> Search(string name)
         {
             #region 生成 SQL Statement

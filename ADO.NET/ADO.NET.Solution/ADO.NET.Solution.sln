@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iSpan.EStore.WinApp", "iSpa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iSpan.EStore.SqlDataLayer", "iSpan.EStore.SqlDataLayer\iSpan.EStore.SqlDataLayer.csproj", "{7C94338C-9B4F-4A33-B1BF-DA2E6677826A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iSpan.EStore.BLL", "iSpan.EStore.BLL\iSpan.EStore.BLL.csproj", "{D8352C44-63C8-4457-8213-5DD7B870D0E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7C94338C-9B4F-4A33-B1BF-DA2E6677826A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C94338C-9B4F-4A33-B1BF-DA2E6677826A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C94338C-9B4F-4A33-B1BF-DA2E6677826A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8352C44-63C8-4457-8213-5DD7B870D0E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8352C44-63C8-4457-8213-5DD7B870D0E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8352C44-63C8-4457-8213-5DD7B870D0E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8352C44-63C8-4457-8213-5DD7B870D0E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

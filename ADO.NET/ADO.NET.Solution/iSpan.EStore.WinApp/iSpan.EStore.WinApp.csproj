@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -77,12 +78,6 @@
     <Compile Include="FormEditNews.Designer.cs">
       <DependentUpon>FormEditNews.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormEditUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormEditUser.Designer.cs">
-      <DependentUpon>FormEditUser.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormProducts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +90,8 @@
     <Compile Include="FormUsers.Designer.cs">
       <DependentUpon>FormUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\ViewModels\UserCreateVm.cs" />
+    <Compile Include="Models\ViewModels\UserUpdateVm.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -111,9 +108,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditNews.resx">
       <DependentUpon>FormEditNews.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormEditUser.resx">
-      <DependentUpon>FormEditUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormProducts.resx">
       <DependentUpon>FormProducts.cs</DependentUpon>
@@ -144,6 +138,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\iSpan.EStore.BLL\iSpan.EStore.BLL.csproj">
+      <Project>{d8352c44-63c8-4457-8213-5dd7b870d0e5}</Project>
+      <Name>iSpan.EStore.BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\iSpan.EStore.SqlDataLayer\iSpan.EStore.SqlDataLayer.csproj">
       <Project>{7c94338c-9b4f-4a33-b1bf-da2e6677826a}</Project>
       <Name>iSpan.EStore.SqlDataLayer</Name>

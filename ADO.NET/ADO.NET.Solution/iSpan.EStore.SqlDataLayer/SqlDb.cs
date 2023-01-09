@@ -64,7 +64,13 @@ namespace iSpan.EStore.SqlDataLayer
         }
 
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="funcConnection"></param>
+        /// <param name="sql"></param>
+        /// <param name="parameters"></param>
+        /// <returns>被異動的筆數</returns>
         public static int UpdateOrDelete(Func<SqlConnection> funcConnection, 
                                          string sql, params SqlParameter[] parameters)
         {
