@@ -284,7 +284,9 @@ GameResult Throw(this Player)
 
 剪刀	石頭	布	剪刀
 
-
+Linked List
+單向
+雙向
 
 ------------------------
 State Pattern
@@ -292,10 +294,12 @@ State Pattern
 要解決的問題：
 有很多種狀態
 有很多種操作
+// 專案資料夾
 
-
-
-
+扭蛋機: 
+若UI有設計好 SatndByState不會讓客人選擇退幣
+所以可以丟出例外
+->重點: WinForm設計
 
 
 

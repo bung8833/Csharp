@@ -39,6 +39,7 @@
             // 
             this.textBoxCoinInput.Location = new System.Drawing.Point(55, 40);
             this.textBoxCoinInput.Name = "textBoxCoinInput";
+            this.textBoxCoinInput.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBoxCoinInput.Size = new System.Drawing.Size(406, 29);
             this.textBoxCoinInput.TabIndex = 0;
             // 
