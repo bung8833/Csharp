@@ -1,4 +1,5 @@
-﻿using iSpan.EStore.SqlDataLayer;
+﻿using iSpan.EStore.BLL.Core;
+using iSpan.EStore.SqlDataLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,7 +34,6 @@ namespace iSpan.EStore.WinApp
             textBoxAccount.Text = user.Account;
             textBoxName.Text = user.Name;
             textBoxEmail.Text = user.Email;
-            textBoxPassword.Text = user.Password;
             textBoxDateOfBirth.Text = user.DateOfBirth.HasValue
                                         ? user.DateOfBirth.Value.ToString("yyyy/MM/dd")
                                         : String.Empty;
@@ -53,13 +53,11 @@ namespace iSpan.EStore.WinApp
             ? height
             : (int?)null;
 
+        // undone
         private UserEntity GetModel()
-            => new UserEntity
+            => new UserEntity(textBoxName.Text, textBoxAccount.Text, null)
             {
                 Id = this.userId,
-                Account = textBoxAccount.Text,
-                Password = textBoxPassword.Text,
-                Name = textBoxName.Text,
                 Email = textBoxEmail.Text,
                 DateOfBirth = this.DateOfBirth,
                 Height = this.UserHeight

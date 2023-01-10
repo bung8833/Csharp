@@ -229,3 +229,83 @@ Vm 驗證
 
 
 
+2023 Jan 10
+
+進入點的表單關閉 -> 系統關閉
+
+
+專題 同一組
+命名方式 字體大小 等等 要統一
+
+
+
+LINQ Cast<>
+
+科技廠 半導體 人力派遣 博弈業
+
+
+
+銀行業 stored procedure
+
+
+一般公司 
+1. Entity Framework // 要會LINQ
+
+2. Dapper套件 // 只要寫sql語法 不用生成parameters
+	      // 面試要會sql select join insert update delete
+
+
+老舊公司 ADO.NET
+
+
+
+偷學公司程式架構
+工作之後 可以學資料結構、演算法 (Yeah!
+
+
+Form
+max size
+min size
+
+start position!!!
+
+
+
+------------------------
+
+Main
+P1.Throw(P2)
+
+GameResult Throw(this Player)
+{
+    //todo
+}
+
+
+剪刀	石頭	布	剪刀
+
+
+
+------------------------
+State Pattern
+
+要解決的問題：
+有很多種狀態
+有很多種操作
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

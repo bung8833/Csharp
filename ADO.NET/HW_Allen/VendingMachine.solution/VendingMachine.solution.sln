@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VendingMachine.WinApp", "VendingMachine.WinApp\VendingMachine.WinApp.csproj", "{4AAC45F1-B39F-44A9-ABC4-4B91CFA21300}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VendingMachine", "VendingMachine\VendingMachine.csproj", "{420B205D-CCAD-432F-89D5-719C5B7DCA38}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4AAC45F1-B39F-44A9-ABC4-4B91CFA21300}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AAC45F1-B39F-44A9-ABC4-4B91CFA21300}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AAC45F1-B39F-44A9-ABC4-4B91CFA21300}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AAC45F1-B39F-44A9-ABC4-4B91CFA21300}.Release|Any CPU.Build.0 = Release|Any CPU
+		{420B205D-CCAD-432F-89D5-719C5B7DCA38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{420B205D-CCAD-432F-89D5-719C5B7DCA38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{420B205D-CCAD-432F-89D5-719C5B7DCA38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{420B205D-CCAD-432F-89D5-719C5B7DCA38}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3D7F22E7-2DE9-4541-89D4-77D0F1CB670E}
+	EndGlobalSection
+EndGlobal

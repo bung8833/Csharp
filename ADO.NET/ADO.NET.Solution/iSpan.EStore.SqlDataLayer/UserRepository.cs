@@ -158,17 +158,21 @@ FROM {_tableName} ";
         {
             string sql = $"SELECT * FROM {_tableName} WHERE Account=@Account";
 
+
             SqlParameter[] parameters1 = new SqlParameter[]
             {
                 new SqlParameter("@Account", System.Data.SqlDbType.NVarChar, 50) { Value = account },
             };
 
+
             var parameters2 = SqlParameterBuilder.Create()
                 .AddNVarChar("Account", account, 50)
                 .Build();
 
+
             var parameters3 = new List<SqlParameter>();
             parameters3.Add(new SqlParameter("Account", System.Data.SqlDbType.NVarChar, 50) { Value = account });
+
 
             return SqlDb.Get(funcConn, funcAssembler, sql, parameters1);
         }

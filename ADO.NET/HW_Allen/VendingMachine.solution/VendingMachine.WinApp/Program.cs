@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace iSpan.EStore.WinApp
+namespace VendingMachine.WinApp
 {
     internal static class Program
     {
@@ -16,7 +16,7 @@ namespace iSpan.EStore.WinApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormLogin());
+            Application.Run(new Form1());
         }
     }
 }
