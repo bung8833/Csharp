@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ispan.Estore.SqlDataLayer", "ispan.Estore.SqlDataLayer\ispan.Estore.SqlDataLayer.csproj", "{DF24600D-BE1A-4F0F-B74C-289400B0DA77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ispan.Estore.SqlDataLayer.WinForm", "ispan.Estore.SqlDataLayer.WinForm\ispan.Estore.SqlDataLayer.WinForm.csproj", "{5F11D4BF-E7EE-47C3-AA30-6979F02226ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF24600D-BE1A-4F0F-B74C-289400B0DA77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF24600D-BE1A-4F0F-B74C-289400B0DA77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF24600D-BE1A-4F0F-B74C-289400B0DA77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF24600D-BE1A-4F0F-B74C-289400B0DA77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F11D4BF-E7EE-47C3-AA30-6979F02226ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F11D4BF-E7EE-47C3-AA30-6979F02226ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F11D4BF-E7EE-47C3-AA30-6979F02226ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F11D4BF-E7EE-47C3-AA30-6979F02226ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C704295C-7AD6-47B3-8A5D-AEDF88294DEE}
+	EndGlobalSection
+EndGlobal

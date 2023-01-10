@@ -1,0 +1,74 @@
+USE [iSpan202301]
+GO
+SET IDENTITY_INSERT [dbo].[Categories] ON 
+GO
+INSERT [dbo].[Categories] ([Id], [Name], [DisplayOrder]) VALUES (1, N'3C', 10)
+GO
+INSERT [dbo].[Categories] ([Id], [Name], [DisplayOrder]) VALUES (2, N'家電', 20)
+GO
+INSERT [dbo].[Categories] ([Id], [Name], [DisplayOrder]) VALUES (3, N'生活用品', 30)
+GO
+SET IDENTITY_INSERT [dbo].[Categories] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Products] ON 
+GO
+INSERT [dbo].[Products] ([Id], [CategoryId], [Name], [Description], [Price], [Status], [ProductImage], [Stock]) VALUES (1, 1, N'HP Printer', N'description', 3000, 1, N'printer.jpg', 100)
+GO
+INSERT [dbo].[Products] ([Id], [CategoryId], [Name], [Description], [Price], [Status], [ProductImage], [Stock]) VALUES (2, 1, N'華碩A320 桌機', N'description', 20000, 1, N'acerPC.jpg', 100)
+GO
+INSERT [dbo].[Products] ([Id], [CategoryId], [Name], [Description], [Price], [Status], [ProductImage], [Stock]) VALUES (3, 1, N'華碩 Zenbook 14 UX3402ZA', N'description', 34900, 1, N'zenbook.jpg', 100)
+GO
+INSERT [dbo].[Products] ([Id], [CategoryId], [Name], [Description], [Price], [Status], [ProductImage], [Stock]) VALUES (4, 2, N'Dyson Cyclone V10 Fluffy SV12 無線吸塵器', N'description', 12900, 1, N'a.jpg', 98)
+GO
+INSERT [dbo].[Products] ([Id], [CategoryId], [Name], [Description], [Price], [Status], [ProductImage], [Stock]) VALUES (5, 2, N'SANSUI 山水 1.8L大容量304不銹鋼電茶壺二入組', N'description', 788, 1, N'a.jpg', 100)
+GO
+INSERT [dbo].[Products] ([Id], [CategoryId], [Name], [Description], [Price], [Status], [ProductImage], [Stock]) VALUES (6, 2, N'大日 Dainichi 煤油暖氣機', N'description', 10900, 1, N'a.jpg', 100)
+GO
+INSERT [dbo].[Products] ([Id], [CategoryId], [Name], [Description], [Price], [Status], [ProductImage], [Stock]) VALUES (7, 2, N'PHILIPS 飛利浦  智能護齦音波震動牙刷 HX6803/02', N'description', 2490, 1, N'a.jpg', 100)
+GO
+INSERT [dbo].[Products] ([Id], [CategoryId], [Name], [Description], [Price], [Status], [ProductImage], [Stock]) VALUES (8, 3, N'Boden-奧洛4尺多功能收納升降大茶几', N'description', 5599, 1, N'a.jpg', 98)
+GO
+INSERT [dbo].[Products] ([Id], [CategoryId], [Name], [Description], [Price], [Status], [ProductImage], [Stock]) VALUES (9, 3, N'Flexispot 單螢幕懸浮旋臂支架 - 黑色', N'description', 1912, 1, N'a.jpg', 100)
+GO
+INSERT [dbo].[Products] ([Id], [CategoryId], [Name], [Description], [Price], [Status], [ProductImage], [Stock]) VALUES (10, 3, N'Flexispot 簡易式氣壓升降工作台', N'description', 3390, 1, N'a.jpg', 100)
+GO
+INSERT [dbo].[Products] ([Id], [CategoryId], [Name], [Description], [Price], [Status], [ProductImage], [Stock]) VALUES (11, 3, N'TOTO TCF23710ATW C2 溫水洗淨便座', N'description', 8990, 1, N'a.jpg', 100)
+GO
+INSERT [dbo].[Products] ([Id], [CategoryId], [Name], [Description], [Price], [Status], [ProductImage], [Stock]) VALUES (12, 3, N'象印*0.82L*SLiT不鏽鋼真空保溫瓶', N'description', 690, 1, N'a.jpg', 100)
+GO
+SET IDENTITY_INSERT [dbo].[Products] OFF
+GO
+SET IDENTITY_INSERT [dbo].[News] ON 
+GO
+INSERT [dbo].[News] ([Id], [Title], [Description], [CreatedTime], [ModifiedTime]) VALUES (1, N'Title1', N'Edited content 3', CAST(N'2023-01-04T16:39:48.083' AS DateTime), CAST(N'2023-01-06T09:49:16.917' AS DateTime))
+GO
+INSERT [dbo].[News] ([Id], [Title], [Description], [CreatedTime], [ModifiedTime]) VALUES (2, N'Title2', N'Edited content 2021 Jan 5 14:59', CAST(N'2023-01-04T16:45:45.330' AS DateTime), CAST(N'2023-01-05T14:59:13.413' AS DateTime))
+GO
+INSERT [dbo].[News] ([Id], [Title], [Description], [CreatedTime], [ModifiedTime]) VALUES (3, N'Title3', N'2023 Jan 4 16:47', CAST(N'2023-01-04T16:47:28.570' AS DateTime), CAST(N'2023-01-04T16:47:28.573' AS DateTime))
+GO
+INSERT [dbo].[News] ([Id], [Title], [Description], [CreatedTime], [ModifiedTime]) VALUES (4, N'Title4', N'--Deny SQL Injection
+a''b
+a--b', CAST(N'2023-01-04T16:50:08.647' AS DateTime), CAST(N'2023-01-04T16:50:08.647' AS DateTime))
+GO
+INSERT [dbo].[News] ([Id], [Title], [Description], [CreatedTime], [ModifiedTime]) VALUES (5, N'Title5', N'2023 Jan 5 11:41', CAST(N'2023-01-05T11:42:00.220' AS DateTime), CAST(N'2023-01-05T11:42:00.220' AS DateTime))
+GO
+INSERT [dbo].[News] ([Id], [Title], [Description], [CreatedTime], [ModifiedTime]) VALUES (19, N'TitleN', N'Create News 2023 Jan 5 16:33', CAST(N'2023-01-05T16:34:01.683' AS DateTime), CAST(N'2023-01-05T16:34:01.683' AS DateTime))
+GO
+INSERT [dbo].[News] ([Id], [Title], [Description], [CreatedTime], [ModifiedTime]) VALUES (23, N'1', N'1', CAST(N'2023-01-06T10:05:16.377' AS DateTime), CAST(N'2023-01-06T10:05:16.377' AS DateTime))
+GO
+SET IDENTITY_INSERT [dbo].[News] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Users] ON 
+GO
+INSERT [dbo].[Users] ([Id], [Name], [Account], [Password], [DateOfBirth], [Height], [Email]) VALUES (1, N'Richard', N'acct01', N'password', NULL, 175, N'b8@gmail.com')
+GO
+INSERT [dbo].[Users] ([Id], [Name], [Account], [Password], [DateOfBirth], [Height], [Email]) VALUES (2, N'Simon', N'acct02', N'password', CAST(N'1970-01-01T00:00:00.000' AS DateTime), NULL, NULL)
+GO
+INSERT [dbo].[Users] ([Id], [Name], [Account], [Password], [DateOfBirth], [Height], [Email]) VALUES (3, N'Tyrell', N'acct03', N'password', NULL, NULL, N'tyrell@ty.com')
+GO
+INSERT [dbo].[Users] ([Id], [Name], [Account], [Password], [DateOfBirth], [Height], [Email]) VALUES (4, N'Simon', N'acct04', N'password', CAST(N'1996-12-31T00:00:00.000' AS DateTime), NULL, NULL)
+GO
+INSERT [dbo].[Users] ([Id], [Name], [Account], [Password], [DateOfBirth], [Height], [Email]) VALUES (5, N'Ridley', N'acct05', N'password', CAST(N'1937-11-30T00:00:00.000' AS DateTime), NULL, NULL)
+GO
+SET IDENTITY_INSERT [dbo].[Users] OFF
+GO
