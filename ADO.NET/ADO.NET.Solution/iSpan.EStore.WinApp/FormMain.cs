@@ -27,7 +27,8 @@ namespace iSpan.EStore.WinApp
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.Owner.Show();
+            //undone 進入點為Login時 FormMain_FormClosing要show Login
+            //this.Owner.Show();
         }
 
 
@@ -74,7 +75,9 @@ namespace iSpan.EStore.WinApp
 
         private void maintainCategoriesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // this
+            var frm = new FormCategories();
+            if (isMdi) frm.MdiParent = this;
+            frm.Show();
         }
 
 
@@ -90,7 +93,9 @@ namespace iSpan.EStore.WinApp
 
         private void form1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // this
+            var frm = new Form1();
+            if (isMdi) frm.MdiParent = this;
+            frm.Show();
         }
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)

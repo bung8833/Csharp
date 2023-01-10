@@ -72,14 +72,15 @@ namespace iSpan.EStore.WinApp
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //if (e.RowIndex < 0) 
-            //    return;
+            //undone unmarked
+            if (e.RowIndex < 0)
+                return;
 
-            //int userId = _users[e.RowIndex].Id;
+            int userId = _users[e.RowIndex].Id;
 
-            //var editUser = new FormEditUser(userId);
-            //editUser.Owner = this;
-            //editUser.ShowDialog();
+            var editUser = new FormEditUser(userId);
+            editUser.Owner = this;
+            editUser.ShowDialog();
         }
     }
 }
