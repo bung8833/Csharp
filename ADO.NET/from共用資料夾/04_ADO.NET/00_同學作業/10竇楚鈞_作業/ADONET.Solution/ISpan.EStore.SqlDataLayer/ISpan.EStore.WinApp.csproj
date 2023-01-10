@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C7B3AB4F-E884-4C2C-9128-1665B6E85565}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ISpan.EStore.SqlDataLayer</RootNamespace>
+    <AssemblyName>ISpan.EStore.SqlDataLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Categories\FormCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categories\FormCategory.Designer.cs">
+      <DependentUpon>FormCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Categories\FormCreateCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categories\FormCreateCategory.Designer.cs">
+      <DependentUpon>FormCreateCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Newss\FormCreateNews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Newss\FormCreateNews.Designer.cs">
+      <DependentUpon>FormCreateNews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Newss\FormNews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Newss\FormNews.Designer.cs">
+      <DependentUpon>FormNews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products\FormCreateProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Products\FormCreateProducts.Designer.cs">
+      <DependentUpon>FormCreateProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\FormCreateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\FormCreateUser.Designer.cs">
+      <DependentUpon>FormCreateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Categories\FormEditCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categories\FormEditCategory.Designer.cs">
+      <DependentUpon>FormEditCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Newss\FormEditNews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Newss\FormEditNews.Designer.cs">
+      <DependentUpon>FormEditNews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products\FormEditProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Products\FormEditProducts.Designer.cs">
+      <DependentUpon>FormEditProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\FormEditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\FormEditUser.Designer.cs">
+      <DependentUpon>FormEditUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products\FormProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Products\FormProducts.Designer.cs">
+      <DependentUpon>FormProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\FormUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\FormUsers.Designer.cs">
+      <DependentUpon>FormUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Categories\FormCategory.resx">
+      <DependentUpon>FormCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categories\FormCreateCategory.resx">
+      <DependentUpon>FormCreateCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newss\FormCreateNews.resx">
+      <DependentUpon>FormCreateNews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newss\FormNews.resx">
+      <DependentUpon>FormNews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products\FormCreateProducts.resx">
+      <DependentUpon>FormCreateProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\FormCreateUser.resx">
+      <DependentUpon>FormCreateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categories\FormEditCategory.resx">
+      <DependentUpon>FormEditCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newss\FormEditNews.resx">
+      <DependentUpon>FormEditNews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products\FormEditProducts.resx">
+      <DependentUpon>FormEditProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\FormEditUser.resx">
+      <DependentUpon>FormEditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products\FormProducts.resx">
+      <DependentUpon>FormProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\FormUsers.resx">
+      <DependentUpon>FormUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ISpan.EStore.WinApp\ISpan.EStore.SqlDataLayer.csproj">
+      <Project>{ee4d4455-98be-4665-a847-27c185f5c78d}</Project>
+      <Name>ISpan.EStore.SqlDataLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

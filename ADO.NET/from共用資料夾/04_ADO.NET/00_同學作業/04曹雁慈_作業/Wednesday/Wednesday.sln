@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsWednesday", "IsWednesday\IsWednesday.csproj", "{AA87EC65-ED07-43E7-AEBD-8FE2A5F1D910}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISpan.PractiveFromAllen.WednesdayConsole", "ISpan.PractiveFromAllen.WednesdayConsole\ISpan.PractiveFromAllen.WednesdayConsole.csproj", "{5D9CDE03-578F-4AD1-A18E-1C84B35E7943}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA87EC65-ED07-43E7-AEBD-8FE2A5F1D910}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA87EC65-ED07-43E7-AEBD-8FE2A5F1D910}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA87EC65-ED07-43E7-AEBD-8FE2A5F1D910}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA87EC65-ED07-43E7-AEBD-8FE2A5F1D910}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D9CDE03-578F-4AD1-A18E-1C84B35E7943}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D9CDE03-578F-4AD1-A18E-1C84B35E7943}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D9CDE03-578F-4AD1-A18E-1C84B35E7943}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D9CDE03-578F-4AD1-A18E-1C84B35E7943}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EF582952-9727-442F-922D-F259F70B8054}
+	EndGlobalSection
+EndGlobal

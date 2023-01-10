@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F273A90D-1A6A-41C5-9605-35478DBFDCE3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>iSpan.EStore.WinApp</RootNamespace>
+    <AssemblyName>iSpan.EStore.WinApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CategoriesForms\FrmCategories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoriesForms\FrmCategories.Designer.cs">
+      <DependentUpon>FrmCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductsForms\FrmEditProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductsForms\FrmEditProduct.Designer.cs">
+      <DependentUpon>FrmEditProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductsForms\FrmAddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductsForms\FrmAddProduct.Designer.cs">
+      <DependentUpon>FrmAddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CategoriesForms\FrmEditCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoriesForms\FrmEditCategory.Designer.cs">
+      <DependentUpon>FrmEditCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CategoriesForms\FrmNewCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoriesForms\FrmNewCategory.Designer.cs">
+      <DependentUpon>FrmNewCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductsForms\FrmProductEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductsForms\FrmProductEditor.Designer.cs">
+      <DependentUpon>FrmProductEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewsForms\FrmNews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewsForms\FrmNews.Designer.cs">
+      <DependentUpon>FrmNews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsersForms\FrmAddNewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersForms\FrmAddNewUser.Designer.cs">
+      <DependentUpon>FrmAddNewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewsForms\FrmCreateNews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewsForms\FrmCreateNews.Designer.cs">
+      <DependentUpon>FrmCreateNews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReadOneCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReadOneCategory.Designer.cs">
+      <DependentUpon>FrmReadOneCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewsForms\FrmEditNews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewsForms\FrmEditNews.Designer.cs">
+      <DependentUpon>FrmEditNews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsersForms\FrmEditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersForms\FrmEditUser.Designer.cs">
+      <DependentUpon>FrmEditUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsersForms\FrmUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersForms\FrmUsers.Designer.cs">
+      <DependentUpon>FrmUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProducts.Designer.cs">
+      <DependentUpon>FrmProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CategoriesForms\FrmCategories.resx">
+      <DependentUpon>FrmCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductsForms\FrmAddProduct.resx">
+      <DependentUpon>FrmAddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CategoriesForms\FrmEditCategory.resx">
+      <DependentUpon>FrmEditCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CategoriesForms\FrmNewCategory.resx">
+      <DependentUpon>FrmNewCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewsForms\FrmNews.resx">
+      <DependentUpon>FrmNews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductsForms\FrmEditProduct.resx">
+      <DependentUpon>FrmEditProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductsForms\FrmProductEditor.resx">
+      <DependentUpon>FrmProductEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersForms\FrmAddNewUser.resx">
+      <DependentUpon>FrmAddNewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewsForms\FrmCreateNews.resx">
+      <DependentUpon>FrmCreateNews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReadOneCategory.resx">
+      <DependentUpon>FrmReadOneCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewsForms\FrmEditNews.resx">
+      <DependentUpon>FrmEditNews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersForms\FrmEditUser.resx">
+      <DependentUpon>FrmEditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersForms\FrmUsers.resx">
+      <DependentUpon>FrmUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProducts.resx">
+      <DependentUpon>FrmProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\iSpan.EStore.SqlDataLayer\iSpan.EStore.SqlDataLayer.csproj">
+      <Project>{87331cc1-a95d-4afe-8bde-99efbbee9a94}</Project>
+      <Name>iSpan.EStore.SqlDataLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
