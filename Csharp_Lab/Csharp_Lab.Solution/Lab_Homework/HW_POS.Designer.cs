@@ -40,7 +40,7 @@
             this.btn_GinTonic = new System.Windows.Forms.Button();
             this.lbl_Menu = new System.Windows.Forms.Label();
             this.panel_TotalPrice = new System.Windows.Forms.Panel();
-            this.lbl_TotalPrice = new System.Windows.Forms.Label();
+            this.lbl_InstructionTotalPrice = new System.Windows.Forms.Label();
             this.panel_PayBy = new System.Windows.Forms.Panel();
             this.btn_JKoPay = new System.Windows.Forms.Button();
             this.btn_LinePay = new System.Windows.Forms.Button();
@@ -93,7 +93,7 @@
             this.tbox_TotalPrice.Enabled = false;
             this.tbox_TotalPrice.Font = new System.Drawing.Font("微軟正黑體", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tbox_TotalPrice.ForeColor = System.Drawing.Color.White;
-            this.tbox_TotalPrice.Location = new System.Drawing.Point(50, 59);
+            this.tbox_TotalPrice.Location = new System.Drawing.Point(50, 67);
             this.tbox_TotalPrice.Name = "tbox_TotalPrice";
             this.tbox_TotalPrice.ReadOnly = true;
             this.tbox_TotalPrice.Size = new System.Drawing.Size(257, 45);
@@ -184,22 +184,22 @@
             // panel_TotalPrice
             // 
             this.panel_TotalPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_TotalPrice.Controls.Add(this.lbl_TotalPrice);
             this.panel_TotalPrice.Controls.Add(this.tbox_TotalPrice);
+            this.panel_TotalPrice.Controls.Add(this.lbl_InstructionTotalPrice);
             this.panel_TotalPrice.Location = new System.Drawing.Point(368, 48);
             this.panel_TotalPrice.Name = "panel_TotalPrice";
             this.panel_TotalPrice.Size = new System.Drawing.Size(323, 127);
             this.panel_TotalPrice.TabIndex = 17;
             // 
-            // lbl_TotalPrice
+            // lbl_InstructionTotalPrice
             // 
-            this.lbl_TotalPrice.AutoSize = true;
-            this.lbl_TotalPrice.Font = new System.Drawing.Font("微軟正黑體", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbl_TotalPrice.Location = new System.Drawing.Point(13, 9);
-            this.lbl_TotalPrice.Name = "lbl_TotalPrice";
-            this.lbl_TotalPrice.Size = new System.Drawing.Size(243, 35);
-            this.lbl_TotalPrice.TabIndex = 10;
-            this.lbl_TotalPrice.Text = "總金額 Total Price";
+            this.lbl_InstructionTotalPrice.AutoSize = true;
+            this.lbl_InstructionTotalPrice.Font = new System.Drawing.Font("微軟正黑體", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbl_InstructionTotalPrice.Location = new System.Drawing.Point(13, 9);
+            this.lbl_InstructionTotalPrice.Name = "lbl_InstructionTotalPrice";
+            this.lbl_InstructionTotalPrice.Size = new System.Drawing.Size(243, 35);
+            this.lbl_InstructionTotalPrice.TabIndex = 10;
+            this.lbl_InstructionTotalPrice.Text = "總金額 Total Price";
             // 
             // panel_PayBy
             // 
@@ -313,7 +313,7 @@
         private System.Windows.Forms.Panel panel_Menu;
         private System.Windows.Forms.Label lbl_Menu;
         private System.Windows.Forms.Panel panel_TotalPrice;
-        private System.Windows.Forms.Label lbl_TotalPrice;
+        private System.Windows.Forms.Label lbl_InstructionTotalPrice;
         private System.Windows.Forms.Panel panel_PayBy;
         private System.Windows.Forms.Label lbl_ad;
         private System.Windows.Forms.Label lbl_PayBy;

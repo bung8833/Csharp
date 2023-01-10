@@ -196,6 +196,9 @@
     <EmbeddedResource Include="MyHomework_張佑晨\index.resources" />
     <EmbeddedResource Include="MyHomework_張佑晨\Myhomework_0703_Hello.resources" />
     <EmbeddedResource Include="MyHomework_張佑晨\Myhomework_0704_LoanReport.resources" />
+    <EmbeddedResource Include="MyHomework_張佑晨\Myhomework_0704_LoanReport.resx">
+      <DependentUpon>Myhomework_0704_LoanReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyHomework_張佑晨\Myhomework_0709_StudentsGrade.resources" />
     <EmbeddedResource Include="MyHomework_張佑晨\Myhomework_0710_StudentsGrade_List.resources" />
     <EmbeddedResource Include="MyHomework_張佑晨\Myhomework_0711_Method.resources" />

@@ -93,50 +93,55 @@
             // lbl_showFinanced
             // 
             this.lbl_showFinanced.AutoSize = true;
+            this.lbl_showFinanced.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbl_showFinanced.Font = new System.Drawing.Font("微軟正黑體", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbl_showFinanced.Location = new System.Drawing.Point(289, 34);
             this.lbl_showFinanced.Name = "lbl_showFinanced";
-            this.lbl_showFinanced.Size = new System.Drawing.Size(134, 35);
+            this.lbl_showFinanced.Size = new System.Drawing.Size(136, 37);
             this.lbl_showFinanced.TabIndex = 6;
             this.lbl_showFinanced.Text = "Financed";
             // 
             // lbl_showYears
             // 
             this.lbl_showYears.AutoSize = true;
+            this.lbl_showYears.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbl_showYears.Font = new System.Drawing.Font("微軟正黑體", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbl_showYears.Location = new System.Drawing.Point(289, 111);
             this.lbl_showYears.Name = "lbl_showYears";
-            this.lbl_showYears.Size = new System.Drawing.Size(86, 35);
+            this.lbl_showYears.Size = new System.Drawing.Size(88, 37);
             this.lbl_showYears.TabIndex = 7;
             this.lbl_showYears.Text = "Years";
             // 
             // lbl_showRate
             // 
             this.lbl_showRate.AutoSize = true;
+            this.lbl_showRate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbl_showRate.Font = new System.Drawing.Font("微軟正黑體", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbl_showRate.Location = new System.Drawing.Point(289, 194);
             this.lbl_showRate.Name = "lbl_showRate";
-            this.lbl_showRate.Size = new System.Drawing.Size(74, 35);
+            this.lbl_showRate.Size = new System.Drawing.Size(76, 37);
             this.lbl_showRate.TabIndex = 8;
             this.lbl_showRate.Text = "Rate";
             // 
             // lbl_showMonthlyPmt
             // 
             this.lbl_showMonthlyPmt.AutoSize = true;
+            this.lbl_showMonthlyPmt.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbl_showMonthlyPmt.Font = new System.Drawing.Font("微軟正黑體", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbl_showMonthlyPmt.Location = new System.Drawing.Point(289, 278);
             this.lbl_showMonthlyPmt.Name = "lbl_showMonthlyPmt";
-            this.lbl_showMonthlyPmt.Size = new System.Drawing.Size(131, 35);
+            this.lbl_showMonthlyPmt.Size = new System.Drawing.Size(133, 37);
             this.lbl_showMonthlyPmt.TabIndex = 9;
             this.lbl_showMonthlyPmt.Text = "Payment";
             // 
             // lbl_showTotalPmt
             // 
             this.lbl_showTotalPmt.AutoSize = true;
+            this.lbl_showTotalPmt.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lbl_showTotalPmt.Font = new System.Drawing.Font("微軟正黑體", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbl_showTotalPmt.Location = new System.Drawing.Point(289, 353);
             this.lbl_showTotalPmt.Name = "lbl_showTotalPmt";
-            this.lbl_showTotalPmt.Size = new System.Drawing.Size(204, 35);
+            this.lbl_showTotalPmt.Size = new System.Drawing.Size(206, 37);
             this.lbl_showTotalPmt.TabIndex = 10;
             this.lbl_showTotalPmt.Text = "Total Payment";
             // 
