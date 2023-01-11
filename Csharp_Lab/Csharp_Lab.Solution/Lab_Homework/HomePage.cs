@@ -48,11 +48,25 @@ namespace Lab_Homework
             ShowFormInContainer(pos);
         }
 
+        private void btn_Calculator_Click(object sender, EventArgs e)
+        {
+            HW_Calculator calculator = new HW_Calculator();
+
+            ShowFormInContainer(calculator);
+        }
+
         private void btn_TicTacToe_Click(object sender, EventArgs e)
         {
             HW_TicTacToe ticTacToe = new HW_TicTacToe();
 
             ShowFormInContainer(ticTacToe);
+        }
+
+        private void buttonGuessTheNumber_Click(object sender, EventArgs e)
+        {
+            HW_GuessTheNumber guessTheNumber = new HW_GuessTheNumber();
+
+            ShowFormInContainer(guessTheNumber);
         }
     }
 }

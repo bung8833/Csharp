@@ -52,7 +52,7 @@
             // buttonPlus
             // 
             this.buttonPlus.Font = new System.Drawing.Font("微軟正黑體", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.buttonPlus.Location = new System.Drawing.Point(372, 39);
+            this.buttonPlus.Location = new System.Drawing.Point(389, 39);
             this.buttonPlus.Name = "buttonPlus";
             this.buttonPlus.Size = new System.Drawing.Size(79, 43);
             this.buttonPlus.TabIndex = 2;
@@ -73,11 +73,12 @@
             // labelDivisionLine
             // 
             this.labelDivisionLine.AutoSize = true;
-            this.labelDivisionLine.Location = new System.Drawing.Point(40, 159);
+            this.labelDivisionLine.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.labelDivisionLine.Location = new System.Drawing.Point(69, 160);
             this.labelDivisionLine.Name = "labelDivisionLine";
-            this.labelDivisionLine.Size = new System.Drawing.Size(318, 18);
+            this.labelDivisionLine.Size = new System.Drawing.Size(270, 23);
             this.labelDivisionLine.TabIndex = 8;
-            this.labelDivisionLine.Text = "===============================";
+            this.labelDivisionLine.Text = "====================";
             // 
             // labelNum2
             // 
@@ -121,7 +122,7 @@
             // buttonMinus
             // 
             this.buttonMinus.Font = new System.Drawing.Font("微軟正黑體", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.buttonMinus.Location = new System.Drawing.Point(372, 88);
+            this.buttonMinus.Location = new System.Drawing.Point(389, 88);
             this.buttonMinus.Name = "buttonMinus";
             this.buttonMinus.Size = new System.Drawing.Size(79, 43);
             this.buttonMinus.TabIndex = 3;
@@ -132,7 +133,7 @@
             // buttonMultiply
             // 
             this.buttonMultiply.Font = new System.Drawing.Font("微軟正黑體", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.buttonMultiply.Location = new System.Drawing.Point(372, 137);
+            this.buttonMultiply.Location = new System.Drawing.Point(389, 137);
             this.buttonMultiply.Name = "buttonMultiply";
             this.buttonMultiply.Size = new System.Drawing.Size(79, 43);
             this.buttonMultiply.TabIndex = 4;
@@ -143,7 +144,7 @@
             // buttonDivide
             // 
             this.buttonDivide.Font = new System.Drawing.Font("微軟正黑體", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.buttonDivide.Location = new System.Drawing.Point(372, 186);
+            this.buttonDivide.Location = new System.Drawing.Point(389, 186);
             this.buttonDivide.Name = "buttonDivide";
             this.buttonDivide.Size = new System.Drawing.Size(79, 43);
             this.buttonDivide.TabIndex = 5;
@@ -155,7 +156,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(535, 315);
+            this.ClientSize = new System.Drawing.Size(548, 315);
             this.Controls.Add(this.buttonDivide);
             this.Controls.Add(this.buttonMultiply);
             this.Controls.Add(this.buttonMinus);
@@ -168,8 +169,8 @@
             this.Controls.Add(this.buttonPlus);
             this.Controls.Add(this.textBoxNum1);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(557, 371);
-            this.MinimumSize = new System.Drawing.Size(557, 371);
+            this.MaximumSize = new System.Drawing.Size(570, 371);
+            this.MinimumSize = new System.Drawing.Size(570, 371);
             this.Name = "HW_Calculator";
             this.Text = "HW_Calculator";
             this.ResumeLayout(false);

@@ -37,11 +37,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(287, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(256, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 31;
-            this.dataGridView1.Size = new System.Drawing.Size(303, 351);
+            this.dataGridView1.Size = new System.Drawing.Size(499, 397);
             this.dataGridView1.TabIndex = 0;
             // 
             // buttonSieve
@@ -62,6 +62,7 @@
             this.buttonGroup.TabIndex = 2;
             this.buttonGroup.Text = "查詢 int[] 奇偶數群組";
             this.buttonGroup.UseVisualStyleBackColor = true;
+            this.buttonGroup.Click += new System.EventHandler(this.buttonGroup_Click);
             // 
             // QuerySyntax2
             // 

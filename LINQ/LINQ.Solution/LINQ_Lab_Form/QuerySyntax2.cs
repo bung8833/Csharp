@@ -22,21 +22,32 @@ namespace LINQ_Lab_Form
         {
             int[] numbers = new int[]
             {
-                1, 2, 3, 4, 5, 6, 7, 8, 9,
+                0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
             };
 
-            var linq = from n in numbers
-                       where n % 2 == 0
-                       select n;
+            var linq = from Number in numbers
+                       where Number % 2 == 0
+                       select new
+                       {
+                           Number
+                       };
 
-            foreach (var n in linq)
+            dataGridView1.DataSource = linq.ToList();
+        }
+
+        private void buttonGroup_Click(object sender, EventArgs e)
+        {
+            int[] numbers = new int[]
             {
-                
-            }
+                0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+            };
 
+            var linq = from number in numbers
+                       group number by number % 2 into NumberGroup
+                       select new { Key = NumberGroup.Key == 0 ? "偶數" : "奇數",
+                                    Count = NumberGroup.Count() };
 
-
-            //dataGridView1.DataSource = linq.ToList();
+            dataGridView1.DataSource = linq.ToList();
         }
     }
 }

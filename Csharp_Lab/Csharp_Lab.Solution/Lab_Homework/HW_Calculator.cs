@@ -18,48 +18,17 @@ namespace Lab_Homework
         }
 
 
-        private void DisplayAnswer(decimal n1, decimal n2, Button btn)
+        private void DisplayAnswer(Button btn)
         {
-            if (btn == buttonPlus)
-            {
-                decimal ans = n1 + n2;
+            
+            labelDivisionLine.Text = "====================";
 
-                textBoxAnswer.Text = ans.ToString();
-            }
-            else if (btn == buttonMinus)
-            {
-                decimal ans = n1 - n2;
+            // Parse Num1 and Num2
+            decimal num1 = 0;
+            decimal num2 = 1;
 
-                textBoxAnswer.Text = ans.ToString();
-            }
-            else if (btn == buttonMultiply)
-            {
-                decimal ans = n1 * n2;
-
-                textBoxAnswer.Text = ans.ToString();
-            }
-            else if (btn == buttonDivide)
-            {
-                // undone
-                decimal ans = n1 / n2;
-
-                textBoxAnswer.Text = ans.ToString();
-            }
-            else
-            {
-                return;
-            }
-        }
-
-        private void buttonPlus_Click(object sender, EventArgs e)
-        {
-            decimal n1 = 0;
-            decimal n2 = 0;
-
-            (decimal num1, decimal num2) vtup = (0, 0);
-
-            bool isDecimal = decimal.TryParse(textBoxNum1.Text, out n1)
-                          && decimal.TryParse(textBoxNum2.Text, out n2);
+            bool isDecimal = decimal.TryParse(textBoxNum1.Text, out num1)
+                          && decimal.TryParse(textBoxNum2.Text, out num2);
 
             if (!isDecimal)
             {
@@ -69,22 +38,61 @@ namespace Lab_Homework
                 return;
             }
 
-            DisplayAnswer(n1, n2, (Button)sender);
+
+            // Calculate answer
+            if (btn == buttonPlus)
+            {
+                textBoxAnswer.Text = Math.Round((num1 + num2), 4, 
+                                                 MidpointRounding.AwayFromZero).ToString();
+            }
+            else if (btn == buttonMinus)
+            {
+                textBoxAnswer.Text = Math.Round((num1 - num2), 4,
+                                                 MidpointRounding.AwayFromZero).ToString();
+            }
+            else if (btn == buttonMultiply)
+            {
+                textBoxAnswer.Text = Math.Round((num1 * num2), 4,
+                                                 MidpointRounding.AwayFromZero).ToString();
+            }
+            else if (btn == buttonDivide)
+            {
+                if (num2 == 0)
+                {
+                    textBoxAnswer.Text = "Division by zero";
+                    labelDivisionLine.Text = "Division by zero Division by zero";
+                    return;
+                }
+
+                textBoxAnswer.Text = Math.Round((num1 / num2), 4,
+                                                 MidpointRounding.AwayFromZero).ToString();
+            }
+            else
+            {
+                return;
+            }
+        }
+
+
+
+        private void buttonPlus_Click(object sender, EventArgs e)
+        {
+            DisplayAnswer((Button)sender);
         }
 
         private void buttonMinus_Click(object sender, EventArgs e)
         {
-
+            DisplayAnswer((Button)sender);
         }
 
         private void buttonMultiply_Click(object sender, EventArgs e)
         {
-
+            DisplayAnswer((Button)sender);
         }
 
         private void buttonDivide_Click(object sender, EventArgs e)
         {
-
+            DisplayAnswer((Button)sender);
         }
     }
 }

@@ -59,6 +59,12 @@
     <Compile Include="HW_Calculator.Designer.cs">
       <DependentUpon>HW_Calculator.cs</DependentUpon>
     </Compile>
+    <Compile Include="HW_GuessTheNumber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HW_GuessTheNumber.Designer.cs">
+      <DependentUpon>HW_GuessTheNumber.cs</DependentUpon>
+    </Compile>
     <Compile Include="HW_Hello.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,12 @@
     <Compile Include="HW_TicTacToe.Designer.cs">
       <DependentUpon>HW_TicTacToe.cs</DependentUpon>
     </Compile>
+    <Compile Include="InputYourGuess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputYourGuess.Designer.cs">
+      <DependentUpon>InputYourGuess.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoanReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +109,9 @@
     <EmbeddedResource Include="HW_Calculator.resx">
       <DependentUpon>HW_Calculator.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HW_GuessTheNumber.resx">
+      <DependentUpon>HW_GuessTheNumber.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HW_Hello.resx">
       <DependentUpon>HW_Hello.cs</DependentUpon>
     </EmbeddedResource>
@@ -108,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HW_TicTacToe.resx">
       <DependentUpon>HW_TicTacToe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputYourGuess.resx">
+      <DependentUpon>InputYourGuess.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoanReport.resx">
       <DependentUpon>LoanReport.cs</DependentUpon>

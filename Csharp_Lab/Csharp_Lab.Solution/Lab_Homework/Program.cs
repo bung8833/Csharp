@@ -17,8 +17,7 @@ namespace Lab_Homework
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            //Application.Run(new HomePage());
-            Application.Run(new HW_Calculator());
+            Application.Run(new HomePage());
         }
     }
 }

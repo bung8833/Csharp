@@ -1,18 +1,21 @@
+- 學生成績2+1種
 成績 Struct
 txtBox
 result = ...
-
 成績
 txtBox
 result = ...
-
 成績 List
 txtBox
 result = ...
 
-Method 包含迴圈
+- 猜數字
+按Enter輸入數字
+label show result
+反白數字
 
-計算機 n1, n2 加減乘除
+
+
 
 
 
