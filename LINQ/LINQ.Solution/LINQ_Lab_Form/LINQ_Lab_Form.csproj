@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3BF761F5-8E67-485A-A69C-94852C756C78}</ProjectGuid>
+    <ProjectGuid>{AF4E37F8-9085-4BFE-A6CC-4F69CBF73E6C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Lab_Homework</RootNamespace>
-    <AssemblyName>Lab_Homework</AssemblyName>
+    <RootNamespace>LINQ_Lab_Form</RootNamespace>
+    <AssemblyName>LINQ_Lab_Form</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,7 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,70 +46,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HomePage.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HomePage.Designer.cs">
-      <DependentUpon>HomePage.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="HW_Calculator.cs">
+    <Compile Include="FormAnonymous.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HW_Calculator.Designer.cs">
-      <DependentUpon>HW_Calculator.cs</DependentUpon>
+    <Compile Include="FormAnonymous.Designer.cs">
+      <DependentUpon>FormAnonymous.cs</DependentUpon>
     </Compile>
-    <Compile Include="HW_Hello.cs">
+    <Compile Include="FormLabLinqStandard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HW_Hello.Designer.cs">
-      <DependentUpon>HW_Hello.cs</DependentUpon>
+    <Compile Include="FormLabLinqStandard.Designer.cs">
+      <DependentUpon>FormLabLinqStandard.cs</DependentUpon>
     </Compile>
-    <Compile Include="HW_Loan.cs">
-      <SubType>Form</SubType>
+    <Compile Include="NorthwindDataSet.cs">
+      <DependentUpon>NorthwindDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="HW_Loan.Designer.cs">
-      <DependentUpon>HW_Loan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HW_POS.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HW_POS.Designer.cs">
-      <DependentUpon>HW_POS.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HW_TicTacToe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HW_TicTacToe.Designer.cs">
-      <DependentUpon>HW_TicTacToe.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LoanReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoanReport.Designer.cs">
-      <DependentUpon>LoanReport.cs</DependentUpon>
+    <Compile Include="NorthwindDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NorthwindDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="HomePage.resx">
-      <DependentUpon>HomePage.cs</DependentUpon>
+    <Compile Include="QuerySyntax.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuerySyntax.Designer.cs">
+      <DependentUpon>QuerySyntax.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuerySyntax2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuerySyntax2.Designer.cs">
+      <DependentUpon>QuerySyntax2.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HW_Calculator.resx">
-      <DependentUpon>HW_Calculator.cs</DependentUpon>
+    <EmbeddedResource Include="FormAnonymous.resx">
+      <DependentUpon>FormAnonymous.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HW_Hello.resx">
-      <DependentUpon>HW_Hello.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HW_Loan.resx">
-      <DependentUpon>HW_Loan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HW_POS.resx">
-      <DependentUpon>HW_POS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HW_TicTacToe.resx">
-      <DependentUpon>HW_TicTacToe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LoanReport.resx">
-      <DependentUpon>LoanReport.cs</DependentUpon>
+    <EmbeddedResource Include="FormLabLinqStandard.resx">
+      <DependentUpon>FormLabLinqStandard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -121,6 +104,23 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QuerySyntax.resx">
+      <DependentUpon>QuerySyntax.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuerySyntax2.resx">
+      <DependentUpon>QuerySyntax2.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="NorthwindDataSet.xsc">
+      <DependentUpon>NorthwindDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="NorthwindDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NorthwindDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="NorthwindDataSet.xss">
+      <DependentUpon>NorthwindDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -134,6 +134,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\LINQ_Lab\LINQ_Lab.csproj">
+      <Project>{5eec8f2b-8fdd-4401-baa7-9ee940e7a5f5}</Project>
+      <Name>LINQ_Lab</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

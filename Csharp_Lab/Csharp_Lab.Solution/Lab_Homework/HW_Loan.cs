@@ -97,6 +97,7 @@ namespace Lab_Homework
             loanReport.lbl_showMonthlyPmt.Text  = monthlyPmt.ToString();
             loanReport.lbl_showTotalPmt.Text    = (monthlyPmt * months).ToString();
 
+            loanReport.StartPosition = FormStartPosition.CenterScreen;
             loanReport.Show();
         }
     }

@@ -50,7 +50,8 @@
 			this.splitContainer1.Location = new global::System.Drawing.Point(0, 0);
 			this.splitContainer1.Name = "splitContainer1";
 			this.splitContainer1.Orientation = global::System.Windows.Forms.Orientation.Horizontal;
-			this.splitContainer1.Panel1.BackgroundImage = (global::System.Drawing.Image)componentResourceManager.GetObject("splitContainer1.Panel1.BackgroundImage");
+			// HACK
+			//this.splitContainer1.Panel1.BackgroundImage = (global::System.Drawing.Image)componentResourceManager.GetObject("splitContainer1.Panel1.BackgroundImage");
 			this.splitContainer1.Panel1.BackgroundImageLayout = global::System.Windows.Forms.ImageLayout.Stretch;
 			this.splitContainer1.Panel1.Controls.Add(this.label1);
 			this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
@@ -71,7 +72,8 @@
 			this.splitContainer2.Name = "splitContainer2";
 			this.splitContainer2.Panel1.AutoScroll = true;
 			this.splitContainer2.Panel1.BackColor = global::System.Drawing.Color.Gold;
-			this.splitContainer2.Panel1.BackgroundImage = (global::System.Drawing.Image)componentResourceManager.GetObject("splitContainer2.Panel1.BackgroundImage");
+            // HACK
+            //this.splitContainer2.Panel1.BackgroundImage = (global::System.Drawing.Image)componentResourceManager.GetObject("splitContainer2.Panel1.BackgroundImage");
 			this.splitContainer2.Panel1.BackgroundImageLayout = global::System.Windows.Forms.ImageLayout.Zoom;
 			this.splitContainer2.Panel1.Controls.Add(this.button9);
 			this.splitContainer2.Panel1.Controls.Add(this.button10);
@@ -90,7 +92,8 @@
 			this.splitContainer2.Panel1.Controls.Add(this.button2);
 			this.splitContainer2.Panel1.Controls.Add(this.button1);
 			this.splitContainer2.Panel2.BackColor = global::System.Drawing.Color.Gold;
-			this.splitContainer2.Panel2.BackgroundImage = (global::System.Drawing.Image)componentResourceManager.GetObject("splitContainer2.Panel2.BackgroundImage");
+            // HACK
+            //this.splitContainer2.Panel2.BackgroundImage = (global::System.Drawing.Image)componentResourceManager.GetObject("splitContainer2.Panel2.BackgroundImage");
 			this.splitContainer2.Panel2.BackgroundImageLayout = global::System.Windows.Forms.ImageLayout.Zoom;
 			this.splitContainer2.Size = new global::System.Drawing.Size(1030, 502);
 			this.splitContainer2.SplitterDistance = 196;

@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Lab_Homework
+namespace LINQ_Lab_Form
 {
     internal static class Program
     {
@@ -16,9 +17,9 @@ namespace Lab_Homework
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            
 
-            //Application.Run(new HomePage());
-            Application.Run(new HW_Calculator());
+            Application.Run(new QuerySyntax2());
         }
     }
 }
