@@ -24,6 +24,8 @@ namespace Lab_Homework
         public InputYourGuess()
         {
             InitializeComponent();
+
+            SelectInput();
         }
 
         private void ReceiveGuess()

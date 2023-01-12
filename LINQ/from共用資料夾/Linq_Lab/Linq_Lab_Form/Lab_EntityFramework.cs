@@ -153,26 +153,32 @@ namespace Linq_Lab_Form
 
 			//dgvShow.DataSource = qP.ToList();
 
-			List<Contact> lsContact = new List<Contact>
+			List<Contact> Contacts = new List<Contact>
 			{
-				new Contact{ ComID = 1 , ContactName = "John"},
-				new Contact {ComID = 3 , ContactName = "Jenna"},
-				new Contact{ComID=4, ContactName="Eric"}
+				new Contact{ ComID = 1, ContactName = "John" },
+				new Contact{ ComID = 3, ContactName = "Jenna" },
+				new Contact{ ComID = 4, ContactName = "Eric" }
 			};
 
-			List<Company> lsCompany = new List<Company>
+			List<Company> Companies = new List<Company>
 			{
-				new Company{ComID = 1 , CompanyName ="Apple"},
-				new Company{ComID = 2 , CompanyName ="Microsoft"},
-				new Company{ComID = 3 , CompanyName ="amazon"},
-				new Company {ComID = 4 , CompanyName ="SpaceX"}
+				new Company{ ComID = 1, CompanyName = "Apple" },
+				new Company{ ComID = 2, CompanyName = "Microsoft" },
+				new Company{ ComID = 3, CompanyName = "amazon" },
+				new Company{ ComID = 4, CompanyName = "SpaceX" }
 			};
 
-			var q = from com in  lsCompany
-					join c in lsContact on com.ComID equals c.ComID into ls
-					from c in ls.DefaultIfEmpty(new Contact { ComID = -1 , ContactName = "Nobody"})
-					select new {
-						com.ComID, com.CompanyName , c.ContactName
+			var q = from company in  Companies
+					join contact in Contacts on company.ComID equals contact.ComID into ls
+					from contact in ls.DefaultIfEmpty
+					(new Contact
+					{
+                        ComID = -1,
+                        ContactName = "Nobody"
+                    })
+					select new
+					{
+						company.ComID, company.CompanyName, contact.ContactName
 					};
 
 

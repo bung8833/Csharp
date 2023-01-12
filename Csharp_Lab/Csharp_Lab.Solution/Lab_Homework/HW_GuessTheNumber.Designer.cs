@@ -31,12 +31,13 @@
             this.buttonGuess = new System.Windows.Forms.Button();
             this.buttonShowAnswer = new System.Windows.Forms.Button();
             this.labelInstruction = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // buttonGuess
             // 
             this.buttonGuess.Font = new System.Drawing.Font("Rockwell", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonGuess.Location = new System.Drawing.Point(116, 177);
+            this.buttonGuess.Location = new System.Drawing.Point(97, 133);
             this.buttonGuess.Name = "buttonGuess";
             this.buttonGuess.Size = new System.Drawing.Size(222, 72);
             this.buttonGuess.TabIndex = 0;
@@ -47,7 +48,7 @@
             // buttonShowAnswer
             // 
             this.buttonShowAnswer.Font = new System.Drawing.Font("Rockwell", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonShowAnswer.Location = new System.Drawing.Point(374, 177);
+            this.buttonShowAnswer.Location = new System.Drawing.Point(369, 133);
             this.buttonShowAnswer.Name = "buttonShowAnswer";
             this.buttonShowAnswer.Size = new System.Drawing.Size(222, 72);
             this.buttonShowAnswer.TabIndex = 1;
@@ -65,11 +66,19 @@
             this.labelInstruction.TabIndex = 2;
             this.labelInstruction.Text = "Geuss the number: from 1 to 100";
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(47, 240);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(619, 394);
+            this.panel1.TabIndex = 3;
+            // 
             // HW_GuessTheNumber
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(712, 656);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.labelInstruction);
             this.Controls.Add(this.buttonShowAnswer);
             this.Controls.Add(this.buttonGuess);
@@ -86,5 +95,6 @@
         private System.Windows.Forms.Button buttonGuess;
         private System.Windows.Forms.Button buttonShowAnswer;
         private System.Windows.Forms.Label labelInstruction;
+        private System.Windows.Forms.Panel panel1;
     }
 }

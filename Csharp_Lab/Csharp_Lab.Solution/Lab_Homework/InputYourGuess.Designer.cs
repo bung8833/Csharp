@@ -69,6 +69,7 @@
             // textBoxGuessInput
             // 
             this.textBoxGuessInput.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxGuessInput.HideSelection = false;
             this.textBoxGuessInput.Location = new System.Drawing.Point(31, 141);
             this.textBoxGuessInput.Name = "textBoxGuessInput";
             this.textBoxGuessInput.Size = new System.Drawing.Size(512, 36);

@@ -35,6 +35,7 @@
             this.buttonDelete = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.buttonSearch = new System.Windows.Forms.Button();
+            this.buttonLeftOuterJoin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,11 +109,22 @@
             this.buttonSearch.UseVisualStyleBackColor = true;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
+            // buttonLeftOuterJoin
+            // 
+            this.buttonLeftOuterJoin.Location = new System.Drawing.Point(1002, 19);
+            this.buttonLeftOuterJoin.Name = "buttonLeftOuterJoin";
+            this.buttonLeftOuterJoin.Size = new System.Drawing.Size(112, 43);
+            this.buttonLeftOuterJoin.TabIndex = 7;
+            this.buttonLeftOuterJoin.Text = "LeftOuter";
+            this.buttonLeftOuterJoin.UseVisualStyleBackColor = true;
+            this.buttonLeftOuterJoin.Click += new System.EventHandler(this.buttonLeftOuterJoin_Click);
+            // 
             // FormLabEntityFramework
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1009, 542);
+            this.ClientSize = new System.Drawing.Size(1141, 542);
+            this.Controls.Add(this.buttonLeftOuterJoin);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.buttonDelete);
@@ -137,5 +149,6 @@
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button buttonSearch;
+        private System.Windows.Forms.Button buttonLeftOuterJoin;
     }
 }

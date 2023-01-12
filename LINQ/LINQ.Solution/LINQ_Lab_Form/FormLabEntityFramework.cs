@@ -113,5 +113,43 @@ Nah, Energy Drinks is just something anyone can find in any stores.";
 
             dataGridView1.DataSource = dbContext.Categories.ToList();
         }
+
+        private void buttonLeftOuterJoin_Click(object sender, EventArgs e)
+        {
+            //todo create Contact entity
+            
+            //List<Contact> Contacts = new List<Contact>
+            //{
+            //    new Contact{ ComID = 1, ContactName = "John" },
+            //    new Contact{ ComID = 3, ContactName = "Jenna" },
+            //    new Contact{ ComID = 4, ContactName = "Eric" }
+            //};
+
+            //List<Company> Companies = new List<Company>
+            //{
+            //    new Company{ ComID = 1, CompanyName = "Apple" },
+            //    new Company{ ComID = 2, CompanyName = "Microsoft" },
+            //    new Company{ ComID = 3, CompanyName = "amazon" },
+            //    new Company{ ComID = 4, CompanyName = "SpaceX" }
+            //};
+
+            //var q = from company in Companies
+            //        join contact in Contacts on company.ComID equals contact.ComID into ls
+            //        from contact in ls.DefaultIfEmpty
+            //        (new Contact
+            //        {
+            //            ComID = -1,
+            //            ContactName = "Nobody"
+            //        })
+            //        select new
+            //        {
+            //            company.ComID,
+            //            company.CompanyName,
+            //            contact.ContactName
+            //        };
+
+
+            //dgvShow.DataSource = q.ToList();
+        }
     }
 }

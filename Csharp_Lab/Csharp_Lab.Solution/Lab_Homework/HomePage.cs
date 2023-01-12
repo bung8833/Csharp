@@ -62,7 +62,7 @@ namespace Lab_Homework
             ShowFormInContainer(ticTacToe);
         }
 
-        private void buttonGuessTheNumber_Click(object sender, EventArgs e)
+        private void btn_GuessTheNumber_Click(object sender, EventArgs e)
         {
             HW_GuessTheNumber guessTheNumber = new HW_GuessTheNumber();
 

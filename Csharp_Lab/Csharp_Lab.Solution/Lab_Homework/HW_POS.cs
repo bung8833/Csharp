@@ -17,111 +17,60 @@ namespace Lab_Homework
             InitializeComponent();
         }
 
+        public class Wine
+        {
+            public readonly string Name;
+            public readonly int Price;
+
+            public Wine(string name, int price)
+            {
+                Name = name;
+                Price = price;
+            }
+
+            private int _qty;
+            public int Qty
+            {
+                get { return _qty; }
+                set
+                {
+                    if (value >= 0)
+                    {
+                        _qty = value;
+                    }
+                    else
+                    {
+                        _qty = 0;
+                    }
+                }
+            }
+        }
 
 
-        ////// Global //////
-        ////// Global //////
-        ////// Global //////
+
+        Wine Vodka = new Wine("伏特加 Vodka", 300)
+        {
+            Qty = 0,
+        };
+
+        Wine Rum = new Wine("蘭姆酒 Rum", 380)
+        {
+            Qty = 0,
+        };
+
+        Wine Bourbon = new Wine("波本 Bourbon", 400)
+        {
+            Qty = 0,
+        };
+
+        Wine GinTonic = new Wine("琴通寧 Gin Tonic", 320)
+        {
+            Qty = 0,
+        };
 
         static int TotalPrice = 0;
 
-        public class Vodka
-        {
-            public const string Name = "伏特加 Vodka";
-            public const int Price = 300;
-
-            private static int _qty = 0;
-            public static int Qty
-            {
-                get { return _qty; }
-                set
-                {
-                    if (value >= 0)
-                    {
-                        _qty = value;
-                    }
-                    else
-                    {
-                        _qty = 0;
-                    }
-                }
-            }
-        }
-
-        public class Rum
-        {
-            public const string Name = "蘭姆酒 Rum";
-            public const int Price = 380;
-
-            private static int _qty = 0;
-            public static int Qty
-            {
-                get { return _qty; }
-                set
-                {
-                    if (value >= 0)
-                    {
-                        _qty = value;
-                    }
-                    else
-                    {
-                        _qty = 0;
-                    }
-                }
-            }
-        }
-
-        public class Bourbon
-        {
-            public const string Name = "波本 Bourbon";
-            public const int Price = 400;
-
-            private static int _qty = 0;
-            public static int Qty
-            {
-                get { return _qty; }
-                set
-                {
-                    if (value >= 0)
-                    {
-                        _qty = value;
-                    }
-                    else
-                    {
-                        _qty = 0;
-                    }
-                }
-            }
-        }
-
-        public class GinTonic
-        {
-            public const string Name = "琴通寧 Gin Tonic";
-            public const int Price = 320;
-
-            private static int _qty = 0;
-            public static int Qty
-            {
-                get { return _qty; }
-                set
-                {
-                    if (value >= 0)
-                    {
-                        _qty = value;
-                    }
-                    else
-                    {
-                        _qty = 0;
-                    }
-                }
-            }
-        }
-
-
-
-        ////// Wines //////
-        ////// Wines //////
-        ////// Wines //////
+        
 
         private void btn_Vodka_Click(object sender, EventArgs e)
         {
