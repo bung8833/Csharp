@@ -61,21 +61,19 @@
             this.labelInstruction.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.labelInstruction.Location = new System.Drawing.Point(57, 60);
             this.labelInstruction.Name = "labelInstruction";
-            this.labelInstruction.Size = new System.Drawing.Size(630, 37);
+            this.labelInstruction.Size = new System.Drawing.Size(569, 37);
             this.labelInstruction.TabIndex = 2;
-            this.labelInstruction.Text = "Geuss the number: between 1 to 100";
+            this.labelInstruction.Text = "Geuss the number: from 1 to 100";
             // 
             // HW_GuessTheNumber
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(749, 364);
+            this.ClientSize = new System.Drawing.Size(712, 656);
             this.Controls.Add(this.labelInstruction);
             this.Controls.Add(this.buttonShowAnswer);
             this.Controls.Add(this.buttonGuess);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(771, 420);
-            this.MinimumSize = new System.Drawing.Size(771, 420);
             this.Name = "HW_GuessTheNumber";
             this.Text = "HW_GuessTheNumber";
             this.ResumeLayout(false);

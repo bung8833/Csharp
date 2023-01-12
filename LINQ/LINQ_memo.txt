@@ -1,0 +1,12 @@
+DataGridView 的 DataSource要是property 
+所以要建立物件(object)
+
+select new 
+{
+    ...
+}
+
+// select new { } 為匿名類別
+
+
+彙總運算: aggregate

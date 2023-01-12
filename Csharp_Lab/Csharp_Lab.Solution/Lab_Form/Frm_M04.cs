@@ -86,7 +86,7 @@ namespace Lab_Form
             MessageBox.Show("Age: " + mbr1.Age);
             MessageBox.Show("Nickname: " + mbr1.Nickname);
 
-            Member mbr2 = new Member //todo "()"
+            Member mbr2 = new Member
             {
                 Name = "Richard",
                 Age = 26

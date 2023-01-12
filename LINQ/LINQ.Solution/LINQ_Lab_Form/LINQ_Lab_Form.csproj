@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Categories.cs">
+      <DependentUpon>Northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employees.cs">
+      <DependentUpon>Northwind.tt</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,11 +73,32 @@
     <Compile Include="FormAnonymous.Designer.cs">
       <DependentUpon>FormAnonymous.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLabEntityFramework.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLabEntityFramework.Designer.cs">
+      <DependentUpon>FormLabEntityFramework.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLabLinqStandard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormLabLinqStandard.Designer.cs">
       <DependentUpon>FormLabLinqStandard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Northwind.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Northwind.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Northwind.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Northwind.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Northwind.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Northwind.edmx</DependentUpon>
     </Compile>
     <Compile Include="NorthwindDataSet.cs">
       <DependentUpon>NorthwindDataSet.xsd</DependentUpon>
@@ -92,6 +128,9 @@
     <EmbeddedResource Include="FormAnonymous.resx">
       <DependentUpon>FormAnonymous.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormLabEntityFramework.resx">
+      <DependentUpon>FormLabEntityFramework.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLabLinqStandard.resx">
       <DependentUpon>FormLabLinqStandard.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,6 +149,13 @@
     <EmbeddedResource Include="QuerySyntax2.resx">
       <DependentUpon>QuerySyntax2.cs</DependentUpon>
     </EmbeddedResource>
+    <EntityDeploy Include="Northwind.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Northwind.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Northwind.edmx.diagram">
+      <DependentUpon>Northwind.edmx</DependentUpon>
+    </None>
     <None Include="NorthwindDataSet.xsc">
       <DependentUpon>NorthwindDataSet.xsd</DependentUpon>
     </None>
@@ -121,6 +167,7 @@
     <None Include="NorthwindDataSet.xss">
       <DependentUpon>NorthwindDataSet.xsd</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -139,6 +186,21 @@
       <Project>{5eec8f2b-8fdd-4401-baa7-9ee940e7a5f5}</Project>
       <Name>LINQ_Lab</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Northwind.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Northwind.Context.cs</LastGenOutput>
+      <DependentUpon>Northwind.edmx</DependentUpon>
+    </Content>
+    <Content Include="Northwind.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Northwind.edmx</DependentUpon>
+      <LastGenOutput>Northwind.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

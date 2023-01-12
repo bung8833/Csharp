@@ -43,11 +43,36 @@ namespace LINQ_Lab_Form
             };
 
             var linq = from number in numbers
-                       group number by number % 2 into NumberGroup
-                       select new { Key = NumberGroup.Key == 0 ? "偶數" : "奇數",
-                                    Count = NumberGroup.Count() };
+                       group number by GetGroupName(number)
+                         into NumberGroup
+                       select new
+                       {
+                           奇偶 = NumberGroup.Key,
+                           Count = NumberGroup.Count()
+                       };
+
+            //var linq = from number in numbers
+            //           group number by number % 2 == 0 ? "偶數" : "奇數" 
+            //             into NumberGroup
+            //           select new
+            //           {
+            //               Key = NumberGroup.Key,
+            //               Count = NumberGroup.Count()
+            //           };
+
+            //var linq = from number in numbers
+            //           group number by number % 2 into NumberGroup
+            //           select new 
+            //           { 
+            //               Key = NumberGroup.Key == 0 
+            //               ? "偶數" : "奇數", 
+            //               Count = NumberGroup.Count()
+            //           };
 
             dataGridView1.DataSource = linq.ToList();
         }
+
+        private string GetGroupName(int number)
+            => number % 2 == 0 ? "偶數" : "奇數";
     }
 }

@@ -41,7 +41,7 @@ namespace Lab_Form
     }
 
     // 一個Class本身 預設為internal
-    //todo
+
     public class Member
     {
         // Class裡面的東西 預設為private
