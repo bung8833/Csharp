@@ -59,12 +59,15 @@ namespace Lab_Homework
         {
             ReceiveGuess();
         }
-        
+
         private void textBoxGuessInput_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
                 ReceiveGuess();
+
+                e.Handled = true;
+                e.SuppressKeyPress = true;
             }
         }
 
