@@ -33,10 +33,10 @@
             this.btn_TicTacToe = new System.Windows.Forms.Button();
             this.btn_POS = new System.Windows.Forms.Button();
             this.panelLeft = new System.Windows.Forms.Panel();
+            this.buttonGuessTheNumber = new System.Windows.Forms.Button();
             this.btn_Calculator = new System.Windows.Forms.Button();
             this.panelRight = new System.Windows.Forms.Panel();
             this.splitter2 = new System.Windows.Forms.Splitter();
-            this.buttonGuessTheNumber = new System.Windows.Forms.Button();
             this.panelLeft.SuspendLayout();
             this.panelRight.SuspendLayout();
             this.SuspendLayout();
@@ -49,6 +49,7 @@
             this.btn_Hello.Name = "btn_Hello";
             this.btn_Hello.Size = new System.Drawing.Size(199, 35);
             this.btn_Hello.TabIndex = 0;
+            this.btn_Hello.TabStop = false;
             this.btn_Hello.Text = "Hello";
             this.btn_Hello.UseVisualStyleBackColor = true;
             this.btn_Hello.Click += new System.EventHandler(this.btn_Hello_Click);
@@ -61,6 +62,7 @@
             this.btn_Loan.Name = "btn_Loan";
             this.btn_Loan.Size = new System.Drawing.Size(199, 35);
             this.btn_Loan.TabIndex = 1;
+            this.btn_Loan.TabStop = false;
             this.btn_Loan.Text = "Loan";
             this.btn_Loan.UseVisualStyleBackColor = true;
             this.btn_Loan.Click += new System.EventHandler(this.btn_Loan_Click);
@@ -72,7 +74,8 @@
             this.btn_TicTacToe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_TicTacToe.Name = "btn_TicTacToe";
             this.btn_TicTacToe.Size = new System.Drawing.Size(199, 35);
-            this.btn_TicTacToe.TabIndex = 3;
+            this.btn_TicTacToe.TabIndex = 4;
+            this.btn_TicTacToe.TabStop = false;
             this.btn_TicTacToe.Text = "TicTacToe";
             this.btn_TicTacToe.UseVisualStyleBackColor = true;
             this.btn_TicTacToe.Click += new System.EventHandler(this.btn_TicTacToe_Click);
@@ -85,6 +88,7 @@
             this.btn_POS.Name = "btn_POS";
             this.btn_POS.Size = new System.Drawing.Size(199, 35);
             this.btn_POS.TabIndex = 2;
+            this.btn_POS.TabStop = false;
             this.btn_POS.Text = "POS";
             this.btn_POS.UseVisualStyleBackColor = true;
             this.btn_POS.Click += new System.EventHandler(this.btn_POS_Click);
@@ -104,6 +108,19 @@
             this.panelLeft.Size = new System.Drawing.Size(215, 583);
             this.panelLeft.TabIndex = 0;
             // 
+            // buttonGuessTheNumber
+            // 
+            this.buttonGuessTheNumber.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.buttonGuessTheNumber.Location = new System.Drawing.Point(5, 219);
+            this.buttonGuessTheNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonGuessTheNumber.Name = "buttonGuessTheNumber";
+            this.buttonGuessTheNumber.Size = new System.Drawing.Size(199, 35);
+            this.buttonGuessTheNumber.TabIndex = 5;
+            this.buttonGuessTheNumber.TabStop = false;
+            this.buttonGuessTheNumber.Text = "GuessTheNumber";
+            this.buttonGuessTheNumber.UseVisualStyleBackColor = true;
+            this.buttonGuessTheNumber.Click += new System.EventHandler(this.buttonGuessTheNumber_Click);
+            // 
             // btn_Calculator
             // 
             this.btn_Calculator.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
@@ -111,7 +128,8 @@
             this.btn_Calculator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_Calculator.Name = "btn_Calculator";
             this.btn_Calculator.Size = new System.Drawing.Size(199, 35);
-            this.btn_Calculator.TabIndex = 4;
+            this.btn_Calculator.TabIndex = 3;
+            this.btn_Calculator.TabStop = false;
             this.btn_Calculator.Text = "Calculator";
             this.btn_Calculator.UseVisualStyleBackColor = true;
             this.btn_Calculator.Click += new System.EventHandler(this.btn_Calculator_Click);
@@ -133,18 +151,6 @@
             this.splitter2.Size = new System.Drawing.Size(3, 579);
             this.splitter2.TabIndex = 0;
             this.splitter2.TabStop = false;
-            // 
-            // buttonGuessTheNumber
-            // 
-            this.buttonGuessTheNumber.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.buttonGuessTheNumber.Location = new System.Drawing.Point(5, 219);
-            this.buttonGuessTheNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonGuessTheNumber.Name = "buttonGuessTheNumber";
-            this.buttonGuessTheNumber.Size = new System.Drawing.Size(199, 35);
-            this.buttonGuessTheNumber.TabIndex = 5;
-            this.buttonGuessTheNumber.Text = "GuessTheNumber";
-            this.buttonGuessTheNumber.UseVisualStyleBackColor = true;
-            this.buttonGuessTheNumber.Click += new System.EventHandler(this.buttonGuessTheNumber_Click);
             // 
             // HomePage
             // 

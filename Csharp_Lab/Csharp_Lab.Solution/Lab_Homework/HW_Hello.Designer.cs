@@ -49,7 +49,7 @@
             this.lbl_Name.Location = new System.Drawing.Point(80, 80);
             this.lbl_Name.Name = "lbl_Name";
             this.lbl_Name.Size = new System.Drawing.Size(99, 36);
-            this.lbl_Name.TabIndex = 2;
+            this.lbl_Name.TabIndex = 6;
             this.lbl_Name.Text = "姓名：";
             // 
             // lbl_EngName
@@ -60,7 +60,7 @@
             this.lbl_EngName.Location = new System.Drawing.Point(80, 152);
             this.lbl_EngName.Name = "lbl_EngName";
             this.lbl_EngName.Size = new System.Drawing.Size(217, 36);
-            this.lbl_EngName.TabIndex = 3;
+            this.lbl_EngName.TabIndex = 7;
             this.lbl_EngName.Text = "English Name: ";
             // 
             // lbl_Gender
@@ -71,7 +71,7 @@
             this.lbl_Gender.Location = new System.Drawing.Point(80, 221);
             this.lbl_Gender.Name = "lbl_Gender";
             this.lbl_Gender.Size = new System.Drawing.Size(99, 36);
-            this.lbl_Gender.TabIndex = 4;
+            this.lbl_Gender.TabIndex = 8;
             this.lbl_Gender.Text = "性別：";
             // 
             // lbl_Zodiac
@@ -82,7 +82,7 @@
             this.lbl_Zodiac.Location = new System.Drawing.Point(80, 292);
             this.lbl_Zodiac.Name = "lbl_Zodiac";
             this.lbl_Zodiac.Size = new System.Drawing.Size(99, 36);
-            this.lbl_Zodiac.TabIndex = 5;
+            this.lbl_Zodiac.TabIndex = 9;
             this.lbl_Zodiac.Text = "星座：";
             // 
             // txtBox_Name
@@ -92,7 +92,7 @@
             this.txtBox_Name.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBox_Name.Name = "txtBox_Name";
             this.txtBox_Name.Size = new System.Drawing.Size(139, 36);
-            this.txtBox_Name.TabIndex = 6;
+            this.txtBox_Name.TabIndex = 0;
             // 
             // txtBox_EngName
             // 
@@ -101,7 +101,7 @@
             this.txtBox_EngName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBox_EngName.Name = "txtBox_EngName";
             this.txtBox_EngName.Size = new System.Drawing.Size(139, 36);
-            this.txtBox_EngName.TabIndex = 7;
+            this.txtBox_EngName.TabIndex = 1;
             // 
             // txtBox_Gender
             // 
@@ -110,7 +110,7 @@
             this.txtBox_Gender.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBox_Gender.Name = "txtBox_Gender";
             this.txtBox_Gender.Size = new System.Drawing.Size(139, 36);
-            this.txtBox_Gender.TabIndex = 8;
+            this.txtBox_Gender.TabIndex = 2;
             // 
             // txtBox_Zodiac
             // 
@@ -119,7 +119,7 @@
             this.txtBox_Zodiac.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBox_Zodiac.Name = "txtBox_Zodiac";
             this.txtBox_Zodiac.Size = new System.Drawing.Size(139, 36);
-            this.txtBox_Zodiac.TabIndex = 9;
+            this.txtBox_Zodiac.TabIndex = 3;
             // 
             // btn_Hello
             // 
@@ -129,7 +129,7 @@
             this.btn_Hello.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_Hello.Name = "btn_Hello";
             this.btn_Hello.Size = new System.Drawing.Size(169, 54);
-            this.btn_Hello.TabIndex = 10;
+            this.btn_Hello.TabIndex = 4;
             this.btn_Hello.Text = "Say HELLO!";
             this.btn_Hello.UseVisualStyleBackColor = true;
             this.btn_Hello.Click += new System.EventHandler(this.btn_Hello_Click);
@@ -142,7 +142,7 @@
             this.btn_Hi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_Hi.Name = "btn_Hi";
             this.btn_Hi.Size = new System.Drawing.Size(169, 54);
-            this.btn_Hi.TabIndex = 11;
+            this.btn_Hi.TabIndex = 5;
             this.btn_Hi.Text = "Say Hi!";
             this.btn_Hi.UseVisualStyleBackColor = true;
             this.btn_Hi.Click += new System.EventHandler(this.btn_Hi_Click);

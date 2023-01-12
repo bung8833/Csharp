@@ -80,7 +80,7 @@
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(12, 409);
+            this.buttonDelete.Location = new System.Drawing.Point(12, 475);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(112, 43);
             this.buttonDelete.TabIndex = 4;
@@ -100,7 +100,7 @@
             // 
             // buttonSearch
             // 
-            this.buttonSearch.Location = new System.Drawing.Point(12, 360);
+            this.buttonSearch.Location = new System.Drawing.Point(12, 426);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(112, 43);
             this.buttonSearch.TabIndex = 6;

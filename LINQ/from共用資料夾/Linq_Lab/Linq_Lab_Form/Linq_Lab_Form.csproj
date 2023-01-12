@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AF4E37F8-9085-4BFE-A6CC-4F69CBF73E6C}</ProjectGuid>
+    <ProjectGuid>{DF742B75-5803-4E6C-B0D0-087E0912ECFC}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>LINQ_Lab_Form</RootNamespace>
-    <AssemblyName>LINQ_Lab_Form</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <RootNamespace>Linq_Lab_Form</RootNamespace>
+    <AssemblyName>Linq_Lab_Form</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -56,55 +56,61 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Categories.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
+      <DependentUpon>NorthwindModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Customers.cs">
+      <DependentUpon>NorthwindModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Employees.cs">
-      <DependentUpon>Northwind.tt</DependentUpon>
+      <DependentUpon>NorthwindModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Lab_Ado.net.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Lab_Ado.net.Designer.cs">
+      <DependentUpon>Lab_Ado.net.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAnonymous.cs">
+    <Compile Include="Lab_DataSet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAnonymous.Designer.cs">
-      <DependentUpon>FormAnonymous.cs</DependentUpon>
+    <Compile Include="Lab_DataSet.Designer.cs">
+      <DependentUpon>Lab_DataSet.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLabEntityFramework.cs">
+    <Compile Include="Lab_EntityFramework.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLabEntityFramework.Designer.cs">
-      <DependentUpon>FormLabEntityFramework.cs</DependentUpon>
+    <Compile Include="Lab_EntityFramework.Designer.cs">
+      <DependentUpon>Lab_EntityFramework.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLabLinqStandard.cs">
+    <Compile Include="Lab_Linq_Standard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLabLinqStandard.Designer.cs">
-      <DependentUpon>FormLabLinqStandard.cs</DependentUpon>
+    <Compile Include="Lab_Linq_Standard.Designer.cs">
+      <DependentUpon>Lab_Linq_Standard.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPracticeStatistics.cs">
+    <Compile Include="Lab_匿名函式.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPracticeStatistics.Designer.cs">
-      <DependentUpon>FormPracticeStatistics.cs</DependentUpon>
+    <Compile Include="Lab_匿名函式.Designer.cs">
+      <DependentUpon>Lab_匿名函式.cs</DependentUpon>
     </Compile>
-    <Compile Include="Northwind.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Northwind.Context.tt</DependentUpon>
+    <Compile Include="Lab_員工群組.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Northwind.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Northwind.tt</DependentUpon>
+    <Compile Include="Lab_員工群組.Designer.cs">
+      <DependentUpon>Lab_員工群組.cs</DependentUpon>
     </Compile>
-    <Compile Include="Northwind.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Northwind.edmx</DependentUpon>
+    <Compile Include="Lab_基本查詢.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab_基本查詢.Designer.cs">
+      <DependentUpon>Lab_基本查詢.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lab_彙總運算.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lab_彙總運算.Designer.cs">
+      <DependentUpon>Lab_彙總運算.cs</DependentUpon>
     </Compile>
     <Compile Include="NorthwindDataSet.cs">
       <DependentUpon>NorthwindDataSet.xsd</DependentUpon>
@@ -114,34 +120,53 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>NorthwindDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="NorthwindModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NorthwindModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NorthwindModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NorthwindModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NorthwindModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NorthwindModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Products.cs">
+      <DependentUpon>NorthwindModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuerySyntax.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Region.cs">
+      <DependentUpon>NorthwindModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="QuerySyntax.Designer.cs">
-      <DependentUpon>QuerySyntax.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QuerySyntax2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuerySyntax2.Designer.cs">
-      <DependentUpon>QuerySyntax2.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Utility.cs" />
+    <EmbeddedResource Include="Lab_Ado.net.resx">
+      <DependentUpon>Lab_Ado.net.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAnonymous.resx">
-      <DependentUpon>FormAnonymous.cs</DependentUpon>
+    <EmbeddedResource Include="Lab_DataSet.resx">
+      <DependentUpon>Lab_DataSet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormLabEntityFramework.resx">
-      <DependentUpon>FormLabEntityFramework.cs</DependentUpon>
+    <EmbeddedResource Include="Lab_EntityFramework.resx">
+      <DependentUpon>Lab_EntityFramework.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormLabLinqStandard.resx">
-      <DependentUpon>FormLabLinqStandard.cs</DependentUpon>
+    <EmbeddedResource Include="Lab_Linq_Standard.resx">
+      <DependentUpon>Lab_Linq_Standard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPracticeStatistics.resx">
-      <DependentUpon>FormPracticeStatistics.cs</DependentUpon>
+    <EmbeddedResource Include="Lab_匿名函式.resx">
+      <DependentUpon>Lab_匿名函式.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab_員工群組.resx">
+      <DependentUpon>Lab_員工群組.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab_基本查詢.resx">
+      <DependentUpon>Lab_基本查詢.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lab_彙總運算.resx">
+      <DependentUpon>Lab_彙總運算.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -152,19 +177,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="QuerySyntax.resx">
-      <DependentUpon>QuerySyntax.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuerySyntax2.resx">
-      <DependentUpon>QuerySyntax2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EntityDeploy Include="Northwind.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Northwind.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Northwind.edmx.diagram">
-      <DependentUpon>Northwind.edmx</DependentUpon>
-    </None>
     <None Include="NorthwindDataSet.xsc">
       <DependentUpon>NorthwindDataSet.xsd</DependentUpon>
     </None>
@@ -175,6 +187,13 @@
     </None>
     <None Include="NorthwindDataSet.xss">
       <DependentUpon>NorthwindDataSet.xsd</DependentUpon>
+    </None>
+    <EntityDeploy Include="NorthwindModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>NorthwindModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="NorthwindModel.edmx.diagram">
+      <DependentUpon>NorthwindModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -191,21 +210,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LINQ_Lab\LINQ_Lab.csproj">
-      <Project>{5eec8f2b-8fdd-4401-baa7-9ee940e7a5f5}</Project>
-      <Name>LINQ_Lab</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Northwind.Context.tt">
+    <Content Include="NorthwindModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Northwind.Context.cs</LastGenOutput>
-      <DependentUpon>Northwind.edmx</DependentUpon>
+      <LastGenOutput>NorthwindModel.Context.cs</LastGenOutput>
+      <DependentUpon>NorthwindModel.edmx</DependentUpon>
     </Content>
-    <Content Include="Northwind.tt">
+    <Content Include="NorthwindModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Northwind.edmx</DependentUpon>
-      <LastGenOutput>Northwind.cs</LastGenOutput>
+      <DependentUpon>NorthwindModel.edmx</DependentUpon>
+      <LastGenOutput>NorthwindModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>

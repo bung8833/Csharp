@@ -37,7 +37,6 @@ namespace Lab_Homework
                                     $"from {LowerBound} to {UpperBound}";
         }
 
-        public int GetAnswer() => Answer;
 
         public HW_GuessTheNumber()
         {

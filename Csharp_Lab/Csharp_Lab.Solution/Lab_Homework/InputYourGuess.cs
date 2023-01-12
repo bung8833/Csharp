@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,6 +15,12 @@ namespace Lab_Homework
     {
         private int numberOfGuess;
 
+        public void SelectInput()
+        {
+            textBoxGuessInput.Focus();
+            textBoxGuessInput.SelectAll();
+        }
+
         public InputYourGuess()
         {
             InitializeComponent();
@@ -21,6 +28,8 @@ namespace Lab_Homework
 
         private void ReceiveGuess()
         {
+            SelectInput();
+
             bool isInt = int.TryParse(textBoxGuessInput.Text, out numberOfGuess);
 
             if (!isInt)
@@ -48,7 +57,7 @@ namespace Lab_Homework
         {
             ReceiveGuess();
         }
-
+        
         private void textBoxGuessInput_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)

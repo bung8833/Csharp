@@ -19,7 +19,7 @@ namespace LINQ_Lab_Form
             Application.SetCompatibleTextRenderingDefault(false);
             
 
-            Application.Run(new FormLabEntityFramework());
+            Application.Run(new FormPracticeStatistics());
         }
     }
 }

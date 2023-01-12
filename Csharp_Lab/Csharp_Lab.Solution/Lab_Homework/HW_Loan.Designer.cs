@@ -46,7 +46,7 @@
             this.lbl_financed.Location = new System.Drawing.Point(50, 44);
             this.lbl_financed.Name = "lbl_financed";
             this.lbl_financed.Size = new System.Drawing.Size(155, 35);
-            this.lbl_financed.TabIndex = 0;
+            this.lbl_financed.TabIndex = 6;
             this.lbl_financed.Text = "貸款金額：";
             // 
             // lbl_years
@@ -56,7 +56,7 @@
             this.lbl_years.Location = new System.Drawing.Point(50, 114);
             this.lbl_years.Name = "lbl_years";
             this.lbl_years.Size = new System.Drawing.Size(124, 35);
-            this.lbl_years.TabIndex = 1;
+            this.lbl_years.TabIndex = 7;
             this.lbl_years.Text = "期限 (年)";
             // 
             // lbl_rate
@@ -66,7 +66,7 @@
             this.lbl_rate.Location = new System.Drawing.Point(50, 184);
             this.lbl_rate.Name = "lbl_rate";
             this.lbl_rate.Size = new System.Drawing.Size(121, 35);
-            this.lbl_rate.TabIndex = 2;
+            this.lbl_rate.TabIndex = 8;
             this.lbl_rate.Text = "利率 (%)";
             // 
             // btn_PMT
@@ -76,7 +76,7 @@
             this.btn_PMT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_PMT.Name = "btn_PMT";
             this.btn_PMT.Size = new System.Drawing.Size(175, 75);
-            this.btn_PMT.TabIndex = 4;
+            this.btn_PMT.TabIndex = 3;
             this.btn_PMT.Text = "PMT (月付)";
             this.btn_PMT.UseVisualStyleBackColor = true;
             this.btn_PMT.Click += new System.EventHandler(this.btn_PMT_Click);
@@ -88,7 +88,7 @@
             this.btn_total.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_total.Name = "btn_total";
             this.btn_total.Size = new System.Drawing.Size(175, 75);
-            this.btn_total.TabIndex = 5;
+            this.btn_total.TabIndex = 4;
             this.btn_total.Text = "Total";
             this.btn_total.UseVisualStyleBackColor = true;
             this.btn_total.Click += new System.EventHandler(this.btn_total_Click);
@@ -100,7 +100,7 @@
             this.btn_report.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_report.Name = "btn_report";
             this.btn_report.Size = new System.Drawing.Size(175, 75);
-            this.btn_report.TabIndex = 6;
+            this.btn_report.TabIndex = 5;
             this.btn_report.Text = "Report";
             this.btn_report.UseVisualStyleBackColor = true;
             this.btn_report.Click += new System.EventHandler(this.btn_report_Click);
@@ -112,7 +112,7 @@
             this.txtBox_financed.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBox_financed.Name = "txtBox_financed";
             this.txtBox_financed.Size = new System.Drawing.Size(192, 39);
-            this.txtBox_financed.TabIndex = 7;
+            this.txtBox_financed.TabIndex = 0;
             this.txtBox_financed.Text = "240000";
             // 
             // txtBox_years
@@ -122,7 +122,7 @@
             this.txtBox_years.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBox_years.Name = "txtBox_years";
             this.txtBox_years.Size = new System.Drawing.Size(192, 39);
-            this.txtBox_years.TabIndex = 8;
+            this.txtBox_years.TabIndex = 1;
             this.txtBox_years.Text = "2";
             // 
             // txtBox_rate
@@ -132,7 +132,7 @@
             this.txtBox_rate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBox_rate.Name = "txtBox_rate";
             this.txtBox_rate.Size = new System.Drawing.Size(192, 39);
-            this.txtBox_rate.TabIndex = 9;
+            this.txtBox_rate.TabIndex = 2;
             this.txtBox_rate.Text = "2.4";
             // 
             // HW_Loan

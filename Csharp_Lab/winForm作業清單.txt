@@ -1,21 +1,8 @@
-- 學生成績2+1種
-成績 Struct
-txtBox
-result = ...
-成績
-txtBox
-result = ...
-成績 List
-txtBox
-result = ...
+記事本
 
-- 猜數字
-按Enter輸入數字
-label show result
-反白數字
+小畫家
 
-
-
+圖片瀏覽器
 
 
 
