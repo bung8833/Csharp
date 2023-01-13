@@ -224,5 +224,11 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Linq_Lab\Linq_Lab.csproj">
+      <Project>{1f1ef9a8-a3b9-4535-88ce-0bad48597af6}</Project>
+      <Name>Linq_Lab</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

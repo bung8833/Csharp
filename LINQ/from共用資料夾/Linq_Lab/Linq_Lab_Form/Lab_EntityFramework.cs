@@ -41,7 +41,6 @@ namespace Linq_Lab_Form
 			dbContext.Categories.Add(cate);
 
 			dbContext.SaveChanges();
-
 			dgvShow.DataSource = dbContext.Categories.ToList();
 
 		}
@@ -86,9 +85,9 @@ namespace Linq_Lab_Form
 
 		private void button5_Click(object sender, EventArgs e)
 		{
-			//Categories qCate = (from c in dbContext.Categories
-			//			where c.CategoryName == "Beer"
-			//			select c).First();
+			//Categories qCate2 = (from c in dbContext.Categories
+			//					where c.CategoryName == "Beer"
+			//					select c).First();
 
 			Categories qCate = dbContext.Categories.First(c=>c.CategoryName =="Beer");
 
@@ -188,12 +187,12 @@ namespace Linq_Lab_Form
 
 		private void button10_Click(object sender, EventArgs e)
 		{
-			var q = from pro in dbContext.Products
+			var q = from prod in dbContext.Products
 					select new
 					{
-						ProductName = pro.ProductName,
-						ProductUnitPrice = pro.UnitPrice,
-						CategoryName = pro.Categories.CategoryName
+						ProductName = prod.ProductName,
+						ProductUnitPrice = prod.UnitPrice,
+						CategoryName = prod.Categories.CategoryName
 					};
 
 			dgvShow.DataSource = q.ToList();

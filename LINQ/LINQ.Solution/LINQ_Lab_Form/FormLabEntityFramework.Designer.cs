@@ -36,6 +36,10 @@
             this.button4 = new System.Windows.Forms.Button();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.buttonLeftOuterJoin = new System.Windows.Forms.Button();
+            this.buttonUnion = new System.Windows.Forms.Button();
+            this.buttonConcat = new System.Windows.Forms.Button();
+            this.buttonJoin = new System.Windows.Forms.Button();
+            this.buttonNavProp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,7 +115,7 @@
             // 
             // buttonLeftOuterJoin
             // 
-            this.buttonLeftOuterJoin.Location = new System.Drawing.Point(1002, 19);
+            this.buttonLeftOuterJoin.Location = new System.Drawing.Point(999, 166);
             this.buttonLeftOuterJoin.Name = "buttonLeftOuterJoin";
             this.buttonLeftOuterJoin.Size = new System.Drawing.Size(112, 43);
             this.buttonLeftOuterJoin.TabIndex = 7;
@@ -119,11 +123,55 @@
             this.buttonLeftOuterJoin.UseVisualStyleBackColor = true;
             this.buttonLeftOuterJoin.Click += new System.EventHandler(this.buttonLeftOuterJoin_Click);
             // 
+            // buttonUnion
+            // 
+            this.buttonUnion.Location = new System.Drawing.Point(999, 19);
+            this.buttonUnion.Name = "buttonUnion";
+            this.buttonUnion.Size = new System.Drawing.Size(112, 43);
+            this.buttonUnion.TabIndex = 8;
+            this.buttonUnion.Text = "Union";
+            this.buttonUnion.UseVisualStyleBackColor = true;
+            this.buttonUnion.Click += new System.EventHandler(this.buttonUnion_Click);
+            // 
+            // buttonConcat
+            // 
+            this.buttonConcat.Location = new System.Drawing.Point(999, 68);
+            this.buttonConcat.Name = "buttonConcat";
+            this.buttonConcat.Size = new System.Drawing.Size(112, 43);
+            this.buttonConcat.TabIndex = 9;
+            this.buttonConcat.Text = "Concat";
+            this.buttonConcat.UseVisualStyleBackColor = true;
+            this.buttonConcat.Click += new System.EventHandler(this.buttonConcat_Click);
+            // 
+            // buttonJoin
+            // 
+            this.buttonJoin.Location = new System.Drawing.Point(999, 117);
+            this.buttonJoin.Name = "buttonJoin";
+            this.buttonJoin.Size = new System.Drawing.Size(112, 43);
+            this.buttonJoin.TabIndex = 10;
+            this.buttonJoin.Text = "Join";
+            this.buttonJoin.UseVisualStyleBackColor = true;
+            this.buttonJoin.Click += new System.EventHandler(this.buttonJoin_Click);
+            // 
+            // buttonNavProp
+            // 
+            this.buttonNavProp.Location = new System.Drawing.Point(999, 215);
+            this.buttonNavProp.Name = "buttonNavProp";
+            this.buttonNavProp.Size = new System.Drawing.Size(112, 92);
+            this.buttonNavProp.TabIndex = 11;
+            this.buttonNavProp.Text = "Navigation Properties";
+            this.buttonNavProp.UseVisualStyleBackColor = true;
+            this.buttonNavProp.Click += new System.EventHandler(this.buttonNavProp_Click);
+            // 
             // FormLabEntityFramework
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1141, 542);
+            this.Controls.Add(this.buttonNavProp);
+            this.Controls.Add(this.buttonJoin);
+            this.Controls.Add(this.buttonConcat);
+            this.Controls.Add(this.buttonUnion);
             this.Controls.Add(this.buttonLeftOuterJoin);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.button4);
@@ -150,5 +198,9 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.Button buttonLeftOuterJoin;
+        private System.Windows.Forms.Button buttonUnion;
+        private System.Windows.Forms.Button buttonConcat;
+        private System.Windows.Forms.Button buttonJoin;
+        private System.Windows.Forms.Button buttonNavProp;
     }
 }
