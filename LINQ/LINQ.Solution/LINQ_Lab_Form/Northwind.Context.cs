@@ -27,5 +27,7 @@ namespace LINQ_Lab_Form
     
         public virtual DbSet<Employees> Employees { get; set; }
         public virtual DbSet<Categories> Categories { get; set; }
+        public virtual DbSet<Customers> Customers { get; set; }
+        public virtual DbSet<Products> Products { get; set; }
     }
 }

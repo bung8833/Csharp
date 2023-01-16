@@ -20,10 +20,10 @@ namespace Lab_Homework
 
 
         // will not change color:
-        //static Color NewColor = SystemColors.GradientInactiveCaption;
+        static Color NewColor = SystemColors.GradientInactiveCaption;
 
         // will change color:
-        static Color NewColor = SystemColors.GradientActiveCaption;
+        //static Color NewColor = SystemColors.GradientActiveCaption;
 
 
         /// <summary>

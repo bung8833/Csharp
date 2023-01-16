@@ -7,7 +7,10 @@
       <Diagram DiagramId="94b444764981408bbf56b73b41ab8494" Name="Diagram1">
         <EntityTypeShape EntityType="NorthwindModel.Employees" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="true" />
         <AssociationConnector Association="NorthwindModel.FK_Employees_Employees" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="NorthwindModel.Categories" Width="1.5" PointX="3.375" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.Categories" Width="1.5" PointX="2.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.Customers" Width="1.5" PointX="4" PointY="0.5" />
+        <EntityTypeShape EntityType="NorthwindModel.Products" Width="1.5" PointX="2.25" PointY="2.625" />
+        <AssociationConnector Association="NorthwindModel.FK_Products_Categories" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

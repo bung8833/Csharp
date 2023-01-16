@@ -86,8 +86,6 @@ namespace Lab_Homework
             panel1.Controls.Add(formInput);
             formInput.StartPosition = FormStartPosition.Manual ;
             formInput.Show();
-            formInput.Activate();
-            formInput.Refresh();
         }
 
         private void buttonShowAnswer_Click(object sender, EventArgs e)
