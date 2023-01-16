@@ -30,5 +30,6 @@ namespace Linq_Lab_Form
         public virtual DbSet<Employees> Employees { get; set; }
         public virtual DbSet<Region> Region { get; set; }
         public virtual DbSet<Customers> Customers { get; set; }
+        public virtual DbSet<Orders> Orders { get; set; }
     }
 }

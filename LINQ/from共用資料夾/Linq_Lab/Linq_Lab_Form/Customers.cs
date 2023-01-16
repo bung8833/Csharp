@@ -14,6 +14,12 @@ namespace Linq_Lab_Form
     
     public partial class Customers
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Customers()
+        {
+            this.Orders = new HashSet<Orders>();
+        }
+    
         public string CustomerID { get; set; }
         public string CompanyName { get; set; }
         public string ContactName { get; set; }
@@ -26,5 +32,8 @@ namespace Linq_Lab_Form
         public string Phone { get; set; }
         public string Fax { get; set; }
         public string notes { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Orders> Orders { get; set; }
     }
 }

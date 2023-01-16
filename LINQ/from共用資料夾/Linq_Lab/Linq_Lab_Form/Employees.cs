@@ -18,6 +18,7 @@ namespace Linq_Lab_Form
         public Employees()
         {
             this.Employees1 = new HashSet<Employees>();
+            this.Orders = new HashSet<Orders>();
         }
     
         public int EmployeeID { get; set; }
@@ -42,5 +43,7 @@ namespace Linq_Lab_Form
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Employees> Employees1 { get; set; }
         public virtual Employees Employees2 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Orders> Orders { get; set; }
     }
 }

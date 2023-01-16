@@ -41,6 +41,7 @@ namespace Linq_Lab_Form
 			dbContext.Categories.Add(cate);
 
 			dbContext.SaveChanges();
+
 			dgvShow.DataSource = dbContext.Categories.ToList();
 
 		}
@@ -85,9 +86,9 @@ namespace Linq_Lab_Form
 
 		private void button5_Click(object sender, EventArgs e)
 		{
-			//Categories qCate2 = (from c in dbContext.Categories
-			//					where c.CategoryName == "Beer"
-			//					select c).First();
+			//Categories qCate = (from c in dbContext.Categories
+			//			where c.CategoryName == "Beer"
+			//			select c).First();
 
 			Categories qCate = dbContext.Categories.First(c=>c.CategoryName =="Beer");
 
@@ -152,32 +153,26 @@ namespace Linq_Lab_Form
 
 			//dgvShow.DataSource = qP.ToList();
 
-			List<Contact> Contacts = new List<Contact>
+			List<Contact> lsContact = new List<Contact>
 			{
-				new Contact{ ComID = 1, ContactName = "John" },
-				new Contact{ ComID = 3, ContactName = "Jenna" },
-				new Contact{ ComID = 4, ContactName = "Eric" }
+				new Contact{ ComID = 1 , ContactName = "John"},
+				new Contact {ComID = 3 , ContactName = "Jenna"},
+				new Contact{ComID=4, ContactName="Eric"}
 			};
 
-			List<Company> Companies = new List<Company>
+			List<Company> lsCompany = new List<Company>
 			{
-				new Company{ ComID = 1, CompanyName = "Apple" },
-				new Company{ ComID = 2, CompanyName = "Microsoft" },
-				new Company{ ComID = 3, CompanyName = "amazon" },
-				new Company{ ComID = 4, CompanyName = "SpaceX" }
+				new Company{ComID = 1 , CompanyName ="Apple"},
+				new Company{ComID = 2 , CompanyName ="Microsoft"},
+				new Company{ComID = 3 , CompanyName ="amazon"},
+				new Company {ComID = 4 , CompanyName ="SpaceX"}
 			};
 
-			var q = from company in  Companies
-					join contact in Contacts on company.ComID equals contact.ComID into ls
-					from contact in ls.DefaultIfEmpty
-					(new Contact
-					{
-                        ComID = -1,
-                        ContactName = "Nobody"
-                    })
-					select new
-					{
-						company.ComID, company.CompanyName, contact.ContactName
+			var q = from com in  lsCompany
+					join c in lsContact on com.ComID equals c.ComID into ls
+					from c in ls.DefaultIfEmpty(new Contact { ComID = -1 , ContactName = "Nobody"})
+					select new {
+						com.ComID, com.CompanyName , c.ContactName
 					};
 
 
@@ -187,15 +182,34 @@ namespace Linq_Lab_Form
 
 		private void button10_Click(object sender, EventArgs e)
 		{
-			var q = from prod in dbContext.Products
+			var q = from pro in dbContext.Products
 					select new
 					{
-						ProductName = prod.ProductName,
-						ProductUnitPrice = prod.UnitPrice,
-						CategoryName = prod.Categories.CategoryName
+						ProductName = pro.ProductName,
+						ProductUnitPrice = pro.UnitPrice,
+						CategoryName = pro.Categories.CategoryName
 					};
 
 			dgvShow.DataSource = q.ToList();
+		}
+
+		private void button11_Click(object sender, EventArgs e)
+		{
+			var q = from cate in dbContext.Categories
+					from pro in cate.Products
+					select new
+					{
+						ProductName = pro.ProductName,
+						ProductUnitPrice = pro.UnitPrice,
+						CategoryName = cate.CategoryName
+					};
+
+			dgvShow.DataSource = q.ToList();
+		}
+
+		private void dgvShow_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+
 		}
 	}
 }

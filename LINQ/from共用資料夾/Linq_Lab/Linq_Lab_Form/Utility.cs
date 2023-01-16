@@ -30,4 +30,11 @@ namespace Linq_Lab_Form
 		public string CompanyName { get; set; }
 	}
 
+
+	public class CategoryProduct
+	{
+		public string CategoryName { get; set; }
+		public string ProductName { get; set; }
+	}
+
 }

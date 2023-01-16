@@ -41,5 +41,47 @@ namespace Linq_Lab_Form
 			dgvShow.DataSource = qPro.ToList();
 
 		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			NorthwindDataSet dsNorthwind = new NorthwindDataSet();
+			new ProductsTableAdapter().Fill(dsNorthwind.Products);
+
+			var qPro = dsNorthwind.Products.OrderBy(p => p.UnitPrice).Take(7).Aggregate(
+				(p, next) => p.UnitPrice > next.UnitPrice ? p : next);
+
+			//var qPro = dsNorthwind.Products.OrderBy(p => p.UnitPrice).Take(7).Aggregate(new NorthwindDataSet.ProductsRow { ProductID = 99999 , CategoryID = 1 , ProductName = "BEST" , SupplierID= 1, QuantityPerUnit ="666" , UnitPrice = 9000 , UnitsInStock = 30 , UnitsOnOrder = 20 , ReorderLevel =20 , Discontinued = false} , );
+
+			MessageBox.Show(qPro.ProductName + " " + qPro.UnitPrice);
+
+
+			//var q = dsNorthwind.Products.OrderBy(p => p.UnitPrice).Take(7).Aggregate()
+
+			string sentence = "the quick brown fox jumps over the lazy dog";
+
+			string[] words = sentence.Split(' ');
+
+			var q = words.Aggregate((now, next) => next + " " + now); 
+			// quick the -> brown quick the -> fox brown quick the
+
+			int[] ints = { 4, 8, 8, 3, 9, 0, 7, 8, 2 };  // 49
+
+			var qNums = ints.Aggregate(0, (total, next) => total + next);
+
+
+			string[] fruits = { "apple", "mango", "orange", "passionfruit", "grape" };
+
+			var qLongest = fruits.Aggregate("banana", 
+				(longest, next) => longest.Length < next.Length ? next : longest, 
+				result => result.ToUpper());
+
+
+			//MessageBox.Show(q);
+
+			//MessageBox.Show(qNums.ToString());
+
+			MessageBox.Show(qLongest);
+
+		}
 	}
 }

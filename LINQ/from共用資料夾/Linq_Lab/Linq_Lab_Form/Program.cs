@@ -16,7 +16,7 @@ namespace Linq_Lab_Form
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new Lab_EntityFramework());
+			Application.Run(new Lab_彙總運算());
 		}
 	}
 }
