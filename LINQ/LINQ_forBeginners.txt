@@ -1,0 +1,17 @@
+.NET 針對 IEnumerable<T> 介面，提供了數十種擴充方法，放在 Enumerable 這個 Class 中
+
+一維Array, List<T> 都有實作 IEnumerable<T> 介面
+
+IEnumerable<int>  Enumerable.Range(int start, int count)
+
+T[]  ToArray<T>(this IEnumerable<T> source)
+
+IEnumerable<T>  Where<T>(this IEnumerable<T> source, 
+				     Func<T,bool> predicate)
+
+// 注意用法 source.Where(predicate)
+// static bool predicate(T value) => value % 3 == 0;
+a(cde.gh jkl
+abcd f/hijkl
+
+

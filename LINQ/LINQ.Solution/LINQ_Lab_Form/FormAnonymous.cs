@@ -35,7 +35,7 @@ namespace LINQ_Lab_Form
             {
                 Pay = (double amount) => amount; // Lambda B
             }
-
+            
             double price = double.Parse(textBox1.Text);
             double discountedPrice = Pay(price);
 
