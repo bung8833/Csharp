@@ -122,7 +122,7 @@ List<Plan> Calc(int totalCount,
 
 
 SqlDbType.Bit
-0 or 1  -->  true or false
+1 or 0  -->  true or false
 
 
 SQL @參數名稱
@@ -162,13 +162,13 @@ SQL 語法寫錯
 debug方式 執行後檢視sql 貼到記事本檢查
 
 SQL Server
-table設計 將Id(及主鍵)的
+table設計 將Id(即主鍵)的
 識別規格開啟 自動替主鍵編上不重複且遞增的號碼
 
 SQL Server
 Server Name
 Server=.;
-Server=RICHARD\SQLEXPRESS;
+Server=.\SQLEXPRESS;
 
 
 
@@ -190,7 +190,7 @@ Server=RICHARD\SQLEXPRESS;
 2023 Jan 09
 打字軟體/網站 練習
 
-SQL Express
+SQL Express xx
 
 SQL Server 社群版 <--裝這個!
 
