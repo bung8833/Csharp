@@ -1,38 +1,11 @@
-﻿using Microsoft.Win32;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleAppPOKER
+namespace PlayingCardGame.Utilities
 {
-    public class Program
-    {
-        static void Main(string[] args)
-        {
-            //string[] suits = new string[] { "S", "H", "D", "C" };
-            //int[] values = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
-            
-            //var cards = suits.Join(values, 
-            //    s => 1, 
-            //    v => 1, 
-            //    (s, v) => $"{s}{v,2}").ToList();
-
-            List<Card> cards = Card.RandomCards(20);
-            cards = cards.SortCards();
-
-            foreach (var card in cards)
-            {
-                Console.WriteLine(card);
-            }
-
-
-            Console.ReadLine();
-        }
-    }
-
     public class Card : IComparable<Card>
     {
         public string Suit { get; private set; } //花色: Spade, Heart, Dimond, Club
@@ -41,7 +14,7 @@ namespace ConsoleAppPOKER
         public Card(string suit, int value)
         {
             #region Suit
-            if (suit == "s"|| suit == "S" || suit == "spade" || suit == "Spade")
+            if (suit == "s" || suit == "S" || suit == "spade" || suit == "Spade")
             {
                 this.Suit = "黑桃";
             }
@@ -142,6 +115,20 @@ namespace ConsoleAppPOKER
         public static List<Card> SortCards(this List<Card> cards)
         {
             return cards.OrderBy(x => x).ToList();
+        }
+    }
+
+    public class LINQRepo
+    {
+        public void CreateDeckOfCards()
+        {
+            string[] suits = new string[] { "S", "H", "D", "C" };
+            int[] values = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
+
+            var cards = suits.Join(values,
+                s => 1,
+                v => 1,
+                (s, v) => $"{s}{v,2}").ToList();
         }
     }
 }
