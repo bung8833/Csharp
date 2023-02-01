@@ -11,7 +11,7 @@ namespace PlayingCardGame.ConsoleApp
     {
         static void Main(string[] args)
         {
-            List<Card> cards = CardUtility.GetRandomCards(50);
+            List<Card> cards = CardUtility.GetRandomCards(20);
 
             cards.Sort();
 

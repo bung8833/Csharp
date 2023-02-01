@@ -7,6 +7,48 @@ using System.Threading.Tasks;
 
 namespace PlayingCardGame.Utilities
 {
+    public static class CardUtility
+    {
+        /// <summary>
+        /// 隨機選取任意張牌
+        /// </summary>
+        /// <param name="qty"></param>
+        /// <returns></returns>
+        public static List<Card> GetRandomCards(int qty)
+        {
+            string[] suits = new string[] { "S", "H", "D", "C" };
+            int[] values = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
+
+            List<Card> cards = suits.Join(values,
+                s => 1,
+                v => 1,
+                (s, v) => new Card(s, v))
+                .ToList();
+            
+            List<Card> result = new List<Card>();
+
+            for (int i = 0; i < qty; i++)
+            {
+                Random seed = new Random(Guid.NewGuid().GetHashCode());
+                int index = seed.Next(0, cards.Count); // [0, cards.Count)
+
+                result.Add(cards[index]);
+            }
+
+            return result;
+        }
+
+        /// <summary>
+        /// 將牌按照數字、花色排序
+        /// </summary>
+        /// <param name="cards"></param>
+        /// <returns></returns>
+        public static void Sort(this List<Card> cards)
+        {
+            cards.Sort((x,y) => x.CompareTo(y));
+        }
+    }
+
     public class Card : IComparable<Card>
     {
         public string Suit { get; }
@@ -81,7 +123,7 @@ namespace PlayingCardGame.Utilities
             string strValue = String.Empty;
 
             if (this.Value == 1) strValue = "A";
-            else if (this.Value == 10) strValue = "10";
+            else if (this.Value == 10) strValue = "T";
             else if (this.Value == 11) strValue = "J";
             else if (this.Value == 12) strValue = "Q";
             else if (this.Value == 13) strValue = "K";
@@ -95,48 +137,6 @@ namespace PlayingCardGame.Utilities
             else if (this.Suit == SuitName.Club) strSuit = "C";
 
             return strSuit + strValue;
-        }
-    }
-
-    public static class CardUtility
-    {
-        /// <summary>
-        /// 隨機選取任意張牌
-        /// </summary>
-        /// <param name="qty"></param>
-        /// <returns></returns>
-        public static List<Card> GetRandomCards(int qty)
-        {
-            string[] suits = new string[] { "S", "H", "D", "C" };
-            int[] values = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
-
-            List<Card> cards = suits.Join(values,
-                s => 1,
-                v => 1,
-                (s, v) => new Card(s, v))
-                .ToList();
-            
-            List<Card> result = new List<Card>();
-
-            for (int i = 0; i < qty; i++)
-            {
-                Random seed = new Random(Guid.NewGuid().GetHashCode());
-                int index = seed.Next(0, cards.Count); // [0, cards.Count)
-
-                result.Add(cards[index]);
-            }
-
-            return result;
-        }
-
-        /// <summary>
-        /// 將牌按照數字、花色排序
-        /// </summary>
-        /// <param name="cards"></param>
-        /// <returns></returns>
-        public static void Sort(this List<Card> cards)
-        {
-            cards.Sort((x,y) => x.CompareTo(y));
         }
     }
 
@@ -155,10 +155,15 @@ namespace PlayingCardGame.Utilities
             string[] suits = new string[] { "S", "H", "D", "C" };
             int[] values = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
 
-            var cards = suits.Join(values,
-                s => 1,
-                v => 1,
-                (s, v) => $"{s}{v,2}").ToList();
+            List<string> strCards = suits.Join(values,
+                s => 1, v => 1,
+                (s, v) => $"{s}{v,2}")
+                .ToList();
+
+            List<Card> cards = suits.Join(values,
+                s => 1, v => 1,
+                (s, v) => new Card(s, v))
+                .ToList();
         }
     }
 }
