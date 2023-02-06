@@ -10,33 +10,21 @@ namespace PlayingCardGame.Utilities
 {
     public class Card : IComparable<Card>
     {
-        private string _suit;
+        private Suits _suit;
 
-        public string Suit
+        public Suits Suit
         {
             get => _suit;
 
             set
             {
-                if (value.ToLower() == "spade" || value.ToLower() == "s")
+                if (value >= Suits.Club && value <=Suits.Spade)
                 {
-                    _suit = SuitName.Spade;
-                }
-                else if (value.ToLower() == "heart" || value.ToLower() == "h")
-                {
-                    _suit = SuitName.Heart;
-                }
-                else if (value.ToLower() == "diamond" || value.ToLower() == "d")
-                {
-                    _suit = SuitName.Diamond;
-                }
-                else if (value.ToLower() == "club" || value.ToLower() == "c")
-                {
-                    _suit = SuitName.Club;
+                    _suit = value;
                 }
                 else
                 {
-                    throw new Exception("No such card!");
+                    throw new Exception("No such card!\r\nSuit must be within Spade, Heart, Diamond, Club.");
                 }
             }
         }
@@ -52,79 +40,46 @@ namespace PlayingCardGame.Utilities
                 if (value >= 1 && value <= 13) _value = value;
                 else
                 {
-                    throw new Exception("No such card!");
+                    throw new Exception("No such card!\r\nValue must be from 1 to 13");
                 }
             }
         }
 
-        public Card(string suit, int value)
+        public Card(Suits suit, int value)
         {
             Suit = suit;
-            #region Suit
-            //if (suit.ToLower() == "spade" || suit.ToLower() == "s")
-            //{
-            //    this.Suit = SuitName.Spade;
-            //}
-            //else if (suit.ToLower() == "heart" || suit.ToLower() == "h")
-            //{
-            //    this.Suit = SuitName.Heart;
-            //}
-            //else if (suit.ToLower() == "diamond" || suit.ToLower() == "d")
-            //{
-            //    this.Suit = SuitName.Diamond;
-            //}
-            //else if (suit.ToLower() == "club" || suit.ToLower() == "c")
-            //{
-            //    this.Suit = SuitName.Club;
-            //}
-            //else
-            //{
-            //    throw new Exception("No such card!");
-            //}
-            #endregion
-
             Value = value;
-            #region Value
-            //if (value >= 1 && value <= 13) this.Value = value;
-            //else
-            //{
-            //    throw new Exception("No such card!");
-            //}
-            #endregion
-        }
-
-        private int GetSuitValue(string suit)
-        {
-            if (suit == SuitName.Spade) return 4;
-            else if (suit == SuitName.Heart) return 3;
-            else if (suit == SuitName.Diamond) return 2;
-            else if (suit == SuitName.Club) return 1;
-            else return 0;
         }
 
         public int CompareTo(Card other)
         {
+            if (this == null && other == null) return 0;
+            if (this == null) return -1;
             if (other == null) return 1;
 
+            // 數字不同 比較數字來決定大小
             if (this.Value != other.Value)
             {
+                // Ace最大
+                if (this.Value == 1) return 1;
+                if (other.Value == 1) return -1;
+
                 return this.Value.CompareTo(other.Value);
             }
-            else
-            {
-                return GetSuitValue(this.Suit).CompareTo(GetSuitValue(other.Suit));
-            }
+            
+            // 數字相同 比較花色來決定大小
+            return ( (int)this.Suit ).CompareTo( (int)other.Suit );
         }
-
         
         public override bool Equals(object obj)
         {
-            if (obj == null) return false;
+            if (this == null && obj == null) return true;
+            if (this == null || obj == null) return false;
 
             Card objAsCard = obj as Card;
             if (objAsCard == null) return false;
-            else return this.Value == objAsCard.Value 
-                     && this.Suit == objAsCard.Suit;
+            else return (this.Value == objAsCard.Value 
+                      && this.Suit == objAsCard.Suit);
         }
 
         public override string ToString()
@@ -140,11 +95,10 @@ namespace PlayingCardGame.Utilities
 
             string strSuit = String.Empty;
 
-            if (this.Suit == SuitName.Spade) strSuit = "S";
-            else if (this.Suit == SuitName.Heart) strSuit = "H";
-            else if (this.Suit == SuitName.Diamond) strSuit = "D";
-            else if (this.Suit == SuitName.Club) strSuit = "C";
-            else this.Suit = "N/A";
+            if (this.Suit == Suits.Spade) strSuit = "S";
+            else if (this.Suit == Suits.Heart) strSuit = "H";
+            else if (this.Suit == Suits.Diamond) strSuit = "D";
+            else strSuit = "C";
 
             return strSuit + strValue;
         }
@@ -154,6 +108,6 @@ namespace PlayingCardGame.Utilities
             return this.Value.GetHashCode();
         }
 
-        // end of Card
+        // end of class Card
     }
 }

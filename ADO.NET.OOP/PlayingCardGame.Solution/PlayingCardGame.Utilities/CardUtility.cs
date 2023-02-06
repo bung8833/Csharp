@@ -9,29 +9,33 @@ namespace PlayingCardGame.Utilities
     public static class CardUtility
     {
         /// <summary>
-        /// 隨機選取任意張牌
+        /// 隨機選取任意張不重複的牌
         /// </summary>
-        /// <param name="qty"></param>
+        /// <param name="countOfCard"></param>
         /// <returns></returns>
-        public static List<Card> GetRandomCards(int qty)
+        public static List<Card> GetRandomCards(int countOfCard)
         {
-            string[] suits = new string[] { "S", "H", "D", "C" };
+            Suits[] suits = new Suits[] { Suits.Spade, Suits.Heart, Suits.Diamond, Suits.Club };
             int[] values = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
 
-            List<Card> cards = suits.Join(values,
+            List<Card> deckOfCards = suits.Join(values,
                 s => 1,
                 v => 1,
-                (s, v) => new Card(s, v))
+                (s, v) => new Card(s , v))
                 .ToList();
 
             List<Card> result = new List<Card>();
 
-            for (int i = 0; i < qty; i++)
+            // 最多取52張牌
+            if (countOfCard > deckOfCards.Count)countOfCard = deckOfCards.Count;
+
+            while (result.Count < countOfCard)
             {
                 Random seed = new Random(Guid.NewGuid().GetHashCode());
-                int index = seed.Next(0, cards.Count); // [0, cards.Count)
+                int index = seed.Next(0, deckOfCards.Count); // [0, deckOfCards.Count)
 
-                result.Add(cards[index]);
+                result.Add(deckOfCards[index]);
+                deckOfCards.RemoveAt(index);
             }
 
             return result;
@@ -42,7 +46,7 @@ namespace PlayingCardGame.Utilities
         /// </summary>
         /// <param name="cards"></param>
         /// <returns></returns>
-        public static void SortCards(this List<Card> cards)
+        public static void SoryByValue(this List<Card> cards)
         {
             cards.Sort((x, y) => x.CompareTo(y));
         }
