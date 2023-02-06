@@ -11,8 +11,18 @@ namespace PlayingCardGame.ConsoleApp
     {
         static void Main(string[] args)
         {
-            Deck deck = new Deck();
-            deck.Cards.ForEach(c => Console.WriteLine($"{c}  "));
+            var game1 = new FiveCardStud();
+
+            game1.Hand = new List<Card>
+            {
+                new Card(Suits.s, 10),
+                new Card(Suits.s, 11),
+                new Card(Suits.s, 12),
+                new Card(Suits.s, 13),
+                new Card(Suits.s, 1),
+            };
+
+            Console.WriteLine(new FiveCardStud().IsRoyalFlush(game1.Hand));
 
 
             Console.ReadLine();

@@ -16,7 +16,7 @@ namespace PlayingCardGame.Utilities
         {
             get => _suit;
 
-            set
+            private set
             {
                 if (value >= Suits.Club && value <=Suits.Spade)
                 {
@@ -35,7 +35,7 @@ namespace PlayingCardGame.Utilities
         {
             get => _value;
 
-            set
+            private set
             {
                 if (value >= 1 && value <= 13) _value = value;
                 else

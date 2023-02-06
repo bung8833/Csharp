@@ -19,7 +19,10 @@ namespace PlayingCardGame.Utilities
 
         public Deck(int[] ranks)
         {
-            // todo 驗證
+            if (ranks.Max() > 13 || ranks.Min() < 1)
+            {
+                throw new Exception("Ranks must be from 1 to 13");
+            }
 
             Suits[] suits = new Suits[] { Suits.Club, Suits.Diamond, Suits.Heart, Suits.Spade };
 
