@@ -77,9 +77,12 @@ namespace PlayingCardGame.Utilities
             return this.Cards.GetHashCode();
         }
 
-        // todo deck 洗牌
+        /// <summary>
+        /// 將Deck中的Cards洗牌
+        /// </summary>
         public void Shuffle()
         {
+            // todo 比較不同洗牌方式
             List<Card> existingCards = this.Cards.Select(c => c).ToList();
             this.Cards.Clear();
 

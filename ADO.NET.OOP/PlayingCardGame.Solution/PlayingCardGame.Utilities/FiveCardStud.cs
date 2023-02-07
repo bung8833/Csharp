@@ -76,8 +76,12 @@ namespace PlayingCardGame.Utilities
             return Hand.GetHashCode();
         }
 
-        // todo 判斷牌型
-        public bool IsRoyalFlush(List<Card> hand)
+        // todo 用LINQ判斷牌型
+        /// <summary>
+        /// 判斷玩家的手牌 是否為同花大順
+        /// </summary>
+        /// <returns></returns>
+        public bool IsRoyalFlush()
         {
 
             return true;
