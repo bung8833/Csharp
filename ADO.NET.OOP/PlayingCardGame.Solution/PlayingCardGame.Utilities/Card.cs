@@ -51,6 +51,11 @@ namespace PlayingCardGame.Utilities
             Value = value;
         }
 
+        /// <summary>
+        /// 根據數字和花色 比較兩張Card的大小
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
         public int CompareTo(Card other)
         {
             if (this == null && other == null) return 0;
@@ -70,7 +75,12 @@ namespace PlayingCardGame.Utilities
             // 數字相同 比較花色來決定大小
             return ( (int)this.Suit ).CompareTo( (int)other.Suit );
         }
-        
+
+        /// <summary>
+        /// 根據數字和花色 比較兩張Card是否相等
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public override bool Equals(object obj)
         {
             if (this == null && obj == null) return true;

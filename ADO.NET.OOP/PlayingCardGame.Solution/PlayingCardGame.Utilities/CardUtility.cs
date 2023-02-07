@@ -35,7 +35,7 @@ namespace PlayingCardGame.Utilities
                 int index = seed.Next(0, deckOfCards.Count); // [0, deckOfCards.Count)
 
                 result.Add(deckOfCards[index]);
-                deckOfCards.RemoveAt(index);
+                deckOfCards.RemoveAt(index); // 取完就丟掉 才不會取到重覆的牌
             }
 
             return result;
@@ -46,13 +46,13 @@ namespace PlayingCardGame.Utilities
         /// </summary>
         /// <param name="cards"></param>
         /// <returns></returns>
-        public static void SoryByValue(this List<Card> cards)
+        public static void SoryByHighOrLow(this List<Card> cards)
         {
             cards.Sort((x, y) => x.CompareTo(y));
         }
 
         /// <summary>
-        /// 判斷指定的物件是否等於目前的物件
+        /// 根據數字和花色 判斷是否所有Card皆相等
         /// </summary>
         /// <param name="source"></param>
         /// <param name="firstCard"></param>
@@ -72,7 +72,7 @@ namespace PlayingCardGame.Utilities
             foreach (var card in cards)
             {
                 if (source.Value != card.Value
-                || source.Suit != card.Suit)
+                 || source.Suit != card.Suit)
                 {
                     return false;
                 }

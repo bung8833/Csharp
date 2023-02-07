@@ -10,13 +10,28 @@ namespace PlayingCardGame.Utilities
 {
     public class Deck
     {
-        public List<Card> Cards { get; private set; } // 這副牌中所有的Card
+        /// <summary>
+        /// 目前存在這副牌中的牌
+        /// </summary>
+        public List<Card> Cards { get; private set; }
 
+        /// <summary>
+        /// 取得全部52張牌
+        /// </summary>
         public Deck()
         {
-            Cards = NewDeckOfCards();
+            Suits[] suits = new Suits[] { Suits.Club, Suits.Diamond, Suits.Heart, Suits.Spade };
+            int[] ranks = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
+
+            Cards = suits.Join(ranks, s => 1, v => 1, (s, v) => new Card(s, v))
+                        .ToList();
         }
 
+        /// <summary>
+        /// 只取得一部分的牌 可以傳入想要的數字來決定要生成哪些牌 
+        /// </summary>
+        /// <param name="ranks"></param>
+        /// <exception cref="Exception"></exception>
         public Deck(int[] ranks)
         {
             if (ranks.Max() > 13 || ranks.Min() < 1)
@@ -30,18 +45,87 @@ namespace PlayingCardGame.Utilities
                          .ToList();
         }
 
-        private List<Card> NewDeckOfCards()
+        /// <summary>
+        /// 判斷兩副Deck中的牌 其值和順序是否相同
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public override bool Equals(object obj)
         {
-            Suits[] suits = new Suits[] { Suits.Club, Suits.Diamond, Suits.Heart, Suits.Spade };
-            int[] ranks = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
+            if (this == null && obj == null) return true;
+            if (this == null || obj == null) return false;
 
-            return suits.Join(ranks, s => 1, v => 1, (s, v) => new Card(s, v))
-                        .ToList();
+            Deck objAsDeck = obj as Deck;
+            if (objAsDeck == null) return false;
+            else return (this.Cards.SequenceEqual(objAsDeck.Cards));
         }
 
-        //public Deck Shuffle() // 洗牌
-        //public Card Deal() // 向Deck索取下一張牌, 如果被取光了,丟出例外
-        //public Card Deal(int count) // 向Deck索取下N張牌, 如果剩下的牌不夠 N 張, 丟出例外
+        public override string ToString()
+        {
+            string result = String.Empty;
+
+            foreach (Card card in Cards)
+            {
+                result += card.ToString() + " ";
+            }
+
+            return result;
+        }
+
+        public override int GetHashCode()
+        {
+            return this.Cards.GetHashCode();
+        }
+
+        // todo deck 洗牌
+        public void Shuffle()
+        {
+            List<Card> existingCards = this.Cards.Select(c => c).ToList();
+            this.Cards.Clear();
+
+            Random seed = new Random(Guid.NewGuid().GetHashCode());
+            while (existingCards.Count > 0)
+            {
+                int index = seed.Next(0, existingCards.Count); // [0, allCards.Count)
+
+                this.Cards.Add(existingCards[index]);
+                existingCards.RemoveAt(index);
+            }
+        }
+
+        /// <summary>
+        /// 向Deck索取下一張牌 若叫用時已被取光 則丟出例外
+        /// </summary>
+        /// <returns></returns>
+        public Card Deal()
+        {
+            return Deal(1).First();
+
+            //int count = Cards.Count;
+            //if (count == 0) throw new Exception("Deck已經沒有牌可抽了");
+
+            //Card nextCard = Cards.Last();
+            //Cards.RemoveAt(count-1);
+            //return nextCard;
+        }
+
+        /// <summary>
+        /// 向Deck索取下N張牌 若叫用時已被取光 或剩下數量不足 則丟出例外
+        /// </summary>
+        /// <param name="countOfDeal"></param>
+        /// <returns></returns>
+        public List<Card> Deal(int countOfDeal)
+        {
+            int count = Cards.Count;
+            if (count - countOfDeal < 0) throw new Exception("Deck中的牌不足");
+
+            Card[] nextCards = new Card[countOfDeal];
+            Cards.CopyTo(count-countOfDeal, nextCards, 0, countOfDeal);
+
+            Cards.RemoveRange(count-countOfDeal, countOfDeal);
+
+            return nextCards.ToList();
+        }
 
 
 

@@ -10,9 +10,11 @@ namespace PlayingCardGame.Utilities
     {
         private List<Card> _hand = new List<Card>();
 
-        public List<Card> Hand // 玩家的手牌
+        /// <summary>
+        /// 玩家的手牌 介於0~5張 且不應有重複的牌
+        /// </summary>
+        public List<Card> Hand
         {
-            // 應介於0~5張, 且不應有重複的牌
             get
             {
                 if (_hand.Count > 5)
@@ -41,6 +43,11 @@ namespace PlayingCardGame.Utilities
             }
         }
 
+        /// <summary>
+        /// 判斷兩副手牌中的牌是否相同 只比較其值 不管順序
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public override bool Equals(object obj)
         {
             if (this == null && obj == null) return true;
@@ -69,9 +76,10 @@ namespace PlayingCardGame.Utilities
             return Hand.GetHashCode();
         }
 
+        // todo 判斷牌型
         public bool IsRoyalFlush(List<Card> hand)
         {
-            // todo
+
             return true;
         }
 
