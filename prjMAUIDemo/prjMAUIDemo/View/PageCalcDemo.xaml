@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="prjMAUIDemo.View.PageCalcDemo"
+             Title="PageCalcDemo">
+    <StackLayout
+        Orientation="Vertical"
+        VerticalOptions="FillAndExpand">
+        
+        <Label x:Name="LabelInstruction"
+               Text="計算機範例"
+               VerticalOptions="Center" 
+               HorizontalOptions="Center"/>
+
+        <Label x:Name="LabelAnswer"
+               Text="0"
+               HorizontalTextAlignment="End"
+               FontSize="50"
+               VerticalOptions="Start" 
+               HorizontalOptions="EndAndExpand"/>
+
+        <Grid x:Name="GridButtons"
+              VerticalOptions="FillAndExpand" 
+              HorizontalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <!--數字-->
+
+            <Button x:Name="Button7"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Clicked="btnNumbersClicked"
+                    Text="7"
+                    FontSize="30"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Fill"/>
+
+            <Button x:Name="Button8"
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    Clicked="btnNumbersClicked"
+                    Text="8"
+                    FontSize="30"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Fill"/>
+
+            <Button x:Name="Button9"
+                    Grid.Column="2"
+                    Grid.Row="0"
+                    Clicked="btnNumbersClicked"
+                    Text="9"
+                    FontSize="30"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Fill"/>
+
+            <Button x:Name="Button4"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Clicked="btnNumbersClicked"
+                    Text="4"
+                    FontSize="30"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Fill"/>
+
+            <Button x:Name="Button5"
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Clicked="btnNumbersClicked"
+                    Text="5"
+                    FontSize="30"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Fill"/>
+
+            <Button x:Name="Button6"
+                    Grid.Column="2"
+                    Grid.Row="1"
+                    Clicked="btnNumbersClicked"
+                    Text="6"
+                    FontSize="30"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Fill"/>
+
+            <Button x:Name="Button1"
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    Clicked="btnNumbersClicked"
+                    Text="1"
+                    FontSize="30"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Fill"/>
+
+            <Button x:Name="Button2"
+                    Grid.Column="1"
+                    Grid.Row="2"
+                    Clicked="btnNumbersClicked"
+                    Text="2"
+                    FontSize="30"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Fill"/>
+
+            <Button x:Name="Button3"
+                    Grid.Column="2"
+                    Grid.Row="2"
+                    Clicked="btnNumbersClicked"
+                    Text="3"
+                    FontSize="30"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Fill"/>
+
+            <Button x:Name="Button0"
+                    Grid.Column="2"
+                    Grid.Row="3"
+                    Clicked="btnNumbersClicked"
+                    Text="0"
+                    FontSize="30"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Fill"/>
+            
+            <!--四則運算-->
+
+            <Button x:Name="ButtonEquals"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Grid.Row="3"
+                    Clicked="btnEqualsClicked"
+                    Text="="
+                    FontSize="30"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Fill"/>
+
+            <Button x:Name="ButtonAdd"
+                    Grid.Column="3"
+                    Grid.Row="0"
+                    Clicked="btnOperatorsClicked"
+                    Text="+"
+                    FontSize="30"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Fill"/>
+
+            <Button x:Name="ButtonMinus"
+                    Grid.Column="3"
+                    Grid.Row="1"
+                    Clicked="btnOperatorsClicked"
+                    Text="-"
+                    FontSize="30"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Fill"/>
+
+            <Button x:Name="ButtonMultiply"
+                    Grid.Column="3"
+                    Grid.Row="2"
+                    Clicked="btnOperatorsClicked"
+                    Text="*"
+                    FontSize="30"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Fill"/>
+
+            <Button x:Name="ButtonDivision"
+                    Grid.Column="3"
+                    Grid.Row="3"
+                    Clicked="btnOperatorsClicked"
+                    Text="/"
+                    FontSize="30"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Fill"/>
+
+        </Grid>
+        
+    </StackLayout>
+</ContentPage>

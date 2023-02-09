@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="prjMAUIDemo.View.PageClickDemo"
+             Title="PageClickDemo">
+    <StackLayout
+        Orientation="Vertical"
+        HorizontalOptions="FillAndExpand">
+        <StackLayout
+            Orientation="Horizontal"
+            HorizontalOptions="FillAndExpand">
+            
+            <Entry x:Name="EntryA"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   FontSize="30"/>
+            <Label x:Name="LabelXToThePowerOf2"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   Text="X2+"
+                   FontSize="30"/>
+
+            <Entry x:Name="EntryB"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   FontSize="30"/>
+            <Label x:Name="LabelX"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   Text="X+"
+                   FontSize="30"/>
+
+            <Entry x:Name="EntryC"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   FontSize="30"/>
+            <Label x:Name="LabelEquals0"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   Text="=0"
+                   FontSize="30"/>
+            
+        </StackLayout>
+        <StackLayout
+            Orientation="Horizontal"
+            HorizontalOptions="FillAndExpand">
+            
+            <Button x:Name="ButtonOK"
+                    HorizontalOptions="Start"
+                    VerticalOptions="CenterAndExpand"
+                    Text="確定"
+                    Clicked="ButtonOkClicked"
+                    FontSize="30"/>
+            <Label x:Name="LabelAnswer"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   Text="解答: "
+                   FontSize="30"/>
+            
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

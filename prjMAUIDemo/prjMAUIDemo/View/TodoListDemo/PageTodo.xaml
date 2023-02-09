@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="prjMAUIDemo.View.TodoListDemo.PageTodo"
+             Title="PageTodo">
+    <StackLayout
+        Orientation="Vertical">
+        
+        <Label 
+            Text="待辦事項 App"
+            FontSize="30"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label 
+            Text="工作項目"
+            FontSize="25"/>
+        <Entry
+            x:Name="txtTodo"
+            Margin="5"/>
+        <Label 
+            Text="預計完成日期"
+            FontSize="25"/>
+        <Entry
+            x:Name="txtDate"
+            Margin="5"/>
+
+        <StackLayout
+            Orientation="Horizontal">
+            <Button
+                Text="加入"
+                Clicked="btnSaveClicked"
+                FontSize="25"
+                Margin="5"/>
+            <Button
+                Text="瀏覽"
+                Clicked="btnListClicked"
+                FontSize="25"
+                Margin="5"/>
+        </StackLayout>
+
+        <Label
+            x:Name="lblGet"
+            Text="---"
+            FontSize="25"
+            VerticalOptions="Start"
+            HorizontalOptions="Start"/>
+
+    </StackLayout>
+</ContentPage>

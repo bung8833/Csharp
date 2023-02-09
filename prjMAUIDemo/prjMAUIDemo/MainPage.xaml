@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="prjMAUIDemo.MainPage">
+    <StackLayout
+        Orientation="Vertical"
+        VerticalOptions="FillAndExpand">
+
+        <StackLayout
+            Orientation="Horizontal"
+            VerticalOptions="FillAndExpand">
+
+            <Label x:Name="lbl1"
+                   Text="紅"
+                   BackgroundColor="#e76f51"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="32"/>
+
+            <Label x:Name="lbl2"
+                   Text="藍"
+                   BackgroundColor="#4361ee"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="32"/>
+
+            <Label x:Name="lbl3"
+                   Text="黃"
+                   BackgroundColor="#ffb703"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="32"/>
+
+            <Label x:Name="lbl4"
+                   Text="綠"
+                   BackgroundColor="#386641"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="32"/>
+
+        </StackLayout>
+
+        <StackLayout
+            Orientation="Horizontal"
+            VerticalOptions="FillAndExpand">
+
+            <Button x:Name="btnShuffle"
+                    Text="洗牌"
+                    HorizontalOptions="FillAndExpand"
+                    FontSize="32"/>
+
+        </StackLayout>
+
+        <StackLayout
+            Orientation="Vertical"
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand">
+
+            <Label Text="第一行"
+                   VerticalOptions="FillAndExpand"
+                   FontSize="32"/>
+
+            <Label Text="第二行"
+                   VerticalOptions="FillAndExpand"
+                   FontSize="32"/>
+
+            <Label Text="第三行"
+                   VerticalOptions="FillAndExpand"
+                   FontSize="32"/>
+
+            <Label Text="第四行"
+                   VerticalOptions="FillAndExpand"
+                   FontSize="32"/>
+
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
