@@ -1,6 +1,7 @@
 ﻿using prjMAUIDemo.Models;
 using prjMAUIDemo.View;
 using prjMAUIDemo.View.TodoListDemo;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace prjMAUIDemo;
 
